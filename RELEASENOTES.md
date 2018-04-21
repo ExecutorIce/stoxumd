@@ -33,7 +33,7 @@ Highlights of this release include:
 - Allow `Journal` to be copied/moved ([#2292](https://github.com/ripple/rippled/issues/2292))
 - Cleanly report invalid `[server]` settings ([#2305](https://github.com/ripple/rippled/issues/2305))
 - Improve log scrubbing ([#2358](https://github.com/ripple/rippled/issues/2358))
-- Update `rippled-example.cfg` ([#2307](https://github.com/ripple/rippled/issues/2307))
+- Update `stoxumd-example.cfg` ([#2307](https://github.com/ripple/rippled/issues/2307))
 - Force json commands to be objects ([#2319](https://github.com/ripple/rippled/issues/2319))
 - Fix cmake clang build for sanitizers ([#2325](https://github.com/ripple/rippled/issues/2325))
 - Allow `account_objects` RPC to filter by “check” ([#2356](https://github.com/ripple/rippled/issues/2356))
@@ -690,7 +690,7 @@ The rippled team is proud to release rippled version 0.30.1. This version contai
 
 **New Features**
 
--   Secure gateway: configured IPs can forward identifying user data in HTTP headers, including user name and origin IP. If the user name exists, then resource limits are lifted for that session. See rippled-example.cfg for more information.
+-   Secure gateway: configured IPs can forward identifying user data in HTTP headers, including user name and origin IP. If the user name exists, then resource limits are lifted for that session. See stoxumd-example.cfg for more information.
 -   Allow fractional fee multipliers (RIPD-626)
 -   Add “expiration” to account\_offers (RIPD-1049)
 -   Add “owner\_funds” to “transactions” array in RPC ledger (RIPD-1050)
@@ -788,7 +788,7 @@ While it may be possible to compile rippled on (virtual) machines with 4GB of RA
 
 **Development-Related Updates**
 
--   Transitional support for gcc 5.2: to enable support define the environmental variable `RIPPLED_OLD_GCC_ABI`=1
+-   Transitional support for gcc 5.2: to enable support define the environmental variable `STOXUMD_OLD_GCC_ABI`=1
 -   Transitional support for C++ 14: to enable support define the environment variable `RIPPLED_USE_CPP_14`=1
 -   Visual Studio 2015 support
 -   Updates to integration tests
@@ -905,7 +905,7 @@ The minimum supported version of Boost is v1.57.0. You **must** upgrade to this 
 
 **rippled.cfg Updates**
 
-For \[ips\] stanza, a port must be specified for each listed IP address with the space between IP address and port, ex.: `r.ripple.com` `51235` ([RIPD-893](https://ripplelabs.atlassian.net/browse/RIPD-893))
+For \[ips\] stanza, a port must be specified for each listed IP address with the space between IP address and port, ex.: `r.stoxum.com` `51235` ([RIPD-893](https://ripplelabs.atlassian.net/browse/RIPD-893))
 
 **New Features**
 
@@ -1044,7 +1044,7 @@ With rippled version 0.28, the rippled.cfg file must be changed according to the
 
 `admin` `=` `allow` to `admin` `=` <IP address>
 
--   For most installations, 127.0.0.1 will preserve current behavior. 0.0.0.0 may be specified to indicate "any IP" but cannot be combined with other IP addresses. Use of 0.0.0.0 may introduce severe security risks and is not recommended. See docs/rippled-example.cfg for more information.
+-   For most installations, 127.0.0.1 will preserve current behavior. 0.0.0.0 may be specified to indicate "any IP" but cannot be combined with other IP addresses. Use of 0.0.0.0 may introduce severe security risks and is not recommended. See docs/stoxumd-example.cfg for more information.
 
 **More Strict Requirements on MemoType**
 
@@ -1430,7 +1430,7 @@ The minimum supported version of Boost is v1.57.0. You **must** upgrade to this 
 
 **New Features**
 
--   SHAMapStore Online Delete ([RIPD-415](https://ripplelabs.atlassian.net/browse/RIPD-415)): Makes rippled configurable to support deletion of all data in its key-value store (nodestore) and ledger and transaction SQLite databases based on validated ledger sequence numbers. See doc/rippled-example.cfg for configuration setup.
+-   SHAMapStore Online Delete ([RIPD-415](https://ripplelabs.atlassian.net/browse/RIPD-415)): Makes rippled configurable to support deletion of all data in its key-value store (nodestore) and ledger and transaction SQLite databases based on validated ledger sequence numbers. See doc/stoxumd-example.cfg for configuration setup.
 -   [Universal Port](https://forum.ripple.com/viewtopic.php?f=2&t=8313&p=57969). See necessary config changes below.
 -   Config "ledger\_history\_index" option ([RIPD-559](https://ripplelabs.atlassian.net/browse/RIPD-559))
 
@@ -1464,7 +1464,7 @@ The minimum supported version of Boost is v1.57.0. You **must** upgrade to this 
 
 With rippled version 0.27.0, the rippled.cfg file must be changed according to these instructions:
 
--   Add new stanza - `[server]`. This section will contain a list of port names and key/value pairs. A port name must start with a letter and contain only letters and numbers. The name is not case-sensitive. For each name in this list, rippled will look for a configuration file section with the same name and use it to create a listening port. To simplify migration, you can use port names from your previous version of rippled.cfg (see Section 1. Server for detailed explanation in doc/rippled-example.cfg). For example:
+-   Add new stanza - `[server]`. This section will contain a list of port names and key/value pairs. A port name must start with a letter and contain only letters and numbers. The name is not case-sensitive. For each name in this list, rippled will look for a configuration file section with the same name and use it to create a listening port. To simplify migration, you can use port names from your previous version of rippled.cfg (see Section 1. Server for detailed explanation in doc/stoxumd-example.cfg). For example:
 
          [server]
          rpc_port
@@ -1504,7 +1504,7 @@ With rippled version 0.27.0, the rippled.cfg file must be changed according to t
 
 -   Remove `[websocket_public_port],` `[websocket_public_ip],` `[websocket_ssl_key],` `[websocket_ssl_cert],` `[websocket_ssl_chain]` settings from rippled.cfg
 -   Disable `[ssl_verify]` section by setting it to 0
--   Migrate the remaining configurations without changes. To enable online delete feature, check Section 6. Database in doc/rippled-example.cfg
+-   Migrate the remaining configurations without changes. To enable online delete feature, check Section 6. Database in doc/stoxumd-example.cfg
 
 **Integration Notes**
 
@@ -1564,7 +1564,7 @@ The minimum supported version of Boost is v1.55.0. You **must** upgrade to this 
 
 **Important JSON-RPC Update**
 
-With rippled version 0.26.4, the [rippled.cfg](https://github.com/ripple/rippled/blob/0.26.4/doc/rippled-example.cfg) file must set the ssl\_verify property to 0. Without this update, JSON-RPC API calls may not work.
+With rippled version 0.26.4, the [rippled.cfg](https://github.com/ripple/rippled/blob/0.26.4/doc/stoxumd-example.cfg) file must set the ssl\_verify property to 0. Without this update, JSON-RPC API calls may not work.
 
 **New Features**
 
@@ -1891,7 +1891,7 @@ The minimum supported version of Boost is v1.55.  You **must** upgrade to this r
 
 **Major Features**
 
-* Option to compress the NodeStore db. More speed, less space. See [`rippled-example.cfg`](https://github.com/ripple/rippled/blob/0.25.1/doc/rippled-example.cfg#L691)
+* Option to compress the NodeStore db. More speed, less space. See [`stoxumd-example.cfg`](https://github.com/ripple/rippled/blob/0.25.1/doc/stoxumd-example.cfg#L691)
 
 **Improvements**
 
@@ -1901,7 +1901,7 @@ The minimum supported version of Boost is v1.55.  You **must** upgrade to this r
 * Improved handling of modified ledger nodes.
 * Improved performance of JSON document generator.
 * Made strConcat operate in O(n) time for greater efficiency.
-* Added some new configuration options to doc/rippled-example.cfg
+* Added some new configuration options to doc/stoxumd-example.cfg
 
 **Bug Fixes**
 
@@ -1938,7 +1938,7 @@ The minimum supported version of Boost is v1.55. You **must** upgrade to this re
 
 **Major Features**
 
--   Option to compress the NodeStore db. More speed, less space. See [`rippled-example.cfg`](https://github.com/ripple/rippled/blob/0.25.0/doc/rippled-example.cfg#L691)
+-   Option to compress the NodeStore db. More speed, less space. See [`stoxumd-example.cfg`](https://github.com/ripple/rippled/blob/0.25.0/doc/stoxumd-example.cfg#L691)
 
 **Improvements**
 
@@ -2187,7 +2187,7 @@ If you are a validator, you should set your quorum to at least four.
 
 **IPs**
 
-A list of Ripple Labs server IP addresses can be found by resolving **r.ripple.com**. You can also add this to your *rippled.cfg* file to ensure you always have several peer connections to Ripple Labs servers:
+A list of Ripple Labs server IP addresses can be found by resolving **r.stoxum.com**. You can also add this to your *rippled.cfg* file to ensure you always have several peer connections to Ripple Labs servers:
 
      [ips]
      184.73.226.101 51235
@@ -2276,7 +2276,7 @@ Starting with this release, the minimum supported version of GCC used to compile
 -   Multiple fixes to ledger acquisition, cleanup, and logging.
 -   Made multiple improvements to WebSockets server.
 -   Added Debian-style initscript (doc/rippled.init).
--   Updated default config file (doc/rippled-example.cfg) to reflect best practices.
+-   Updated default config file (doc/stoxumd-example.cfg) to reflect best practices.
 -   Made changes to SHAMapTreeNode and visitLeavesInternal to conserve memory.
 -   Implemented new fee schedule:
     -   Transaction fee: 10 drops
@@ -2311,7 +2311,7 @@ If you are a validator, you should set your quorum to at least four.
 
 **IPs**
 
-A list of Ripple Labs server IP addresses can be found by resolving **r.ripple.com**. You can also add this to your *rippled.cfg* file to ensure you always have several peer connections to Ripple Labs servers:
+A list of Ripple Labs server IP addresses can be found by resolving **r.stoxum.com**. You can also add this to your *rippled.cfg* file to ensure you always have several peer connections to Ripple Labs servers:
 
     [ips]
     54.225.112.220 51235
@@ -2391,7 +2391,7 @@ If you are a validator, you should set your quorum to at least four.
 
 **IPs**
 
-A list of Ripple Labs server IP addresses can be found by resolving `r.ripple.com`. You can also add this to your `rippled.cfg` file to ensure you always have several peer connections to Ripple Labs servers:
+A list of Ripple Labs server IP addresses can be found by resolving `r.stoxum.com`. You can also add this to your `rippled.cfg` file to ensure you always have several peer connections to Ripple Labs servers:
 
     [ips]
     54.225.112.220 51235
@@ -2474,7 +2474,7 @@ If you are a validator, you should set your quorum to at least four.
 
 **IPs**
 
-A list of Ripple Labs server IP addresses can be found by resolving `r.ripple.com`. You can also add this to your `rippled.cfg` file to ensure you always have several peer connections to Ripple Labs servers:
+A list of Ripple Labs server IP addresses can be found by resolving `r.stoxum.com`. You can also add this to your `rippled.cfg` file to ensure you always have several peer connections to Ripple Labs servers:
 
     [ips]
     54.225.112.220 51235
@@ -2546,7 +2546,7 @@ If you are a validator, you should set your quorum to at least four.
 
 **IPs**
 
-A list of Ripple Labs server IP addresses can be found by resolving `r.ripple.com`. You can also add this to your `rippled.cfg` file to ensure you always have several peer connections to Ripple Labs servers:
+A list of Ripple Labs server IP addresses can be found by resolving `r.stoxum.com`. You can also add this to your `rippled.cfg` file to ensure you always have several peer connections to Ripple Labs servers:
 
     [ips]
     54.225.112.220 51235
@@ -2646,7 +2646,7 @@ If you are a validator, you should set your quorum to at least four.
 
 **IPs**
 
-A list of Ripple Labs server IP addresses can be found by resolving `r.ripple.com`. You can also add this to your `rippled.cfg` file to ensure you always have several peer connections to Ripple Labs servers:
+A list of Ripple Labs server IP addresses can be found by resolving `r.stoxum.com`. You can also add this to your `rippled.cfg` file to ensure you always have several peer connections to Ripple Labs servers:
 
     [ips]
     54.225.112.220 51235

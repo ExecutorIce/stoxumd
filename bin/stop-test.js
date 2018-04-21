@@ -25,8 +25,8 @@ if (process.argv[2] == null) {
   process.exit();
 } else {
   var testRange = process.argv[2].split(',').map(Number);
-  var rippledPath = process.argv[3] || 'build/rippled'
-  var rippledConf = process.argv[4] || 'rippled.cfg'
+  var rippledPath = process.argv[3] || 'build/stoxumd'
+  var rippledConf = process.argv[4] || 'stoxumd.cfg'
 }
 
 var options = {

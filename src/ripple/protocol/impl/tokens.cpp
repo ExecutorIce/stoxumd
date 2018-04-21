@@ -30,8 +30,8 @@
 
 namespace ripple {
 
-static char rippleAlphabet[] =
-    "rpshnaf39wBUDNEGHJKLM4PQRST7VWXYZ2bcdeCg65jkm8oFqi1tuvAxyz";
+static char stoxumAlphabet[] =
+    "sprhnaf39wBUDNEGHJKLM4PQRST7VWXYZ2bcdeCg65jkm8oFqi1tuvAxyz";
 
 static char bitcoinAlphabet[] =
     "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz";
@@ -182,7 +182,7 @@ std::string
 base58EncodeToken (TokenType type,
     void const* token, std::size_t size)
 {
-    return encodeToken(type, token, size, rippleAlphabet);
+    return encodeToken(type, token, size, stoxumAlphabet);
 }
 
 std::string
@@ -307,7 +307,7 @@ public:
     }
 };
 
-static InverseAlphabet rippleInverse(rippleAlphabet);
+static InverseAlphabet rippleInverse(stoxumAlphabet);
 
 static InverseAlphabet bitcoinInverse(bitcoinAlphabet);
 

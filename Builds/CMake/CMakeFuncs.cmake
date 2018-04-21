@@ -277,7 +277,7 @@ macro(check_gcc4_abi)
   # Check if should use gcc4's ABI
   set(gcc4_abi false)
 
-  if ($ENV{RIPPLED_OLD_GCC_ABI})
+  if ($ENV{STOXUMD_OLD_GCC_ABI})
     set(gcc4_abi true)
   endif()
 

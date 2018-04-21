@@ -1,4 +1,4 @@
-# rippled SConstruct
+# stoxumd SConstruct
 #
 '''
 
@@ -6,7 +6,7 @@
     ----------------------------------------------------------------------------
 
     <none>          Same as 'install'
-    install         Default target and copies it to build/rippled (default)
+    install         Default target and copies it to build/stoxumd (default)
 
     all             All available variants
     debug           All available debug variants
@@ -84,9 +84,9 @@ The following extra options may be used:
     --assert Enable asserts, even in release builds.
 
 GCC 5: If the gcc toolchain is used, gcc version 5 or better is required. On
-    linux distros that ship with gcc 4 (ubuntu < 15.10), rippled will force gcc
+    linux distros that ship with gcc 4 (ubuntu < 15.10), stoxumd will force gcc
     to use gcc4's ABI (there was an ABI change between versions). This allows us
-    to use the package manager to install rippled dependencies. It also means if
+    to use the package manager to install stoxumd dependencies. It also means if
     the user builds C++ dependencies themselves - such as boost - they must
     either be built with gcc 4 or with the preprocessor flag
     `_GLIBCXX_USE_CXX11_ABI` set to zero.
@@ -95,7 +95,7 @@ Clang on linux: Clang cannot use the new gcc 5 ABI (clang does not know about
     the `abi_tag` attribute). On linux distros that ship with the gcc 5 ABI
     (ubuntu >= 15.10), building with clang requires building boost and protobuf
     with the old ABI (best to build them with clang). It is best to statically
-    link rippled in this scenario (use the `--static` with scons), as dynamic
+    link stoxumd in this scenario (use the `--static` with scons), as dynamic
     linking may use a library with the incorrect ABI.
 
 
@@ -124,7 +124,7 @@ import glob
 import SCons.Action
 
 if (not platform.machine().endswith('64')):
-    print('Warning: Detected {} architecture. Rippled requires a 64-bit OS.'.format(
+    print('Warning: Detected {} architecture. Stoxumd requires a 64-bit OS.'.format(
           platform.machine()));
 
 sys.path.append(os.path.join('src', 'ripple', 'beast', 'site_scons'))
@@ -186,7 +186,7 @@ def check_openssl():
     build_time = 'Mon Apr  7 20:33:19 UTC 2014'
     if parse_time(d) < parse_time(build_time):
         raise Exception('Your openSSL was built on %s; '
-                        'rippled needs a version built on or after %s.'
+                        'stoxumd needs a version built on or after %s.'
                         % (line, build_time))
 
 
@@ -330,7 +330,7 @@ def is_ubuntu():
 
 @memoize
 def use_gcc4_abi(cc_cmd):
-    if os.getenv('RIPPLED_OLD_GCC_ABI'):
+    if os.getenv('STOXUMD_OLD_GCC_ABI'):
         return True
     gcc_ver = ''
     ubuntu_ver = None
@@ -1234,7 +1234,7 @@ for tu_style in ['classic', 'unity']:
                 object_builder.add_source_files('src/ripple/unity/beastobjc.mm')
 
             target = env.Program(
-                target=os.path.join(variant_dir, 'rippled'),
+                target=os.path.join(variant_dir, 'stoxumd'),
                 source=object_builder.objects
                 )
 
@@ -1272,7 +1272,7 @@ for key, value in aliases.items():
     env.Alias(key, value)
 
 vcxproj = base.VSProject(
-    os.path.join('Builds', 'VisualStudio2015', 'RippleD'),
+    os.path.join('Builds', 'VisualStudio2015', 'StoxumD'),
     source = [],
     VSPROJECT_ROOT_DIRS = [
         'build/',

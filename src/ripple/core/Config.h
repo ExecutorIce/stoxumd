@@ -113,9 +113,9 @@ public:
     bool valShards = false;
     bool ELB_SUPPORT = false;
 
-    std::vector<std::string>    IPS;                    // Peer IPs from rippled.cfg.
-    std::vector<std::string>    IPS_FIXED;              // Fixed Peer IPs from rippled.cfg.
-    std::vector<std::string>    SNTP_SERVERS;           // SNTP servers from rippled.cfg.
+    std::vector<std::string>    IPS;                    // Peer IPs from stoxumd.cfg.
+    std::vector<std::string>    IPS_FIXED;              // Fixed Peer IPs from stoxumd.cfg.
+    std::vector<std::string>    SNTP_SERVERS;           // SNTP servers from stoxumd.cfg.
 
     enum StartUpType
     {
@@ -154,8 +154,8 @@ public:
     boost::optional<std::size_t> VALIDATION_QUORUM;     // validations to consider ledger authoritative
 
     std::uint64_t                      FEE_DEFAULT = 10;
-    std::uint64_t                      FEE_ACCOUNT_RESERVE = 200*SYSTEM_CURRENCY_PARTS;
-    std::uint64_t                      FEE_OWNER_RESERVE = 50*SYSTEM_CURRENCY_PARTS;
+    std::uint64_t                      FEE_ACCOUNT_RESERVE = SYSTEM_CURRENCY_PARTS / 1000;
+    std::uint64_t                      FEE_OWNER_RESERVE = SYSTEM_CURRENCY_PARTS / 4000;
     std::uint64_t                      FEE_OFFER = 10;
 
     // Node storage configuration

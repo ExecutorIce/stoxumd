@@ -1,9 +1,9 @@
 set -e
 
 mkdir -p build/docker/
-cp doc/rippled-example.cfg build/clang.debug/rippled build/docker/
+cp doc/stoxumd-example.cfg build/clang.debug/rippled build/docker/
 cp Builds/Docker/Dockerfile-testnet build/docker/Dockerfile
-mv build/docker/rippled-example.cfg build/docker/rippled.cfg
+mv build/docker/stoxumd-example.cfg build/docker/rippled.cfg
 strip build/docker/rippled
 docker build -t ripple/rippled:$CIRCLE_SHA1 build/docker/
 docker tag ripple/rippled:$CIRCLE_SHA1 ripple/rippled:latest

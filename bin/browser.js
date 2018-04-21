@@ -110,7 +110,7 @@ var rewrite_field = function (type, obj, field, opts) {
 var rewrite_type = function (type, obj, opts) {
   if ('amount' === type) {
     if ('string' === typeof obj) {
-      // XRP.
+      // STM.
       return '<B>' + obj + '</B>';
 
     } else {

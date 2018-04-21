@@ -120,7 +120,7 @@ after_build:
         if ($env:build -eq "scons") {
           cp build/$($env:target)/rippled.exe build
           ls build
-          $exe="build/rippled"
+          $exe="build/stoxumd"
         }
         else
         {

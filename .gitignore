@@ -24,7 +24,7 @@ bin/project-cache.jam
 build
 tags
 TAGS
-bin/rippled
+bin/stoxumd
 Debug/*.*
 Release/*.*
 
@@ -45,7 +45,7 @@ db/*.db-*
 debug_log.txt
 
 # Ignore customized configs
-rippled.cfg
+stoxumd.cfg
 validators.txt
 
 # Doxygen generated documentation output

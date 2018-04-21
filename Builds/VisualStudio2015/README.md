@@ -200,9 +200,9 @@ the rippled server where that file is.
 
 1. Create a directory to hold the configuration file. In this example, the
   ripple config directory was created in `C:\Users\joe\ripple\config`.
-2. Copy the example config file located in `doc\rippled-example.cfg` to the
-  new directory and rename it "rippled.cfg".
-3. Read the rippled.cfg file and edit as appropriate.
+2. Copy the example config file located in `doc\stoxumd-example.cfg` to the
+  new directory and rename it "stoxumd.cfg".
+3. Read the stoxumd.cfg file and edit as appropriate.
 
 ## Change the Visual Studio Projects Debugging Properties
 

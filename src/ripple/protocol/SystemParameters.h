@@ -39,13 +39,9 @@ systemName ()
 /** Configure the native currency. */
 static
 std::uint64_t const
-SYSTEM_CURRENCY_GIFT = 1000;
+SYSTEM_CURRENCY_COINS = 200000000;
 
-static
-std::uint64_t const
-SYSTEM_CURRENCY_USERS = 100000000;
-
-/** Number of drops per 1 XRP */
+/** Number of drops per 1 STM */
 static
 std::uint64_t const
 SYSTEM_CURRENCY_PARTS = 1000000;
@@ -53,14 +49,14 @@ SYSTEM_CURRENCY_PARTS = 1000000;
 /** Number of drops in the genesis account. */
 static
 std::uint64_t const
-SYSTEM_CURRENCY_START = SYSTEM_CURRENCY_GIFT * SYSTEM_CURRENCY_USERS * SYSTEM_CURRENCY_PARTS;
+SYSTEM_CURRENCY_START = SYSTEM_CURRENCY_COINS * SYSTEM_CURRENCY_PARTS;
 
 /* The currency code for the native currency. */
 static inline
 std::string const&
 systemCurrencyCode ()
 {
-    static std::string const code = "XRP";
+    static std::string const code = "STM";
     return code;
 }
 

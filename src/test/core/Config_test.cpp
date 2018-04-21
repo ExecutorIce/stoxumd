@@ -45,7 +45,7 @@ admin = 127.0.0.1
 protocol = https
 
 [port_peer]
-port = 51235
+port = 51234
 ip = 0.0.0.0
 protocol = peer
 
@@ -97,7 +97,7 @@ pool.ntp.org
 # Where to find some other servers speaking the Ripple protocol.
 #
 [ips]
-r.ripple.com 51235
+r.stoxum.com 51234
 
 # Turn down default logging to save disk space in the long run.
 # Valid values here are trace, debug, info, warning, error, and fatal

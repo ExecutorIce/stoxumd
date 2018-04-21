@@ -79,6 +79,6 @@ The output will be in `docs/html`.
 
 From the rippled root folder:
 ```
-sudo docker run -v $PWD:/opt/rippled --rm rippled-docs
+sudo docker run -v $PWD:/opt/stoxumd --rm stoxumd-docs
 ```
 The output will be in `docs/html`.
