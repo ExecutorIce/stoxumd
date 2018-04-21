@@ -18,13 +18,13 @@
 //==============================================================================
 
 #include <BeastConfig.h>
-#include <ripple/basics/Log.h>
-#include <ripple/protocol/JsonFields.h>
-#include <ripple/protocol/SecretKey.h>
-#include <ripple/protocol/st.h>
-#include <ripple/json/json_reader.h>
-#include <ripple/json/to_string.h>
-#include <ripple/beast/unit_test.h>
+#include <stoxum/basics/Log.h>
+#include <stoxum/protocol/JsonFields.h>
+#include <stoxum/protocol/SecretKey.h>
+#include <stoxum/protocol/st.h>
+#include <stoxum/json/json_reader.h>
+#include <stoxum/json/to_string.h>
+#include <stoxum/beast/unit_test.h>
 #include <test/jtx.h>
 
 #include <memory>

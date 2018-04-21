@@ -21,9 +21,9 @@
 #define RIPPLE_TEST_JTX_FLAGS_H_INCLUDED
 
 #include <test/jtx/Env.h>
-#include <ripple/protocol/LedgerFormats.h>
-#include <ripple/protocol/TxFlags.h>
-#include <ripple/basics/contract.h>
+#include <stoxum/protocol/LedgerFormats.h>
+#include <stoxum/protocol/TxFlags.h>
+#include <stoxum/basics/contract.h>
 
 namespace ripple {
 namespace test {

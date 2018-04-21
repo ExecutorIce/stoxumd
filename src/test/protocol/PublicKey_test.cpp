@@ -18,9 +18,9 @@
 //==============================================================================
 
 #include <BeastConfig.h>
-#include <ripple/protocol/PublicKey.h>
-#include <ripple/protocol/SecretKey.h>
-#include <ripple/beast/unit_test.h>
+#include <stoxum/protocol/PublicKey.h>
+#include <stoxum/protocol/SecretKey.h>
+#include <stoxum/beast/unit_test.h>
 #include <vector>
 
 namespace ripple {

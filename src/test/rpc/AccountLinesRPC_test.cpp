@@ -18,11 +18,11 @@
 //==============================================================================
 
 #include <BeastConfig.h>
-#include <ripple/protocol/ErrorCodes.h>
-#include <ripple/protocol/JsonFields.h>
-#include <ripple/protocol/TxFlags.h>
+#include <stoxum/protocol/ErrorCodes.h>
+#include <stoxum/protocol/JsonFields.h>
+#include <stoxum/protocol/TxFlags.h>
 #include <test/jtx.h>
-#include <ripple/beast/unit_test.h>
+#include <stoxum/beast/unit_test.h>
 
 namespace ripple {
 

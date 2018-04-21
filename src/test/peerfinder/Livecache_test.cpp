@@ -18,10 +18,10 @@
 //==============================================================================
 
 #include <BeastConfig.h>
-#include <ripple/basics/chrono.h>
-#include <ripple/peerfinder/impl/Livecache.h>
-#include <ripple/beast/unit_test.h>
-#include <ripple/beast/clock/manual_clock.h>
+#include <stoxum/basics/chrono.h>
+#include <stoxum/peerfinder/impl/Livecache.h>
+#include <stoxum/beast/unit_test.h>
+#include <stoxum/beast/clock/manual_clock.h>
 
 namespace ripple {
 namespace PeerFinder {

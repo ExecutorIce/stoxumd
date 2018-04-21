@@ -18,9 +18,9 @@
 //==============================================================================
 
 #include <BeastConfig.h>
-#include <ripple/ledger/CashDiff.h>
-#include <ripple/protocol/STAmount.h>
-#include <ripple/beast/unit_test.h>
+#include <stoxum/ledger/CashDiff.h>
+#include <stoxum/protocol/STAmount.h>
+#include <stoxum/beast/unit_test.h>
 
 namespace ripple {
 namespace test {

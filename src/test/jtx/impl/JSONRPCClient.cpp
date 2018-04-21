@@ -18,10 +18,10 @@
 //==============================================================================
 #include <BeastConfig.h>
 #include <test/jtx/JSONRPCClient.h>
-#include <ripple/json/json_reader.h>
-#include <ripple/json/to_string.h>
-#include <ripple/protocol/JsonFields.h>
-#include <ripple/server/Port.h>
+#include <stoxum/json/json_reader.h>
+#include <stoxum/json/to_string.h>
+#include <stoxum/protocol/JsonFields.h>
+#include <stoxum/server/Port.h>
 #include <beast/http/message.hpp>
 #include <beast/http/dynamic_body.hpp>
 #include <beast/http/string_body.hpp>

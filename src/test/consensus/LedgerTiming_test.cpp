@@ -17,8 +17,8 @@
 */
 //==============================================================================
 #include <BeastConfig.h>
-#include <ripple/beast/unit_test.h>
-#include <ripple/consensus/LedgerTiming.h>
+#include <stoxum/beast/unit_test.h>
+#include <stoxum/consensus/LedgerTiming.h>
 
 namespace ripple {
 namespace test {

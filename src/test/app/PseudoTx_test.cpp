@@ -16,8 +16,8 @@
 //==============================================================================
 
 #include <BeastConfig.h>
-#include <ripple/app/tx/apply.h>
-#include <ripple/protocol/STAccount.h>
+#include <stoxum/app/tx/apply.h>
+#include <stoxum/protocol/STAccount.h>
 #include <string>
 #include <test/jtx.h>
 #include <vector>

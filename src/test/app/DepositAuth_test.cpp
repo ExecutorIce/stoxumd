@@ -18,15 +18,15 @@
 //==============================================================================
 
 #include <BeastConfig.h>
-#include <ripple/app/paths/Flow.h>
-#include <ripple/app/paths/impl/Steps.h>
-#include <ripple/basics/contract.h>
-#include <ripple/core/Config.h>
-#include <ripple/ledger/ApplyViewImpl.h>
-#include <ripple/ledger/PaymentSandbox.h>
-#include <ripple/ledger/Sandbox.h>
-#include <ripple/protocol/Feature.h>
-#include <ripple/protocol/JsonFields.h>
+#include <stoxum/app/paths/Flow.h>
+#include <stoxum/app/paths/impl/Steps.h>
+#include <stoxum/basics/contract.h>
+#include <stoxum/core/Config.h>
+#include <stoxum/ledger/ApplyViewImpl.h>
+#include <stoxum/ledger/PaymentSandbox.h>
+#include <stoxum/ledger/Sandbox.h>
+#include <stoxum/protocol/Feature.h>
+#include <stoxum/protocol/JsonFields.h>
 #include <test/jtx.h>
 #include <test/jtx/PathSet.h>
 

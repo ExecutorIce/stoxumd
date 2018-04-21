@@ -16,8 +16,8 @@
 //==============================================================================
 
 #include <BeastConfig.h>
-#include <ripple/app/ledger/PendingSaves.h>
-#include <ripple/beast/unit_test.h>
+#include <stoxum/app/ledger/PendingSaves.h>
+#include <stoxum/beast/unit_test.h>
 
 namespace ripple {
 namespace test {

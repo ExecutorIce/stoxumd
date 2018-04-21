@@ -19,8 +19,8 @@
 
 #include <BeastConfig.h>
 #include <test/jtx/memo.h>
-#include <ripple/basics/StringUtilities.h>
-#include <ripple/protocol/JsonFields.h>
+#include <stoxum/basics/StringUtilities.h>
+#include <stoxum/protocol/JsonFields.h>
 
 namespace ripple {
 namespace test {

@@ -17,13 +17,13 @@
 */
 //==============================================================================
 
-#include <ripple/basics/Buffer.h>
-#include <ripple/basics/strHex.h>
-#include <ripple/basics/Slice.h>
-#include <ripple/beast/unit_test.h>
-#include <ripple/conditions/Condition.h>
-#include <ripple/conditions/Fulfillment.h>
-#include <ripple/conditions/impl/PreimageSha256.h>
+#include <stoxum/basics/Buffer.h>
+#include <stoxum/basics/strHex.h>
+#include <stoxum/basics/Slice.h>
+#include <stoxum/beast/unit_test.h>
+#include <stoxum/conditions/Condition.h>
+#include <stoxum/conditions/Fulfillment.h>
+#include <stoxum/conditions/impl/PreimageSha256.h>
 #include <algorithm>
 #include <string>
 #include <utility>

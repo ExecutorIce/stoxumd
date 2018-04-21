@@ -17,8 +17,8 @@
 
 #include <BeastConfig.h>
 #include <test/jtx.h>
-#include <ripple/beast/unit_test.h>
-#include <ripple/protocol/Feature.h>
+#include <stoxum/beast/unit_test.h>
+#include <stoxum/protocol/Feature.h>
 
 namespace ripple {
 namespace test {

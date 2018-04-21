@@ -20,11 +20,11 @@
 #include <BeastConfig.h>
 #include <test/jtx/multisign.h>
 #include <test/jtx/utility.h>
-#include <ripple/protocol/HashPrefix.h>
-#include <ripple/protocol/JsonFields.h>
-#include <ripple/protocol/Sign.h>
-#include <ripple/protocol/types.h>
-#include <ripple/basics/contract.h>
+#include <stoxum/protocol/HashPrefix.h>
+#include <stoxum/protocol/JsonFields.h>
+#include <stoxum/protocol/Sign.h>
+#include <stoxum/protocol/types.h>
+#include <stoxum/basics/contract.h>
 
 namespace ripple {
 namespace test {

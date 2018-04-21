@@ -20,14 +20,14 @@
 #ifndef RIPPLE_NODESTORE_BASE_H_INCLUDED
 #define RIPPLE_NODESTORE_BASE_H_INCLUDED
 
-#include <ripple/nodestore/Database.h>
-#include <ripple/basics/random.h>
-#include <ripple/basics/StringUtilities.h>
-#include <ripple/beast/unit_test.h>
-#include <ripple/beast/utility/rngfill.h>
-#include <ripple/beast/xor_shift_engine.h>
-#include <ripple/nodestore/Backend.h>
-#include <ripple/nodestore/Types.h>
+#include <stoxum/nodestore/Database.h>
+#include <stoxum/basics/random.h>
+#include <stoxum/basics/StringUtilities.h>
+#include <stoxum/beast/unit_test.h>
+#include <stoxum/beast/utility/rngfill.h>
+#include <stoxum/beast/xor_shift_engine.h>
+#include <stoxum/nodestore/Backend.h>
+#include <stoxum/nodestore/Types.h>
 #include <boost/algorithm/string.hpp>
 #include <iomanip>
 

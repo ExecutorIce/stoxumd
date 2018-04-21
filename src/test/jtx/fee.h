@@ -22,8 +22,8 @@
 
 #include <test/jtx/Env.h>
 #include <test/jtx/tags.h>
-#include <ripple/protocol/STAmount.h>
-#include <ripple/basics/contract.h>
+#include <stoxum/protocol/STAmount.h>
+#include <stoxum/basics/contract.h>
 #include <boost/optional.hpp>
 
 namespace ripple {

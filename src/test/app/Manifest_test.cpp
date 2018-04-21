@@ -17,16 +17,16 @@
 */
 //==============================================================================
 
-#include <ripple/app/misc/Manifest.h>
-#include <ripple/app/misc/ValidatorList.h>
-#include <ripple/basics/contract.h>
-#include <ripple/basics/StringUtilities.h>
+#include <stoxum/app/misc/Manifest.h>
+#include <stoxum/app/misc/ValidatorList.h>
+#include <stoxum/basics/contract.h>
+#include <stoxum/basics/StringUtilities.h>
 #include <test/jtx.h>
-#include <ripple/core/DatabaseCon.h>
-#include <ripple/app/main/DBInit.h>
-#include <ripple/protocol/SecretKey.h>
-#include <ripple/protocol/Sign.h>
-#include <ripple/protocol/STExchange.h>
+#include <stoxum/core/DatabaseCon.h>
+#include <stoxum/app/main/DBInit.h>
+#include <stoxum/protocol/SecretKey.h>
+#include <stoxum/protocol/Sign.h>
+#include <stoxum/protocol/STExchange.h>
 #include <beast/core/detail/base64.hpp>
 #include <boost/filesystem.hpp>
 #include <boost/algorithm/string.hpp>

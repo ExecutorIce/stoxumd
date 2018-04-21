@@ -17,8 +17,8 @@
 */
 //==============================================================================
 
-#include <ripple/protocol/JsonFields.h>
-#include <ripple/protocol/Feature.h>
+#include <stoxum/protocol/JsonFields.h>
+#include <stoxum/protocol/Feature.h>
 #include <test/jtx.h>
 
 namespace ripple {

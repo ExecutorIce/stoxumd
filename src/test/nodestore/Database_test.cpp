@@ -19,9 +19,9 @@
 
 #include <BeastConfig.h>
 #include <test/nodestore/TestBase.h>
-#include <ripple/nodestore/DummyScheduler.h>
-#include <ripple/nodestore/Manager.h>
-#include <ripple/beast/utility/temp_dir.h>
+#include <stoxum/nodestore/DummyScheduler.h>
+#include <stoxum/nodestore/Manager.h>
+#include <stoxum/beast/utility/temp_dir.h>
 
 namespace ripple {
 namespace NodeStore {

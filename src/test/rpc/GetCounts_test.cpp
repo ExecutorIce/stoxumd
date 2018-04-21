@@ -18,10 +18,10 @@
 //==============================================================================
 
 #include <test/jtx.h>
-#include <ripple/beast/unit_test.h>
-#include <ripple/protocol/JsonFields.h>
-#include <ripple/protocol/SField.h>
-#include <ripple/basics/CountedObject.h>
+#include <stoxum/beast/unit_test.h>
+#include <stoxum/protocol/JsonFields.h>
+#include <stoxum/protocol/SField.h>
+#include <stoxum/basics/CountedObject.h>
 
 namespace ripple {
 

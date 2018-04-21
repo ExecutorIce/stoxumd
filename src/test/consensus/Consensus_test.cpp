@@ -17,10 +17,10 @@
 */
 //==============================================================================
 #include <BeastConfig.h>
-#include <ripple/beast/clock/manual_clock.h>
-#include <ripple/beast/unit_test.h>
-#include <ripple/consensus/Consensus.h>
-#include <ripple/consensus/ConsensusProposal.h>
+#include <stoxum/beast/clock/manual_clock.h>
+#include <stoxum/beast/unit_test.h>
+#include <stoxum/consensus/Consensus.h>
+#include <stoxum/consensus/ConsensusProposal.h>
 #include <test/csf.h>
 #include <utility>
 

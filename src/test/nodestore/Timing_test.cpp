@@ -19,13 +19,13 @@
 
 #include <BeastConfig.h>
 #include <test/nodestore/TestBase.h>
-#include <ripple/nodestore/DummyScheduler.h>
-#include <ripple/nodestore/Manager.h>
-#include <ripple/basics/BasicConfig.h>
-#include <ripple/unity/rocksdb.h>
-#include <ripple/beast/utility/temp_dir.h>
-#include <ripple/beast/xor_shift_engine.h>
-#include <ripple/beast/unit_test.h>
+#include <stoxum/nodestore/DummyScheduler.h>
+#include <stoxum/nodestore/Manager.h>
+#include <stoxum/basics/BasicConfig.h>
+#include <stoxum/unity/rocksdb.h>
+#include <stoxum/beast/utility/temp_dir.h>
+#include <stoxum/beast/xor_shift_engine.h>
+#include <stoxum/beast/unit_test.h>
 #include <beast/unit_test/thread.hpp>
 #include <boost/algorithm/string.hpp>
 #include <atomic>

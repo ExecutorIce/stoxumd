@@ -19,9 +19,9 @@
 
 #include <BeastConfig.h>
 #include <test/jtx.h>
-#include <ripple/protocol/Feature.h>
-#include <ripple/protocol/JsonFields.h>
-#include <ripple/app/misc/AmendmentTable.h>
+#include <stoxum/protocol/Feature.h>
+#include <stoxum/protocol/JsonFields.h>
+#include <stoxum/app/misc/AmendmentTable.h>
 
 namespace ripple {
 

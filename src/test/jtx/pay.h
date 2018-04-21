@@ -22,7 +22,7 @@
 
 #include <test/jtx/Account.h>
 #include <test/jtx/amount.h>
-#include <ripple/json/json_value.h>
+#include <stoxum/json/json_value.h>
 
 namespace ripple {
 namespace test {

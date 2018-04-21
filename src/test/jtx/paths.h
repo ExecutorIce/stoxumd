@@ -21,7 +21,7 @@
 #define RIPPLE_TEST_JTX_PATHS_H_INCLUDED
 
 #include <test/jtx/Env.h>
-#include <ripple/protocol/Issue.h>
+#include <stoxum/protocol/Issue.h>
 #include <type_traits>
 
 namespace ripple {

@@ -18,11 +18,11 @@
 //==============================================================================
 
 #include <BeastConfig.h>
-#include <ripple/json/json_value.h>
-#include <ripple/json/json_reader.h>
-#include <ripple/json/json_writer.h>
-#include <ripple/beast/unit_test.h>
-#include <ripple/beast/type_name.h>
+#include <stoxum/json/json_value.h>
+#include <stoxum/json/json_reader.h>
+#include <stoxum/json/json_writer.h>
+#include <stoxum/beast/unit_test.h>
+#include <stoxum/beast/type_name.h>
 
 #include <algorithm>
 

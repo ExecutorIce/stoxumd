@@ -20,8 +20,8 @@
 #ifndef RIPPLE_TEST_CSF_SCHEDULER_H_INCLUDED
 #define RIPPLE_TEST_CSF_SCHEDULER_H_INCLUDED
 
-#include <ripple/basics/qalloc.h>
-#include <ripple/beast/clock/manual_clock.h>
+#include <stoxum/basics/qalloc.h>
+#include <stoxum/beast/clock/manual_clock.h>
 #include <boost/intrusive/set.hpp>
 #include <type_traits>
 #include <utility>

@@ -23,9 +23,9 @@
 #include <test/jtx/Account.h>
 #include <test/jtx/amount.h>
 #include <test/jtx/tags.h>
-#include <ripple/protocol/Issue.h>
-#include <ripple/protocol/STAmount.h>
-#include <ripple/basics/contract.h>
+#include <stoxum/protocol/Issue.h>
+#include <stoxum/protocol/STAmount.h>
+#include <stoxum/basics/contract.h>
 #include <cstdint>
 #include <ostream>
 #include <string>

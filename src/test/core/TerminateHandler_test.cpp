@@ -18,9 +18,9 @@
 //==============================================================================
 
 #include <BeastConfig.h>
-#include <ripple/core/TerminateHandler.h>
-#include <ripple/beast/core/CurrentThreadName.h>
-#include <ripple/beast/unit_test.h>
+#include <stoxum/core/TerminateHandler.h>
+#include <stoxum/beast/core/CurrentThreadName.h>
+#include <stoxum/beast/unit_test.h>
 
 #include <boost/coroutine/exceptions.hpp>
 #include <exception>

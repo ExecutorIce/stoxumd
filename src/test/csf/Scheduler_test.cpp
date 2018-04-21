@@ -18,7 +18,7 @@
 //==============================================================================
 
 #include <BeastConfig.h>
-#include <ripple/beast/unit_test.h>
+#include <stoxum/beast/unit_test.h>
 #include <test/csf/Scheduler.h>
 #include <set>
 

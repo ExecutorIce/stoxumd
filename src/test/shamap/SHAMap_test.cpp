@@ -18,12 +18,12 @@
 //==============================================================================
 
 #include <BeastConfig.h>
-#include <ripple/shamap/SHAMap.h>
+#include <stoxum/shamap/SHAMap.h>
 #include <test/shamap/common.h>
-#include <ripple/basics/Blob.h>
-#include <ripple/basics/StringUtilities.h>
-#include <ripple/beast/unit_test.h>
-#include <ripple/beast/utility/Journal.h>
+#include <stoxum/basics/Blob.h>
+#include <stoxum/basics/StringUtilities.h>
+#include <stoxum/beast/unit_test.h>
+#include <stoxum/beast/utility/Journal.h>
 
 namespace ripple {
 namespace tests {

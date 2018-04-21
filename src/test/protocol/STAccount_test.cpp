@@ -18,8 +18,8 @@
 //==============================================================================
 
 #include <BeastConfig.h>
-#include <ripple/protocol/STAccount.h>
-#include <ripple/beast/unit_test.h>
+#include <stoxum/protocol/STAccount.h>
+#include <stoxum/beast/unit_test.h>
 
 namespace ripple {
 

@@ -18,12 +18,12 @@
 //==============================================================================
 
 #include <BeastConfig.h>
-#include <ripple/basics/chrono.h>
-#include <ripple/basics/Slice.h>
-#include <ripple/protocol/PublicKey.h>
-#include <ripple/protocol/SecretKey.h>
-#include <ripple/peerfinder/impl/Logic.h>
-#include <ripple/beast/unit_test.h>
+#include <stoxum/basics/chrono.h>
+#include <stoxum/basics/Slice.h>
+#include <stoxum/protocol/PublicKey.h>
+#include <stoxum/protocol/SecretKey.h>
+#include <stoxum/peerfinder/impl/Logic.h>
+#include <stoxum/beast/unit_test.h>
 
 namespace ripple {
 namespace PeerFinder {

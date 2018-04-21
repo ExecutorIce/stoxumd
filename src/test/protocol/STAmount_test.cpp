@@ -18,10 +18,10 @@
 //==============================================================================
 
 #include <BeastConfig.h>
-#include <ripple/basics/Log.h>
-#include <ripple/basics/random.h>
-#include <ripple/protocol/STAmount.h>
-#include <ripple/beast/unit_test.h>
+#include <stoxum/basics/Log.h>
+#include <stoxum/basics/random.h>
+#include <stoxum/protocol/STAmount.h>
+#include <stoxum/beast/unit_test.h>
 
 namespace ripple {
 

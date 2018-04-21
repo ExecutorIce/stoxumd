@@ -16,11 +16,11 @@
 //==============================================================================
 
 #include <BeastConfig.h>
-#include <ripple/protocol/JsonFields.h>
+#include <stoxum/protocol/JsonFields.h>
 #include <test/jtx/WSClient.h>
 #include <test/jtx/JSONRPCClient.h>
 #include <test/jtx.h>
-#include <ripple/beast/unit_test.h>
+#include <stoxum/beast/unit_test.h>
 
 namespace ripple {
 namespace test {

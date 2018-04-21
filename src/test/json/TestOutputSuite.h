@@ -20,8 +20,8 @@
 #ifndef RIPPLE_RPC_TESTOUTPUTSUITE_H_INCLUDED
 #define RIPPLE_RPC_TESTOUTPUTSUITE_H_INCLUDED
 
-#include <ripple/json/Output.h>
-#include <ripple/json/Writer.h>
+#include <stoxum/json/Output.h>
+#include <stoxum/json/Writer.h>
 #include <test/jtx/TestSuite.h>
 
 namespace ripple {

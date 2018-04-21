@@ -20,8 +20,8 @@
 #include <BeastConfig.h>
 #include <test/jtx/jtx_json.h>
 #include <test/jtx/utility.h>
-#include <ripple/json/json_reader.h>
-#include <ripple/basics/contract.h>
+#include <stoxum/json/json_reader.h>
+#include <stoxum/basics/contract.h>
 
 namespace ripple {
 namespace test {

@@ -19,17 +19,17 @@
 
 #include <BeastConfig.h>
 
-#include <ripple/app/misc/AmendmentTable.h>
-#include <ripple/basics/BasicConfig.h>
-#include <ripple/basics/chrono.h>
-#include <ripple/basics/Log.h>
-#include <ripple/core/ConfigSections.h>
-#include <ripple/protocol/Feature.h>
-#include <ripple/protocol/PublicKey.h>
-#include <ripple/protocol/SecretKey.h>
-#include <ripple/protocol/digest.h>
-#include <ripple/protocol/TxFlags.h>
-#include <ripple/beast/unit_test.h>
+#include <stoxum/app/misc/AmendmentTable.h>
+#include <stoxum/basics/BasicConfig.h>
+#include <stoxum/basics/chrono.h>
+#include <stoxum/basics/Log.h>
+#include <stoxum/core/ConfigSections.h>
+#include <stoxum/protocol/Feature.h>
+#include <stoxum/protocol/PublicKey.h>
+#include <stoxum/protocol/SecretKey.h>
+#include <stoxum/protocol/digest.h>
+#include <stoxum/protocol/TxFlags.h>
+#include <stoxum/beast/unit_test.h>
 
 namespace ripple
 {

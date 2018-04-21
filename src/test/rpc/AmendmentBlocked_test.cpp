@@ -18,8 +18,8 @@
 //==============================================================================
 
 #include <test/jtx.h>
-#include <ripple/protocol/JsonFields.h>
-#include <ripple/app/misc/NetworkOPs.h>
+#include <stoxum/protocol/JsonFields.h>
+#include <stoxum/app/misc/NetworkOPs.h>
 #include <test/jtx/WSClient.h>
 
 namespace ripple {

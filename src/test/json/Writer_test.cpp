@@ -18,10 +18,10 @@
 //==============================================================================
 
 #include <BeastConfig.h>
-#include <ripple/json/json_writer.h>
-#include <ripple/json/Writer.h>
+#include <stoxum/json/json_writer.h>
+#include <stoxum/json/Writer.h>
 #include <test/json/TestOutputSuite.h>
-#include <ripple/beast/unit_test.h>
+#include <stoxum/beast/unit_test.h>
 
 namespace Json {
 

@@ -19,8 +19,8 @@
 
 #include <BeastConfig.h>
 #include <test/jtx/quality.h>
-#include <ripple/protocol/SField.h>
-#include <ripple/protocol/Quality.h>
+#include <stoxum/protocol/SField.h>
+#include <stoxum/protocol/Quality.h>
 
 namespace ripple {
 namespace test {

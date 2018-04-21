@@ -18,17 +18,17 @@
 //==============================================================================
 
 #include <BeastConfig.h>
-#include <ripple/crypto/csprng.h>
-#include <ripple/protocol/PublicKey.h>
-#include <ripple/protocol/SecretKey.h>
-#include <ripple/protocol/Seed.h>
-#include <ripple/beast/unit_test.h>
-#include <ripple/beast/utility/rngfill.h>
+#include <stoxum/crypto/csprng.h>
+#include <stoxum/protocol/PublicKey.h>
+#include <stoxum/protocol/SecretKey.h>
+#include <stoxum/protocol/Seed.h>
+#include <stoxum/beast/unit_test.h>
+#include <stoxum/beast/utility/rngfill.h>
 #include <algorithm>
 #include <string>
 #include <vector>
 
-#include <ripple/protocol/impl/secp256k1.h>
+#include <stoxum/protocol/impl/secp256k1.h>
 
 namespace ripple {
 

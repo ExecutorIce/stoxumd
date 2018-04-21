@@ -18,9 +18,9 @@
 //==============================================================================
 
 #include <BeastConfig.h>
-#include <ripple/json/Object.h>
+#include <stoxum/json/Object.h>
 #include <test/json/TestOutputSuite.h>
-#include <ripple/beast/unit_test.h>
+#include <stoxum/beast/unit_test.h>
 
 namespace Json {
 

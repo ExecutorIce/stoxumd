@@ -18,9 +18,9 @@
 //==============================================================================
 
 #include <BeastConfig.h>
-#include <ripple/rpc/Status.h>
-#include <ripple/basics/contract.h>
-#include <ripple/beast/unit_test.h>
+#include <stoxum/rpc/Status.h>
+#include <stoxum/basics/contract.h>
+#include <stoxum/beast/unit_test.h>
 #include <algorithm>
 
 namespace ripple {

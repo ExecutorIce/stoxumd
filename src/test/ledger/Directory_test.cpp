@@ -15,13 +15,13 @@
 */
 //==============================================================================
 
-#include <ripple/beast/xor_shift_engine.h>
-#include <ripple/ledger/BookDirs.h>
-#include <ripple/ledger/Directory.h>
-#include <ripple/ledger/Sandbox.h>
-#include <ripple/protocol/Feature.h>
-#include <ripple/protocol/JsonFields.h>
-#include <ripple/protocol/Protocol.h>
+#include <stoxum/beast/xor_shift_engine.h>
+#include <stoxum/ledger/BookDirs.h>
+#include <stoxum/ledger/Directory.h>
+#include <stoxum/ledger/Sandbox.h>
+#include <stoxum/protocol/Feature.h>
+#include <stoxum/protocol/JsonFields.h>
+#include <stoxum/protocol/Protocol.h>
 #include <test/jtx.h>
 #include <algorithm>
 

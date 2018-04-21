@@ -21,7 +21,7 @@
 #define RIPPLE_TEST_WSCLIENT_H_INCLUDED
 
 #include <test/jtx/AbstractClient.h>
-#include <ripple/core/Config.h>
+#include <stoxum/core/Config.h>
 #include <boost/optional.hpp>
 #include <chrono>
 #include <memory>

@@ -20,16 +20,16 @@
 #include <BeastConfig.h>
 #include <test/jtx/WSClient.h>
 #include <test/jtx.h>
-#include <ripple/json/json_reader.h>
-#include <ripple/json/to_string.h>
-#include <ripple/protocol/JsonFields.h>
-#include <ripple/server/Port.h>
+#include <stoxum/json/json_reader.h>
+#include <stoxum/json/to_string.h>
+#include <stoxum/protocol/JsonFields.h>
+#include <stoxum/server/Port.h>
 #include <beast/core/multi_buffer.hpp>
 #include <beast/websocket.hpp>
 
 #include <condition_variable>
 
-#include <ripple/beast/unit_test.h>
+#include <stoxum/beast/unit_test.h>
 
 namespace ripple {
 namespace test {

@@ -18,8 +18,8 @@
 //==============================================================================
 
 #include <BeastConfig.h>
-#include <ripple/app/tx/impl/OfferStream.h>
-#include <ripple/beast/unit_test.h>
+#include <stoxum/app/tx/impl/OfferStream.h>
+#include <stoxum/beast/unit_test.h>
 
 namespace ripple {
 

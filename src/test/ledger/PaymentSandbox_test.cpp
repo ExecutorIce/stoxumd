@@ -18,12 +18,12 @@
 //==============================================================================
 
 #include <BeastConfig.h>
-#include <ripple/ledger/ApplyViewImpl.h>
-#include <ripple/ledger/PaymentSandbox.h>
+#include <stoxum/ledger/ApplyViewImpl.h>
+#include <stoxum/ledger/PaymentSandbox.h>
 #include <test/jtx/PathSet.h>
-#include <ripple/ledger/View.h>
-#include <ripple/protocol/AmountConversions.h>
-#include <ripple/protocol/Feature.h>
+#include <stoxum/ledger/View.h>
+#include <stoxum/protocol/AmountConversions.h>
+#include <stoxum/protocol/Feature.h>
 
 namespace ripple {
 namespace test {

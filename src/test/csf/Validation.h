@@ -21,7 +21,7 @@
 
 #include <boost/optional.hpp>
 #include <memory>
-#include <ripple/basics/tagged_integer.h>
+#include <stoxum/basics/tagged_integer.h>
 #include <test/csf/ledgers.h>
 #include <utility>
 

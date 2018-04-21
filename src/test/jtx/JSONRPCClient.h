@@ -21,7 +21,7 @@
 #define RIPPLE_TEST_HTTPCLIENT_H_INCLUDED
 
 #include <test/jtx/AbstractClient.h>
-#include <ripple/core/Config.h>
+#include <stoxum/core/Config.h>
 #include <memory>
 
 namespace ripple {

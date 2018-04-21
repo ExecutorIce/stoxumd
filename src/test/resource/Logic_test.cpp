@@ -18,13 +18,13 @@
 //==============================================================================
 
 #include <BeastConfig.h>
-#include <ripple/basics/chrono.h>
-#include <ripple/basics/random.h>
-#include <ripple/beast/unit_test.h>
+#include <stoxum/basics/chrono.h>
+#include <stoxum/basics/random.h>
+#include <stoxum/beast/unit_test.h>
 #include <boost/utility/base_from_member.hpp>
-#include <ripple/resource/Consumer.h>
-#include <ripple/resource/impl/Entry.h>
-#include <ripple/resource/impl/Logic.h>
+#include <stoxum/resource/Consumer.h>
+#include <stoxum/resource/impl/Entry.h>
+#include <stoxum/resource/impl/Logic.h>
 
 
 

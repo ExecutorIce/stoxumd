@@ -18,8 +18,8 @@
 //==============================================================================
 
 #include <BeastConfig.h>
-#include <ripple/protocol/Quality.h>
-#include <ripple/beast/unit_test.h>
+#include <stoxum/protocol/Quality.h>
+#include <stoxum/beast/unit_test.h>
 #include <type_traits>
 
 namespace ripple {

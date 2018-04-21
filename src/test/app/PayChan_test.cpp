@@ -18,12 +18,12 @@
 //==============================================================================
 
 #include <BeastConfig.h>
-#include <ripple/basics/chrono.h>
-#include <ripple/protocol/Feature.h>
-#include <ripple/protocol/Indexes.h>
-#include <ripple/protocol/JsonFields.h>
-#include <ripple/protocol/PayChan.h>
-#include <ripple/protocol/TxFlags.h>
+#include <stoxum/basics/chrono.h>
+#include <stoxum/protocol/Feature.h>
+#include <stoxum/protocol/Indexes.h>
+#include <stoxum/protocol/JsonFields.h>
+#include <stoxum/protocol/PayChan.h>
+#include <stoxum/protocol/TxFlags.h>
 #include <test/jtx.h>
 
 #include <chrono>

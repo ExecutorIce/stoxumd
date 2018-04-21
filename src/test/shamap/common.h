@@ -21,11 +21,11 @@
 #define RIPPLE_SHAMAP_TESTS_COMMON_H_INCLUDED
 
 #include <BeastConfig.h>
-#include <ripple/basics/chrono.h>
-#include <ripple/nodestore/DatabaseShard.h>
-#include <ripple/nodestore/DummyScheduler.h>
-#include <ripple/nodestore/Manager.h>
-#include <ripple/shamap/Family.h>
+#include <stoxum/basics/chrono.h>
+#include <stoxum/nodestore/DatabaseShard.h>
+#include <stoxum/nodestore/DummyScheduler.h>
+#include <stoxum/nodestore/Manager.h>
+#include <stoxum/shamap/Family.h>
 
 namespace ripple {
 namespace tests {

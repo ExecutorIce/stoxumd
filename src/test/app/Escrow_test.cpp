@@ -19,12 +19,12 @@
 
 #include <BeastConfig.h>
 #include <test/jtx.h>
-#include <ripple/app/tx/applySteps.h>
-#include <ripple/ledger/Directory.h>
-#include <ripple/protocol/Feature.h>
-#include <ripple/protocol/Indexes.h>
-#include <ripple/protocol/JsonFields.h>
-#include <ripple/protocol/TxFlags.h>
+#include <stoxum/app/tx/applySteps.h>
+#include <stoxum/ledger/Directory.h>
+#include <stoxum/protocol/Feature.h>
+#include <stoxum/protocol/Indexes.h>
+#include <stoxum/protocol/JsonFields.h>
+#include <stoxum/protocol/TxFlags.h>
 #include <algorithm>
 #include <iterator>
 

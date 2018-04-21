@@ -21,9 +21,9 @@
 #define RIPPLE_TEST_JTX_OWNERS_H_INCLUDED
 
 #include <test/jtx/Env.h>
-#include <ripple/ledger/View.h>
-#include <ripple/protocol/LedgerFormats.h>
-#include <ripple/protocol/UintTypes.h>
+#include <stoxum/ledger/View.h>
+#include <stoxum/protocol/LedgerFormats.h>
+#include <stoxum/protocol/UintTypes.h>
 #include <cstdint>
 
 namespace ripple {

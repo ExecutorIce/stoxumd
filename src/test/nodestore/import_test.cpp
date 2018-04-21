@@ -18,12 +18,12 @@
 //==============================================================================
 
 #include <BeastConfig.h>
-#include <ripple/basics/contract.h>
-#include <ripple/nodestore/impl/codec.h>
-#include <ripple/beast/clock/basic_seconds_clock.h>
-#include <ripple/beast/rfc2616.h>
-#include <ripple/beast/core/LexicalCast.h>
-#include <ripple/beast/unit_test.h>
+#include <stoxum/basics/contract.h>
+#include <stoxum/nodestore/impl/codec.h>
+#include <stoxum/beast/clock/basic_seconds_clock.h>
+#include <stoxum/beast/rfc2616.h>
+#include <stoxum/beast/core/LexicalCast.h>
+#include <stoxum/beast/unit_test.h>
 #include <nudb/create.hpp>
 #include <nudb/detail/format.hpp>
 #include <nudb/xxhasher.hpp>
@@ -35,7 +35,7 @@
 #include <map>
 #include <sstream>
 
-#include <ripple/unity/rocksdb.h>
+#include <stoxum/unity/rocksdb.h>
 
 /*
 

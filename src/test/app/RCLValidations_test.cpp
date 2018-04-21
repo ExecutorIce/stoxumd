@@ -18,12 +18,12 @@
 //==============================================================================
 
 #include <BeastConfig.h>
-#include <ripple/app/consensus/RCLValidations.h>
-#include <ripple/app/ledger/Ledger.h>
-#include <ripple/basics/Log.h>
-#include <ripple/ledger/View.h>
+#include <stoxum/app/consensus/RCLValidations.h>
+#include <stoxum/app/ledger/Ledger.h>
+#include <stoxum/basics/Log.h>
+#include <stoxum/ledger/View.h>
 #include <test/jtx.h>
-#include <ripple/beast/unit_test.h>
+#include <stoxum/beast/unit_test.h>
 
 namespace ripple {
 namespace test {

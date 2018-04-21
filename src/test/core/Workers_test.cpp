@@ -17,8 +17,8 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 */
 //==============================================================================
 
-#include <ripple/core/impl/Workers.h>
-#include <ripple/beast/unit_test.h>
+#include <stoxum/core/impl/Workers.h>
+#include <stoxum/beast/unit_test.h>
 
 namespace ripple {
 

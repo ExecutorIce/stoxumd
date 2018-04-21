@@ -1,7 +1,7 @@
 
 # Ripple protocol buffers
 
-PROTOS = ../../src/ripple_data/protocol/ripple.proto
+PROTOS = ../../src/stoxum_data/protocol/ripple.proto
 PROTOS_DIR = ../../build/proto
 
 # Google Protocol Buffers support
@@ -56,48 +56,48 @@ OTHER_FILES += \
 #   $$files(../../src/beast/modules/beast_basics/diagnostic/*)
 #   $$files(../../src/beast/modules/beast_core/, true)
 
-UI_HEADERS_DIR += ../../src/ripple_basics
+UI_HEADERS_DIR += ../../src/stoxum_basics
 
 # ---------
 # New style
 #
 SOURCES += \
-    ../../src/ripple/beast/ripple_beast.unity.cpp \
-    ../../src/ripple/beast/ripple_beastc.c \
-    ../../src/ripple/common/ripple_common.unity.cpp \
-    ../../src/ripple/http/ripple_http.unity.cpp \
-    ../../src/ripple/json/ripple_json.unity.cpp \
-    ../../src/ripple/peerfinder/ripple_peerfinder.unity.cpp \
-    ../../src/ripple/radmap/ripple_radmap.unity.cpp \
-    ../../src/ripple/resource/ripple_resource.unity.cpp \
-    ../../src/ripple/sitefiles/ripple_sitefiles.unity.cpp \
-    ../../src/ripple/sslutil/ripple_sslutil.unity.cpp \
-    ../../src/ripple/testoverlay/ripple_testoverlay.unity.cpp \
-    ../../src/ripple/types/ripple_types.unity.cpp \
-    ../../src/ripple/validators/ripple_validators.unity.cpp
+    ../../src/stoxum/beast/ripple_beast.unity.cpp \
+    ../../src/stoxum/beast/ripple_beastc.c \
+    ../../src/stoxum/common/ripple_common.unity.cpp \
+    ../../src/stoxum/http/ripple_http.unity.cpp \
+    ../../src/stoxum/json/ripple_json.unity.cpp \
+    ../../src/stoxum/peerfinder/ripple_peerfinder.unity.cpp \
+    ../../src/stoxum/radmap/ripple_radmap.unity.cpp \
+    ../../src/stoxum/resource/ripple_resource.unity.cpp \
+    ../../src/stoxum/sitefiles/ripple_sitefiles.unity.cpp \
+    ../../src/stoxum/sslutil/ripple_sslutil.unity.cpp \
+    ../../src/stoxum/testoverlay/ripple_testoverlay.unity.cpp \
+    ../../src/stoxum/types/ripple_types.unity.cpp \
+    ../../src/stoxum/validators/ripple_validators.unity.cpp
 
 # ---------
 # Old style
 #
 SOURCES += \
-    ../../src/ripple_app/ripple_app.unity.cpp \
-    ../../src/ripple_app/ripple_app_pt1.unity.cpp \
-    ../../src/ripple_app/ripple_app_pt2.unity.cpp \
-    ../../src/ripple_app/ripple_app_pt3.unity.cpp \
-    ../../src/ripple_app/ripple_app_pt4.unity.cpp \
-    ../../src/ripple_app/ripple_app_pt5.unity.cpp \
-    ../../src/ripple_app/ripple_app_pt6.unity.cpp \
-    ../../src/ripple_app/ripple_app_pt7.unity.cpp \
-    ../../src/ripple_app/ripple_app_pt8.unity.cpp \
-    ../../src/ripple_basics/ripple_basics.unity.cpp \
-    ../../src/ripple_core/ripple_core.unity.cpp \
-    ../../src/ripple_data/ripple_data.unity.cpp \
-    ../../src/ripple_hyperleveldb/ripple_hyperleveldb.unity.cpp \
-    ../../src/ripple_leveldb/ripple_leveldb.unity.cpp \
-    ../../src/ripple_net/ripple_net.unity.cpp \
-    ../../src/ripple_overlay/ripple_overlay.unity.cpp \
-    ../../src/ripple_rpc/ripple_rpc.unity.cpp \
-    ../../src/ripple_websocket/ripple_websocket.unity.cpp
+    ../../src/stoxum_app/ripple_app.unity.cpp \
+    ../../src/stoxum_app/ripple_app_pt1.unity.cpp \
+    ../../src/stoxum_app/ripple_app_pt2.unity.cpp \
+    ../../src/stoxum_app/ripple_app_pt3.unity.cpp \
+    ../../src/stoxum_app/ripple_app_pt4.unity.cpp \
+    ../../src/stoxum_app/ripple_app_pt5.unity.cpp \
+    ../../src/stoxum_app/ripple_app_pt6.unity.cpp \
+    ../../src/stoxum_app/ripple_app_pt7.unity.cpp \
+    ../../src/stoxum_app/ripple_app_pt8.unity.cpp \
+    ../../src/stoxum_basics/ripple_basics.unity.cpp \
+    ../../src/stoxum_core/ripple_core.unity.cpp \
+    ../../src/stoxum_data/ripple_data.unity.cpp \
+    ../../src/stoxum_hyperleveldb/ripple_hyperleveldb.unity.cpp \
+    ../../src/stoxum_leveldb/ripple_leveldb.unity.cpp \
+    ../../src/stoxum_net/ripple_net.unity.cpp \
+    ../../src/stoxum_overlay/ripple_overlay.unity.cpp \
+    ../../src/stoxum_rpc/ripple_rpc.unity.cpp \
+    ../../src/stoxum_websocket/ripple_websocket.unity.cpp
 
 LIBS += \
     -lboost_date_time-mt\

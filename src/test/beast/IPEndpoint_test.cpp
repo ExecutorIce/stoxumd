@@ -23,10 +23,10 @@
 #include "../../BeastConfig.h"
 #endif
 
-#include <ripple/beast/net/IPEndpoint.h>
-#include <ripple/beast/net/detail/Parse.h>
+#include <stoxum/beast/net/IPEndpoint.h>
+#include <stoxum/beast/net/detail/Parse.h>
 
-#include <ripple/beast/unit_test.h>
+#include <stoxum/beast/unit_test.h>
 
 #include <typeinfo>
 

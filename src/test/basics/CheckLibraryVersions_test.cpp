@@ -18,9 +18,9 @@
 //==============================================================================
 
 #include <BeastConfig.h>
-#include <ripple/basics/CheckLibraryVersions.h>
-#include <ripple/basics/impl/CheckLibraryVersionsImpl.h>
-#include <ripple/beast/unit_test.h>
+#include <stoxum/basics/CheckLibraryVersions.h>
+#include <stoxum/basics/impl/CheckLibraryVersionsImpl.h>
+#include <stoxum/beast/unit_test.h>
 
 namespace ripple {
 namespace version {

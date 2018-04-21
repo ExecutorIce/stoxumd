@@ -19,12 +19,12 @@
 #ifndef RIPPLE_TEST_CSF_LEDGERS_H_INCLUDED
 #define RIPPLE_TEST_CSF_LEDGERS_H_INCLUDED
 
-#include <ripple/basics/UnorderedContainers.h>
-#include <ripple/basics/chrono.h>
-#include <ripple/consensus/LedgerTiming.h>
-#include <ripple/basics/tagged_integer.h>
-#include <ripple/consensus/LedgerTiming.h>
-#include <ripple/json/json_value.h>
+#include <stoxum/basics/UnorderedContainers.h>
+#include <stoxum/basics/chrono.h>
+#include <stoxum/consensus/LedgerTiming.h>
+#include <stoxum/basics/tagged_integer.h>
+#include <stoxum/consensus/LedgerTiming.h>
+#include <stoxum/json/json_value.h>
 #include <test/csf/Tx.h>
 #include <boost/bimap/bimap.hpp>
 #include <boost/optional.hpp>

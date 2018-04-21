@@ -17,15 +17,15 @@
 */
 //==============================================================================
 
-#include <ripple/protocol/Feature.h>
-#include <ripple/protocol/JsonFields.h>
+#include <stoxum/protocol/Feature.h>
+#include <stoxum/protocol/JsonFields.h>
 #include <test/jtx.h>
 #include <boost/algorithm/string/predicate.hpp>
-#include <ripple/beast/utility/temp_dir.h>
-#include <ripple/resource/ResourceManager.h>
-#include <ripple/resource/impl/Entry.h>
-#include <ripple/resource/impl/Tuning.h>
-#include <ripple/rpc/impl/Tuning.h>
+#include <stoxum/beast/utility/temp_dir.h>
+#include <stoxum/resource/ResourceManager.h>
+#include <stoxum/resource/impl/Entry.h>
+#include <stoxum/resource/impl/Tuning.h>
+#include <stoxum/rpc/impl/Tuning.h>
 
 namespace ripple {
 

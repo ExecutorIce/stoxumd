@@ -18,9 +18,9 @@
 //==============================================================================
 
 #include <BeastConfig.h>
-#include <ripple/protocol/BuildInfo.h>
-#include <ripple/beast/core/SemanticVersion.h>
-#include <ripple/beast/unit_test.h>
+#include <stoxum/protocol/BuildInfo.h>
+#include <stoxum/beast/core/SemanticVersion.h>
+#include <stoxum/beast/unit_test.h>
 
 namespace ripple {
 

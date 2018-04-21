@@ -21,9 +21,9 @@
 #include <test/jtx.h>
 #include <test/jtx/WSClient.h>
 #include <test/jtx/PathSet.h>
-#include <ripple/protocol/Feature.h>
-#include <ripple/protocol/JsonFields.h>
-#include <ripple/protocol/Quality.h>
+#include <stoxum/protocol/Feature.h>
+#include <stoxum/protocol/JsonFields.h>
+#include <stoxum/protocol/Quality.h>
 
 namespace ripple {
 namespace test {

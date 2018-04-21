@@ -16,8 +16,8 @@ ACTION  OF  CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 */
 //==============================================================================
-#include <ripple/beast/unit_test.h>
-#include <ripple/beast/core/SemanticVersion.h>
+#include <stoxum/beast/unit_test.h>
+#include <stoxum/beast/core/SemanticVersion.h>
 namespace beast {
 
 class SemanticVersion_test : public unit_test::suite

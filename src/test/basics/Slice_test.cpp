@@ -18,8 +18,8 @@
 //==============================================================================
 
 #include <BeastConfig.h>
-#include <ripple/basics/Slice.h>
-#include <ripple/beast/unit_test.h>
+#include <stoxum/basics/Slice.h>
+#include <stoxum/beast/unit_test.h>
 #include <array>
 #include <cstdint>
 

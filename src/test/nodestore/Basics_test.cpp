@@ -19,10 +19,10 @@
 
 #include <BeastConfig.h>
 #include <test/nodestore/TestBase.h>
-#include <ripple/nodestore/DummyScheduler.h>
-#include <ripple/nodestore/Manager.h>
-#include <ripple/nodestore/impl/DecodedBlob.h>
-#include <ripple/nodestore/impl/EncodedBlob.h>
+#include <stoxum/nodestore/DummyScheduler.h>
+#include <stoxum/nodestore/Manager.h>
+#include <stoxum/nodestore/impl/DecodedBlob.h>
+#include <stoxum/nodestore/impl/EncodedBlob.h>
 
 namespace ripple {
 namespace NodeStore {

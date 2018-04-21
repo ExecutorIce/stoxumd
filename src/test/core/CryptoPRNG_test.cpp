@@ -18,8 +18,8 @@
 //==============================================================================
 
 #include <test/jtx/Env.h>
-#include <ripple/beast/utility/temp_dir.h>
-#include <ripple/crypto/csprng.h>
+#include <stoxum/beast/utility/temp_dir.h>
+#include <stoxum/crypto/csprng.h>
 #include <boost/filesystem.hpp>
 #include <fstream>
 #include <streambuf>

@@ -16,8 +16,8 @@ ACTION  OF  CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 */
 //==============================================================================
-#include <ripple/beast/unit_test.h>
-#include <ripple/beast/utility/PropertyStream.h>
+#include <stoxum/beast/unit_test.h>
+#include <stoxum/beast/utility/PropertyStream.h>
 namespace beast {
 
 class PropertyStream_test : public unit_test::suite

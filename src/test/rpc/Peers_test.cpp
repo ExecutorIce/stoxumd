@@ -19,9 +19,9 @@
 
 #include <test/jtx.h>
 #include <test/jtx/Env.h>
-#include <ripple/protocol/JsonFields.h>
-#include <ripple/overlay/Cluster.h>
-#include <ripple/overlay/Overlay.h>
+#include <stoxum/protocol/JsonFields.h>
+#include <stoxum/overlay/Cluster.h>
+#include <stoxum/overlay/Overlay.h>
 #include <unordered_map>
 
 namespace ripple {

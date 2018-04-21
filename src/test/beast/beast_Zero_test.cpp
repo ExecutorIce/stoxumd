@@ -17,9 +17,9 @@
 */
 //==============================================================================
 
-#include <ripple/beast/utility/Zero.h>
+#include <stoxum/beast/utility/Zero.h>
 
-#include <ripple/beast/unit_test.h>
+#include <stoxum/beast/unit_test.h>
 
 namespace beast {
 

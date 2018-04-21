@@ -17,8 +17,8 @@
 
 #include <BeastConfig.h>
 #include <test/jtx.h>
-#include <ripple/ledger/BookDirs.h>
-#include <ripple/protocol/Feature.h>
+#include <stoxum/ledger/BookDirs.h>
+#include <stoxum/protocol/Feature.h>
 
 namespace ripple {
 namespace test {

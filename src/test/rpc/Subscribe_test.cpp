@@ -16,14 +16,14 @@
 //==============================================================================
 
 #include <BeastConfig.h>
-#include <ripple/app/misc/LoadFeeTrack.h>
-#include <ripple/app/misc/NetworkOPs.h>
-#include <ripple/core/ConfigSections.h>
-#include <ripple/protocol/JsonFields.h>
+#include <stoxum/app/misc/LoadFeeTrack.h>
+#include <stoxum/app/misc/NetworkOPs.h>
+#include <stoxum/core/ConfigSections.h>
+#include <stoxum/protocol/JsonFields.h>
 #include <test/jtx/WSClient.h>
 #include <test/jtx/envconfig.h>
 #include <test/jtx.h>
-#include <ripple/beast/unit_test.h>
+#include <stoxum/beast/unit_test.h>
 
 namespace ripple {
 namespace test {

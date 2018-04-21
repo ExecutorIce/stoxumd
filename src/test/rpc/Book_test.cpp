@@ -16,12 +16,12 @@
 //==============================================================================
 
 #include <BeastConfig.h>
-#include <ripple/protocol/JsonFields.h>
-#include <ripple/protocol/Indexes.h>
+#include <stoxum/protocol/JsonFields.h>
+#include <stoxum/protocol/Indexes.h>
 #include <test/jtx/WSClient.h>
 #include <test/jtx.h>
-#include <ripple/beast/unit_test.h>
-#include <ripple/rpc/impl/Tuning.h>
+#include <stoxum/beast/unit_test.h>
+#include <stoxum/rpc/impl/Tuning.h>
 
 namespace ripple {
 namespace test {

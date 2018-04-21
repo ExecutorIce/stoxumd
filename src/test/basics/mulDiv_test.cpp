@@ -18,8 +18,8 @@
 //==============================================================================
 
 #include <BeastConfig.h>
-#include <ripple/basics/mulDiv.h>
-#include <ripple/beast/unit_test.h>
+#include <stoxum/basics/mulDiv.h>
+#include <stoxum/beast/unit_test.h>
 
 namespace ripple {
 namespace test {

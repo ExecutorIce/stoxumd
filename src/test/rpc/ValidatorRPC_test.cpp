@@ -18,13 +18,13 @@
 //==============================================================================
 
 #include <BeastConfig.h>
-#include <ripple/app/main/BasicApp.h>
-#include <ripple/app/misc/ValidatorSite.h>
-#include <ripple/beast/unit_test.h>
-#include <ripple/core/ConfigSections.h>
-#include <ripple/json/json_value.h>
-#include <ripple/protocol/JsonFields.h>
-#include <ripple/protocol/Sign.h>
+#include <stoxum/app/main/BasicApp.h>
+#include <stoxum/app/misc/ValidatorSite.h>
+#include <stoxum/beast/unit_test.h>
+#include <stoxum/core/ConfigSections.h>
+#include <stoxum/json/json_value.h>
+#include <stoxum/protocol/JsonFields.h>
+#include <stoxum/protocol/Sign.h>
 #include <beast/core/detail/base64.hpp>
 #include <test/jtx.h>
 #include <test/jtx/TrustedPublisherServer.h>

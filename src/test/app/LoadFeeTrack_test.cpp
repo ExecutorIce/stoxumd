@@ -18,10 +18,10 @@
 //==============================================================================
 
 #include <BeastConfig.h>
-#include <ripple/app/misc/LoadFeeTrack.h>
-#include <ripple/core/Config.h>
-#include <ripple/beast/unit_test.h>
-#include <ripple/ledger/ReadView.h>
+#include <stoxum/app/misc/LoadFeeTrack.h>
+#include <stoxum/core/Config.h>
+#include <stoxum/beast/unit_test.h>
+#include <stoxum/ledger/ReadView.h>
 
 namespace ripple {
 

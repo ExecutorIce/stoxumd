@@ -18,15 +18,15 @@
 //==============================================================================
 
 #include <BeastConfig.h>
-#include <ripple/shamap/SHAMap.h>
+#include <stoxum/shamap/SHAMap.h>
 #include <test/shamap/common.h>
-#include <ripple/protocol/digest.h>
-#include <ripple/basics/contract.h>
-#include <ripple/basics/random.h>
-#include <ripple/basics/StringUtilities.h>
-#include <ripple/basics/UnorderedContainers.h>
-#include <ripple/beast/xor_shift_engine.h>
-#include <ripple/beast/unit_test.h>
+#include <stoxum/protocol/digest.h>
+#include <stoxum/basics/contract.h>
+#include <stoxum/basics/random.h>
+#include <stoxum/basics/StringUtilities.h>
+#include <stoxum/basics/UnorderedContainers.h>
+#include <stoxum/beast/xor_shift_engine.h>
+#include <stoxum/beast/unit_test.h>
 #include <functional>
 #include <stdexcept>
 

@@ -19,7 +19,7 @@
 
 #include <BeastConfig.h>
 #include <test/jtx.h>
-#include <ripple/beast/unit_test.h>
+#include <stoxum/beast/unit_test.h>
 #include <algorithm>
 
 namespace ripple {

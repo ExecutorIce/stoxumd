@@ -179,13 +179,13 @@ set(soci_extra_includes
 
 # Unity sources
 prepend(beast_unity_srcs
-src/ripple/beast/unity/
+src/stoxum/beast/unity/
 beast_insight_unity.cpp
 beast_net_unity.cpp
 beast_utility_unity.cpp)
 
 prepend(ripple_unity_srcs
-src/ripple/unity/
+src/stoxum/unity/
 app_consensus.cpp
 app_ledger.cpp
 app_ledger_impl.cpp
@@ -244,23 +244,23 @@ add_with_props(rippled_src_unity src/test/unity/nodestore_test_unity.cpp
 -I"${CMAKE_SOURCE_DIR}/"src/snappy/config
 ${rocks_db_system_header})
 
-add_with_props(rippled_src_unity src/ripple/unity/nodestore.cpp
+add_with_props(rippled_src_unity src/stoxum/unity/nodestore.cpp
 -I"${CMAKE_SOURCE_DIR}/"src/rocksdb2/include
 -I"${CMAKE_SOURCE_DIR}/"src/snappy/snappy
 -I"${CMAKE_SOURCE_DIR}/"src/snappy/config
 ${rocks_db_system_header})
 
-add_with_props(rippled_src_unity src/ripple/unity/soci_ripple.cpp ${soci_extra_includes})
+add_with_props(rippled_src_unity src/stoxum/unity/soci_ripple.cpp ${soci_extra_includes})
 
 list(APPEND ripple_unity_srcs ${beast_unity_srcs} ${test_unity_srcs}
-src/ripple/unity/nodestore.cpp
-src/ripple/unity/soci_ripple.cpp
+src/stoxum/unity/nodestore.cpp
+src/stoxum/unity/soci_ripple.cpp
 src/test/unity/nodestore_test_unity.cpp)
 
 ############################################################
 
 # Non-unity sources
-file(GLOB_RECURSE core_srcs src/ripple/core/*.cpp)
+file(GLOB_RECURSE core_srcs src/stoxum/core/*.cpp)
 add_with_props(rippled_src_nonunity "${core_srcs}"
     -I"${CMAKE_SOURCE_DIR}/"src/soci/src/core
     -I"${CMAKE_SOURCE_DIR}/"src/sqlite)
@@ -288,12 +288,12 @@ foreach(curdir
         rpc
         server
         shamap)
-    file(GLOB_RECURSE cursrcs src/ripple/${curdir}/*.cpp)
+    file(GLOB_RECURSE cursrcs src/stoxum/${curdir}/*.cpp)
     list(APPEND rippled_src_nonunity "${cursrcs}")
     list(APPEND non_unity_srcs "${cursrcs}")
 endforeach()
 
-file(GLOB_RECURSE nodestore_srcs src/ripple/nodestore/*.cpp
+file(GLOB_RECURSE nodestore_srcs src/stoxum/nodestore/*.cpp
     src/test/nodestore/*.cpp)
 
 add_with_props(rippled_src_nonunity "${nodestore_srcs}"
@@ -351,7 +351,7 @@ if(WIN32 OR is_xcode)
             resource
             validators
             websocket)
-        file(GLOB_RECURSE cursrcs src/ripple/${curdir}/*.cpp)
+        file(GLOB_RECURSE cursrcs src/stoxum/${curdir}/*.cpp)
         list(APPEND rippled_headers "${cursrcs}")
     endforeach()
     list(APPEND rippled_src_nonunity "${rippled_headers}")
@@ -389,7 +389,7 @@ endif()
 
 ############################################################
 
-add_with_props(rippled_src_all src/ripple/unity/soci.cpp
+add_with_props(rippled_src_all src/stoxum/unity/soci.cpp
   ${soci_extra_includes})
 
 if (NOT is_msvc)
@@ -398,18 +398,18 @@ else()
   unset(no_unused_w)
 endif()
 
-add_with_props(rippled_src_all src/ripple/unity/secp256k1.cpp
+add_with_props(rippled_src_all src/stoxum/unity/secp256k1.cpp
   -I"${CMAKE_SOURCE_DIR}/"src/secp256k1
   ${no_unused_w}
   )
 
 foreach(cursrc
-    src/ripple/beast/unity/beast_hash_unity.cpp
-    src/ripple/unity/beast.cpp
-    src/ripple/unity/lz4.c
-    src/ripple/unity/protobuf.cpp
-    src/ripple/unity/ripple.proto.cpp
-    src/ripple/unity/resource.cpp)
+    src/stoxum/beast/unity/beast_hash_unity.cpp
+    src/stoxum/unity/beast.cpp
+    src/stoxum/unity/lz4.c
+    src/stoxum/unity/protobuf.cpp
+    src/stoxum/unity/ripple.proto.cpp
+    src/stoxum/unity/resource.cpp)
 
   add_with_props(rippled_src_all ${cursrc}
     ${rocks_db_system_header}
@@ -426,7 +426,7 @@ endif()
 add_with_props(rippled_src_all src/sqlite/sqlite_unity.c
   ${extra_props})
 
-add_with_props(rippled_src_all src/ripple/unity/ed25519_donna.c
+add_with_props(rippled_src_all src/stoxum/unity/ed25519_donna.c
   -I"${CMAKE_SOURCE_DIR}/"src/ed25519-donna)
 
 if (is_gcc)
@@ -435,7 +435,7 @@ else()
   unset(no_init_w)
 endif()
 
-add_with_props(rippled_src_all src/ripple/unity/rocksdb.cpp
+add_with_props(rippled_src_all src/stoxum/unity/rocksdb.cpp
   -I"${CMAKE_SOURCE_DIR}/"src/rocksdb2
   -I"${CMAKE_SOURCE_DIR}/"src/rocksdb2/include
   -I"${CMAKE_SOURCE_DIR}/"src/snappy/snappy
@@ -446,13 +446,13 @@ if (NOT is_msvc)
   set(no_unused_w -Wno-unused-function)
 endif()
 
-add_with_props(rippled_src_all src/ripple/unity/snappy.cpp
+add_with_props(rippled_src_all src/stoxum/unity/snappy.cpp
   -I"${CMAKE_SOURCE_DIR}/"src/snappy/snappy
   -I"${CMAKE_SOURCE_DIR}/"src/snappy/config
   ${no_unused_w})
 
 if (APPLE AND is_clang)
-  list(APPEND rippled_src_all src/ripple/unity/beastobjc.mm)
+  list(APPEND rippled_src_all src/stoxum/unity/beastobjc.mm)
 endif()
 
 list(APPEND rippled_src_unity "${rippled_src_all}")

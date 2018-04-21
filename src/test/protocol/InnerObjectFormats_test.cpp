@@ -18,12 +18,12 @@
 //==============================================================================
 
 #include <BeastConfig.h>
-#include <ripple/basics/contract.h>
-#include <ripple/protocol/InnerObjectFormats.h>
-#include <ripple/protocol/ErrorCodes.h>          // RPC::containsError
-#include <ripple/json/json_reader.h>             // Json::Reader
-#include <ripple/protocol/STParsedJSON.h>        // STParsedJSONObject
-#include <ripple/beast/unit_test.h>
+#include <stoxum/basics/contract.h>
+#include <stoxum/protocol/InnerObjectFormats.h>
+#include <stoxum/protocol/ErrorCodes.h>          // RPC::containsError
+#include <stoxum/json/json_reader.h>             // Json::Reader
+#include <stoxum/protocol/STParsedJSON.h>        // STParsedJSONObject
+#include <stoxum/beast/unit_test.h>
 #include <test/jtx.h>
 
 namespace ripple {

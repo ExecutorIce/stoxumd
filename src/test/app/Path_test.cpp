@@ -18,20 +18,20 @@
 //==============================================================================
 
 #include <BeastConfig.h>
-#include <ripple/app/paths/AccountCurrencies.h>
-#include <ripple/basics/contract.h>
-#include <ripple/core/JobQueue.h>
-#include <ripple/json/json_reader.h>
-#include <ripple/json/to_string.h>
-#include <ripple/protocol/JsonFields.h>
-#include <ripple/protocol/STParsedJSON.h>
-#include <ripple/protocol/TxFlags.h>
-#include <ripple/resource/Fees.h>
-#include <ripple/rpc/Context.h>
-#include <ripple/rpc/impl/Tuning.h>
-#include <ripple/rpc/RPCHandler.h>
+#include <stoxum/app/paths/AccountCurrencies.h>
+#include <stoxum/basics/contract.h>
+#include <stoxum/core/JobQueue.h>
+#include <stoxum/json/json_reader.h>
+#include <stoxum/json/to_string.h>
+#include <stoxum/protocol/JsonFields.h>
+#include <stoxum/protocol/STParsedJSON.h>
+#include <stoxum/protocol/TxFlags.h>
+#include <stoxum/resource/Fees.h>
+#include <stoxum/rpc/Context.h>
+#include <stoxum/rpc/impl/Tuning.h>
+#include <stoxum/rpc/RPCHandler.h>
 #include <test/jtx.h>
-#include <ripple/beast/unit_test.h>
+#include <stoxum/beast/unit_test.h>
 #include <chrono>
 #include <condition_variable>
 #include <mutex>

@@ -526,13 +526,13 @@ macro(use_protobuf)
   endif()
   include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
-  file(GLOB ripple_proto src/ripple/proto/*.proto)
+  file(GLOB ripple_proto src/stoxum/proto/*.proto)
   PROTOBUF_GENERATE_CPP(PROTO_SRCS PROTO_HDRS ${ripple_proto})
 
   if (WIN32)
     include_directories(src/protobuf/src
       src/protobuf/vsprojects
-      ${CMAKE_CURRENT_BINARY_DIR}/src/ripple/proto)
+      ${CMAKE_CURRENT_BINARY_DIR}/src/stoxum/proto)
   endif()
 
 endmacro()

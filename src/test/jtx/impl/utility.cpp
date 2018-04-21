@@ -19,13 +19,13 @@
 
 #include <BeastConfig.h>
 #include <test/jtx/utility.h>
-#include <ripple/protocol/ErrorCodes.h>
-#include <ripple/protocol/HashPrefix.h>
-#include <ripple/protocol/Indexes.h>
-#include <ripple/protocol/JsonFields.h>
-#include <ripple/protocol/STParsedJSON.h>
-#include <ripple/protocol/types.h>
-#include <ripple/basics/contract.h>
+#include <stoxum/protocol/ErrorCodes.h>
+#include <stoxum/protocol/HashPrefix.h>
+#include <stoxum/protocol/Indexes.h>
+#include <stoxum/protocol/JsonFields.h>
+#include <stoxum/protocol/STParsedJSON.h>
+#include <stoxum/protocol/types.h>
+#include <stoxum/basics/contract.h>
 #include <cstring>
 
 namespace ripple {

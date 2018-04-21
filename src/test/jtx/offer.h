@@ -21,8 +21,8 @@
 #define RIPPLE_TEST_JTX_OFFER_H_INCLUDED
 
 #include <test/jtx/Account.h>
-#include <ripple/json/json_value.h>
-#include <ripple/protocol/STAmount.h>
+#include <stoxum/json/json_value.h>
+#include <stoxum/protocol/STAmount.h>
 
 namespace ripple {
 namespace test {

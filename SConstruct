@@ -127,8 +127,8 @@ if (not platform.machine().endswith('64')):
     print('Warning: Detected {} architecture. Stoxumd requires a 64-bit OS.'.format(
           platform.machine()));
 
-sys.path.append(os.path.join('src', 'ripple', 'beast', 'site_scons'))
-sys.path.append(os.path.join('src', 'ripple', 'site_scons'))
+sys.path.append(os.path.join('src', 'stoxum', 'beast', 'site_scons'))
+sys.path.append(os.path.join('src', 'stoxum', 'site_scons'))
 
 import Beast
 import scons_to_ninja
@@ -156,7 +156,7 @@ def parse_time(t):
     else:
         return time.strptime(t, '%a %b %d %H:%M:%S %Z %Y')
 
-UNITY_BUILD_DIRECTORY = 'src/ripple/unity/'
+UNITY_BUILD_DIRECTORY = 'src/stoxum/unity/'
 
 def memoize(function):
   memo = {}
@@ -798,7 +798,7 @@ root_dir = Dir('#').srcnode().get_abspath() # Path to this SConstruct file
 build_dir = os.path.join('build')
 
 base = Environment(
-    toolpath=[os.path.join ('src', 'ripple', 'beast', 'site_scons', 'site_tools')],
+    toolpath=[os.path.join ('src', 'stoxum', 'beast', 'site_scons', 'site_tools')],
     tools=['default', 'Protoc', 'VSProject'],
     ENV=os.environ,
     TARGET_ARCH='x86_64')
@@ -846,7 +846,7 @@ default_variant = 'release'
 default_target = None
 
 for source in [
-    'src/ripple/proto/ripple.proto',
+    'src/stoxum/proto/ripple.proto',
     ]:
     base.Protoc([],
         source,
@@ -897,11 +897,11 @@ def get_soci_sources(style):
         'src/soci/include/private',
         'src/sqlite', ]
     append_sources(result,
-                   'src/ripple/unity/soci.cpp',
+                   'src/stoxum/unity/soci.cpp',
                    CPPPATH=cpp_path)
     if style == 'unity':
         append_sources(result,
-                       'src/ripple/unity/soci_ripple.cpp',
+                       'src/stoxum/unity/soci_ripple.cpp',
                        CPPPATH=cpp_path)
     return result
 
@@ -929,7 +929,7 @@ def get_common_sources(toolchain):
         warning_flags = {'CCFLAGS': ['-Wno-unused-function']}
     append_sources(
         result,
-        'src/ripple/unity/secp256k1.cpp',
+        'src/stoxum/unity/secp256k1.cpp',
         CPPPATH=['src/secp256k1'],
         **warning_flags)
     return result
@@ -938,31 +938,31 @@ def get_classic_sources(toolchain):
     result = []
     append_sources(
         result,
-        *list_sources('src/ripple/core', '.cpp'),
+        *list_sources('src/stoxum/core', '.cpp'),
         CPPPATH=[
             'src/soci/src/core',
             'src/sqlite']
     )
-    append_sources(result, *list_sources('src/ripple/beast/clock', '.cpp'))
-    append_sources(result, *list_sources('src/ripple/beast/container', '.cpp'))
-    append_sources(result, *list_sources('src/ripple/beast/insight', '.cpp'))
-    append_sources(result, *list_sources('src/ripple/beast/net', '.cpp'))
-    append_sources(result, *list_sources('src/ripple/beast/utility', '.cpp'))
-    append_sources(result, *list_sources('src/ripple/app', '.cpp'))
-    append_sources(result, *list_sources('src/ripple/basics', '.cpp'))
-    append_sources(result, *list_sources('src/ripple/conditions', '.cpp'))
-    append_sources(result, *list_sources('src/ripple/crypto', '.cpp'))
-    append_sources(result, *list_sources('src/ripple/consensus', '.cpp'))
-    append_sources(result, *list_sources('src/ripple/json', '.cpp'))
-    append_sources(result, *list_sources('src/ripple/ledger', '.cpp'))
-    append_sources(result, *list_sources('src/ripple/legacy', '.cpp'))
-    append_sources(result, *list_sources('src/ripple/net', '.cpp'))
-    append_sources(result, *list_sources('src/ripple/overlay', '.cpp'))
-    append_sources(result, *list_sources('src/ripple/peerfinder', '.cpp'))
-    append_sources(result, *list_sources('src/ripple/protocol', '.cpp'))
-    append_sources(result, *list_sources('src/ripple/rpc', '.cpp'))
-    append_sources(result, *list_sources('src/ripple/shamap', '.cpp'))
-    append_sources(result, *list_sources('src/ripple/server', '.cpp'))
+    append_sources(result, *list_sources('src/stoxum/beast/clock', '.cpp'))
+    append_sources(result, *list_sources('src/stoxum/beast/container', '.cpp'))
+    append_sources(result, *list_sources('src/stoxum/beast/insight', '.cpp'))
+    append_sources(result, *list_sources('src/stoxum/beast/net', '.cpp'))
+    append_sources(result, *list_sources('src/stoxum/beast/utility', '.cpp'))
+    append_sources(result, *list_sources('src/stoxum/app', '.cpp'))
+    append_sources(result, *list_sources('src/stoxum/basics', '.cpp'))
+    append_sources(result, *list_sources('src/stoxum/conditions', '.cpp'))
+    append_sources(result, *list_sources('src/stoxum/crypto', '.cpp'))
+    append_sources(result, *list_sources('src/stoxum/consensus', '.cpp'))
+    append_sources(result, *list_sources('src/stoxum/json', '.cpp'))
+    append_sources(result, *list_sources('src/stoxum/ledger', '.cpp'))
+    append_sources(result, *list_sources('src/stoxum/legacy', '.cpp'))
+    append_sources(result, *list_sources('src/stoxum/net', '.cpp'))
+    append_sources(result, *list_sources('src/stoxum/overlay', '.cpp'))
+    append_sources(result, *list_sources('src/stoxum/peerfinder', '.cpp'))
+    append_sources(result, *list_sources('src/stoxum/protocol', '.cpp'))
+    append_sources(result, *list_sources('src/stoxum/rpc', '.cpp'))
+    append_sources(result, *list_sources('src/stoxum/shamap', '.cpp'))
+    append_sources(result, *list_sources('src/stoxum/server', '.cpp'))
     append_sources(result, *list_sources('src/test/app', '.cpp'))
     append_sources(result, *list_sources('src/test/basics', '.cpp'))
     append_sources(result, *list_sources('src/test/beast', '.cpp'))
@@ -990,7 +990,7 @@ def get_classic_sources(toolchain):
 
     append_sources(
         result,
-        *(list_sources('src/ripple/nodestore', '.cpp') + list_sources('src/test/nodestore', '.cpp')),
+        *(list_sources('src/stoxum/nodestore', '.cpp') + list_sources('src/test/nodestore', '.cpp')),
         CPPPATH=[
             'src/rocksdb2/include',
             'src/snappy/snappy',
@@ -1007,34 +1007,34 @@ def get_unity_sources(toolchain):
     result = []
     append_sources(
         result,
-        'src/ripple/beast/unity/beast_insight_unity.cpp',
-        'src/ripple/beast/unity/beast_net_unity.cpp',
-        'src/ripple/beast/unity/beast_utility_unity.cpp',
-        'src/ripple/unity/app_consensus.cpp',
-        'src/ripple/unity/app_ledger.cpp',
-        'src/ripple/unity/app_ledger_impl.cpp',
-        'src/ripple/unity/app_main1.cpp',
-        'src/ripple/unity/app_main2.cpp',
-        'src/ripple/unity/app_misc.cpp',
-        'src/ripple/unity/app_misc_impl.cpp',
-        'src/ripple/unity/app_paths.cpp',
-        'src/ripple/unity/app_tx.cpp',
-        'src/ripple/unity/conditions.cpp',
-        'src/ripple/unity/consensus.cpp',
-        'src/ripple/unity/core.cpp',
-        'src/ripple/unity/basics.cpp',
-        'src/ripple/unity/crypto.cpp',
-        'src/ripple/unity/ledger.cpp',
-        'src/ripple/unity/net.cpp',
-        'src/ripple/unity/overlay1.cpp',
-        'src/ripple/unity/overlay2.cpp',
-        'src/ripple/unity/peerfinder.cpp',
-        'src/ripple/unity/json.cpp',
-        'src/ripple/unity/protocol.cpp',
-        'src/ripple/unity/rpcx1.cpp',
-        'src/ripple/unity/rpcx2.cpp',
-        'src/ripple/unity/shamap.cpp',
-        'src/ripple/unity/server.cpp',
+        'src/stoxum/beast/unity/beast_insight_unity.cpp',
+        'src/stoxum/beast/unity/beast_net_unity.cpp',
+        'src/stoxum/beast/unity/beast_utility_unity.cpp',
+        'src/stoxum/unity/app_consensus.cpp',
+        'src/stoxum/unity/app_ledger.cpp',
+        'src/stoxum/unity/app_ledger_impl.cpp',
+        'src/stoxum/unity/app_main1.cpp',
+        'src/stoxum/unity/app_main2.cpp',
+        'src/stoxum/unity/app_misc.cpp',
+        'src/stoxum/unity/app_misc_impl.cpp',
+        'src/stoxum/unity/app_paths.cpp',
+        'src/stoxum/unity/app_tx.cpp',
+        'src/stoxum/unity/conditions.cpp',
+        'src/stoxum/unity/consensus.cpp',
+        'src/stoxum/unity/core.cpp',
+        'src/stoxum/unity/basics.cpp',
+        'src/stoxum/unity/crypto.cpp',
+        'src/stoxum/unity/ledger.cpp',
+        'src/stoxum/unity/net.cpp',
+        'src/stoxum/unity/overlay1.cpp',
+        'src/stoxum/unity/overlay2.cpp',
+        'src/stoxum/unity/peerfinder.cpp',
+        'src/stoxum/unity/json.cpp',
+        'src/stoxum/unity/protocol.cpp',
+        'src/stoxum/unity/rpcx1.cpp',
+        'src/stoxum/unity/rpcx2.cpp',
+        'src/stoxum/unity/shamap.cpp',
+        'src/stoxum/unity/server.cpp',
         'src/test/unity/app_test_unity1.cpp',
         'src/test/unity/app_test_unity2.cpp',
         'src/test/unity/basics_test_unity.cpp',
@@ -1065,7 +1065,7 @@ def get_unity_sources(toolchain):
 
     append_sources(
         result,
-        'src/ripple/unity/nodestore.cpp',
+        'src/stoxum/unity/nodestore.cpp',
         'src/test/unity/nodestore_test_unity.cpp',
         CPPPATH=[
             'src/rocksdb2/include',
@@ -1183,12 +1183,12 @@ for tu_style in ['classic', 'unity']:
                 cc_flags = {}
 
             object_builder.add_source_files(
-                'src/ripple/beast/unity/beast_hash_unity.cpp',
-                'src/ripple/unity/beast.cpp',
-                'src/ripple/unity/lz4.c',
-                'src/ripple/unity/protobuf.cpp',
-                'src/ripple/unity/ripple.proto.cpp',
-                'src/ripple/unity/resource.cpp',
+                'src/stoxum/beast/unity/beast_hash_unity.cpp',
+                'src/stoxum/unity/beast.cpp',
+                'src/stoxum/unity/lz4.c',
+                'src/stoxum/unity/protobuf.cpp',
+                'src/stoxum/unity/ripple.proto.cpp',
+                'src/stoxum/unity/resource.cpp',
                 **cc_flags
             )
 
@@ -1204,14 +1204,14 @@ for tu_style in ['classic', 'unity']:
                 cc_flags = {}
 
             object_builder.add_source_files(
-                'src/ripple/unity/ed25519_donna.c',
+                'src/stoxum/unity/ed25519_donna.c',
                 CPPPATH=[
                     'src/ed25519-donna',
                 ]
             )
 
             object_builder.add_source_files(
-                'src/ripple/unity/rocksdb.cpp',
+                'src/stoxum/unity/rocksdb.cpp',
                 CPPPATH=[
                     'src/rocksdb2',
                     'src/rocksdb2/include',
@@ -1222,7 +1222,7 @@ for tu_style in ['classic', 'unity']:
             )
 
             object_builder.add_source_files(
-                'src/ripple/unity/snappy.cpp',
+                'src/stoxum/unity/snappy.cpp',
                 CCFLAGS=([] if toolchain == 'msvc' else ['-Wno-unused-function']),
                 CPPPATH=[
                     'src/snappy/snappy',
@@ -1231,7 +1231,7 @@ for tu_style in ['classic', 'unity']:
             )
 
             if toolchain == "clang" and Beast.system.osx:
-                object_builder.add_source_files('src/ripple/unity/beastobjc.mm')
+                object_builder.add_source_files('src/stoxum/unity/beastobjc.mm')
 
             target = env.Program(
                 target=os.path.join(variant_dir, 'stoxumd'),

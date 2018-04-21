@@ -18,10 +18,10 @@
 //==============================================================================
 
 #include <BeastConfig.h>
-#include <ripple/protocol/digest.h>
-#include <ripple/beast/utility/rngfill.h>
-#include <ripple/beast/xor_shift_engine.h>
-#include <ripple/beast/unit_test.h>
+#include <stoxum/protocol/digest.h>
+#include <stoxum/beast/utility/rngfill.h>
+#include <stoxum/beast/xor_shift_engine.h>
+#include <stoxum/beast/unit_test.h>
 #include <algorithm>
 #include <chrono>
 #include <cmath>

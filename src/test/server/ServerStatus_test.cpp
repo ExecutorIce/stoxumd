@@ -18,15 +18,15 @@
 //==============================================================================
 
 #include <BeastConfig.h>
-#include <ripple/rpc/ServerHandler.h>
-#include <ripple/json/json_reader.h>
-#include <ripple/app/misc/LoadFeeTrack.h>
+#include <stoxum/rpc/ServerHandler.h>
+#include <stoxum/json/json_reader.h>
+#include <stoxum/app/misc/LoadFeeTrack.h>
 #include <test/jtx.h>
 #include <test/jtx/envconfig.h>
 #include <test/jtx/WSClient.h>
 #include <test/jtx/JSONRPCClient.h>
-#include <ripple/app/misc/NetworkOPs.h>
-#include <ripple/app/ledger/LedgerMaster.h>
+#include <stoxum/app/misc/NetworkOPs.h>
+#include <stoxum/app/ledger/LedgerMaster.h>
 #include <beast/http.hpp>
 #include <beast/test/yield_to.hpp>
 #include <beast/websocket/detail/mask.hpp>

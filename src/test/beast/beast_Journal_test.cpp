@@ -17,8 +17,8 @@
 */
 //==============================================================================
 
-#include <ripple/beast/utility/Journal.h>
-#include <ripple/beast/unit_test.h>
+#include <stoxum/beast/utility/Journal.h>
+#include <stoxum/beast/unit_test.h>
 
 namespace beast {
 

@@ -18,8 +18,8 @@
 //==============================================================================
 
 #include <BeastConfig.h>
-#include <ripple/core/ClosureCounter.h>
-#include <ripple/beast/unit_test.h>
+#include <stoxum/core/ClosureCounter.h>
+#include <stoxum/beast/unit_test.h>
 #include <test/jtx/Env.h>
 #include <atomic>
 #include <chrono>

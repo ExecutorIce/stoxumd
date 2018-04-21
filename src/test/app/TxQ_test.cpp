@@ -17,18 +17,18 @@
 */
 //==============================================================================
 
-#include <ripple/app/main/Application.h>
-#include <ripple/app/misc/LoadFeeTrack.h>
-#include <ripple/app/misc/TxQ.h>
-#include <ripple/app/tx/apply.h>
-#include <ripple/basics/Log.h>
-#include <ripple/basics/mulDiv.h>
+#include <stoxum/app/main/Application.h>
+#include <stoxum/app/misc/LoadFeeTrack.h>
+#include <stoxum/app/misc/TxQ.h>
+#include <stoxum/app/tx/apply.h>
+#include <stoxum/basics/Log.h>
+#include <stoxum/basics/mulDiv.h>
 #include <test/jtx/TestSuite.h>
 #include <test/jtx/envconfig.h>
-#include <ripple/protocol/ErrorCodes.h>
-#include <ripple/protocol/Feature.h>
-#include <ripple/protocol/JsonFields.h>
-#include <ripple/protocol/st.h>
+#include <stoxum/protocol/ErrorCodes.h>
+#include <stoxum/protocol/Feature.h>
+#include <stoxum/protocol/JsonFields.h>
+#include <stoxum/protocol/st.h>
 #include <test/jtx.h>
 #include <test/jtx/ticket.h>
 #include <boost/optional.hpp>

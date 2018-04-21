@@ -18,11 +18,11 @@
 #include <BeastConfig.h>
 #include <test/jtx.h>
 #include <test/jtx/envconfig.h>
-#include <ripple/app/tx/apply.h>
-#include <ripple/basics/StringUtilities.h>
-#include <ripple/json/json_reader.h>
-#include <ripple/protocol/Feature.h>
-#include <ripple/protocol/JsonFields.h>
+#include <stoxum/app/tx/apply.h>
+#include <stoxum/basics/StringUtilities.h>
+#include <stoxum/json/json_reader.h>
+#include <stoxum/protocol/Feature.h>
+#include <stoxum/protocol/JsonFields.h>
 
 namespace ripple {
 namespace test {

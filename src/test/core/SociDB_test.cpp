@@ -19,11 +19,11 @@
 
 #include <BeastConfig.h>
 
-#include <ripple/core/ConfigSections.h>
-#include <ripple/core/SociDB.h>
-#include <ripple/basics/contract.h>
+#include <stoxum/core/ConfigSections.h>
+#include <stoxum/core/SociDB.h>
+#include <stoxum/basics/contract.h>
 #include <test/jtx/TestSuite.h>
-#include <ripple/basics/BasicConfig.h>
+#include <stoxum/basics/BasicConfig.h>
 #include <boost/filesystem.hpp>
 #include <boost/algorithm/string.hpp>
 

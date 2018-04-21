@@ -18,12 +18,12 @@
 //==============================================================================
 
 #include <BeastConfig.h>
-#include <ripple/basics/make_SSLContext.h>
-#include <ripple/beast/rfc2616.h>
-#include <ripple/server/Server.h>
-#include <ripple/server/Session.h>
-#include <ripple/beast/unit_test.h>
-#include <ripple/core/ConfigSections.h>
+#include <stoxum/basics/make_SSLContext.h>
+#include <stoxum/beast/rfc2616.h>
+#include <stoxum/server/Server.h>
+#include <stoxum/server/Session.h>
+#include <stoxum/beast/unit_test.h>
+#include <stoxum/core/ConfigSections.h>
 #include <test/jtx.h>
 #include <test/jtx/envconfig.h>
 #include <boost/asio.hpp>

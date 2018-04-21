@@ -19,8 +19,8 @@
 
 #include <BeastConfig.h>
 #include <test/jtx/rate.h>
-#include <ripple/protocol/JsonFields.h>
-#include <ripple/basics/contract.h>
+#include <stoxum/protocol/JsonFields.h>
+#include <stoxum/basics/contract.h>
 #include <stdexcept>
 
 namespace ripple {

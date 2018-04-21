@@ -18,8 +18,8 @@
 //==============================================================================
 
 #include <BeastConfig.h>
-#include <ripple/beast/core/CurrentThreadName.h>
-#include <ripple/beast/unit_test.h>
+#include <stoxum/beast/core/CurrentThreadName.h>
+#include <stoxum/beast/unit_test.h>
 #include <atomic>
 #include <thread>
 

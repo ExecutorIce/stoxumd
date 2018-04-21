@@ -18,12 +18,12 @@
 //==============================================================================
 
 #include <BeastConfig.h>
-#include <ripple/app/main/Application.h>
-#include <ripple/app/misc/SHAMapStore.h>
-#include <ripple/core/ConfigSections.h>
-#include <ripple/core/DatabaseCon.h>
-#include <ripple/core/SociDB.h>
-#include <ripple/protocol/JsonFields.h>
+#include <stoxum/app/main/Application.h>
+#include <stoxum/app/misc/SHAMapStore.h>
+#include <stoxum/core/ConfigSections.h>
+#include <stoxum/core/DatabaseCon.h>
+#include <stoxum/core/SociDB.h>
+#include <stoxum/protocol/JsonFields.h>
 #include <test/jtx.h>
 #include <test/jtx/envconfig.h>
 

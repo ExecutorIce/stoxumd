@@ -18,9 +18,9 @@
 //==============================================================================
 
 #include <BeastConfig.h>
-#include <ripple/basics/make_SSLContext.h>
-#include <ripple/beast/core/CurrentThreadName.h>
-#include <ripple/beast/unit_test.h>
+#include <stoxum/basics/make_SSLContext.h>
+#include <stoxum/beast/core/CurrentThreadName.h>
+#include <stoxum/beast/unit_test.h>
 #include <boost/asio.hpp>
 #include <boost/asio/ssl.hpp>
 #include <boost/optional.hpp>

@@ -17,10 +17,10 @@
 */
 //==============================================================================
 #include <BeastConfig.h>
-#include <ripple/basics/tagged_integer.h>
-#include <ripple/beast/clock/manual_clock.h>
-#include <ripple/beast/unit_test.h>
-#include <ripple/consensus/Validations.h>
+#include <stoxum/basics/tagged_integer.h>
+#include <stoxum/beast/clock/manual_clock.h>
+#include <stoxum/beast/unit_test.h>
+#include <stoxum/consensus/Validations.h>
 #include <test/csf/Validation.h>
 
 #include <memory>

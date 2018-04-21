@@ -18,13 +18,13 @@
 //==============================================================================
 
 #include <BeastConfig.h>
-#include <ripple/protocol/Sign.h>
-#include <ripple/protocol/STTx.h>
-#include <ripple/protocol/STParsedJSON.h>
-#include <ripple/protocol/types.h>
-#include <ripple/json/to_string.h>
-#include <ripple/beast/unit_test.h>
-#include <ripple/basics/Slice.h>
+#include <stoxum/protocol/Sign.h>
+#include <stoxum/protocol/STTx.h>
+#include <stoxum/protocol/STParsedJSON.h>
+#include <stoxum/protocol/types.h>
+#include <stoxum/json/to_string.h>
+#include <stoxum/beast/unit_test.h>
+#include <stoxum/basics/Slice.h>
 #include "ripple.pb.h"
 
 namespace ripple {

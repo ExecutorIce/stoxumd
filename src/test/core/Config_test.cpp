@@ -18,9 +18,9 @@
 //==============================================================================
 
 #include <BeastConfig.h>
-#include <ripple/basics/contract.h>
-#include <ripple/core/Config.h>
-#include <ripple/core/ConfigSections.h>
+#include <stoxum/basics/contract.h>
+#include <stoxum/core/Config.h>
+#include <stoxum/core/ConfigSections.h>
 #include <test/jtx/TestSuite.h>
 #include <boost/filesystem.hpp>
 #include <boost/format.hpp>

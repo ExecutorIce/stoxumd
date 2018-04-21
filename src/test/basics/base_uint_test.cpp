@@ -18,9 +18,9 @@
 //==============================================================================
 
 #include <BeastConfig.h>
-#include <ripple/basics/base_uint.h>
-#include <ripple/basics/hardened_hash.h>
-#include <ripple/beast/unit_test.h>
+#include <stoxum/basics/base_uint.h>
+#include <stoxum/basics/hardened_hash.h>
+#include <stoxum/beast/unit_test.h>
 #include <boost/algorithm/string.hpp>
 
 namespace ripple {

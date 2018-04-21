@@ -19,14 +19,14 @@
 
 #include <BeastConfig.h>
 #include <test/jtx.h>
-#include <ripple/app/ledger/Ledger.h>
-#include <ripple/ledger/ApplyViewImpl.h>
-#include <ripple/ledger/OpenView.h>
-#include <ripple/ledger/PaymentSandbox.h>
-#include <ripple/ledger/Sandbox.h>
-#include <ripple/core/ConfigSections.h>
-#include <ripple/protocol/Feature.h>
-#include <ripple/protocol/Protocol.h>
+#include <stoxum/app/ledger/Ledger.h>
+#include <stoxum/ledger/ApplyViewImpl.h>
+#include <stoxum/ledger/OpenView.h>
+#include <stoxum/ledger/PaymentSandbox.h>
+#include <stoxum/ledger/Sandbox.h>
+#include <stoxum/core/ConfigSections.h>
+#include <stoxum/protocol/Feature.h>
+#include <stoxum/protocol/Protocol.h>
 #include <type_traits>
 
 namespace ripple {

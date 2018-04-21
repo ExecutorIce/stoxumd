@@ -18,14 +18,14 @@
 //==============================================================================
 
 #include <BeastConfig.h>
-#include <ripple/basics/Log.h>
+#include <stoxum/basics/Log.h>
 #include <test/jtx.h>
-#include <ripple/json/to_string.h>
-#include <ripple/protocol/Feature.h>
-#include <ripple/protocol/JsonFields.h>
-#include <ripple/protocol/TxFlags.h>
-#include <ripple/beast/hash/uhash.h>
-#include <ripple/beast/unit_test.h>
+#include <stoxum/json/to_string.h>
+#include <stoxum/protocol/Feature.h>
+#include <stoxum/protocol/JsonFields.h>
+#include <stoxum/protocol/TxFlags.h>
+#include <stoxum/beast/hash/uhash.h>
+#include <stoxum/beast/unit_test.h>
 #include <boost/lexical_cast.hpp>
 #include <boost/optional.hpp>
 #include <utility>

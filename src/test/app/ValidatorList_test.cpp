@@ -18,15 +18,15 @@
 //==============================================================================
 
 #include <beast/core/detail/base64.hpp>
-#include <ripple/basics/Slice.h>
-#include <ripple/basics/strHex.h>
-#include <ripple/app/misc/ValidatorList.h>
+#include <stoxum/basics/Slice.h>
+#include <stoxum/basics/strHex.h>
+#include <stoxum/app/misc/ValidatorList.h>
 #include <test/jtx.h>
-#include <ripple/protocol/digest.h>
-#include <ripple/protocol/HashPrefix.h>
-#include <ripple/protocol/PublicKey.h>
-#include <ripple/protocol/SecretKey.h>
-#include <ripple/protocol/Sign.h>
+#include <stoxum/protocol/digest.h>
+#include <stoxum/protocol/HashPrefix.h>
+#include <stoxum/protocol/PublicKey.h>
+#include <stoxum/protocol/SecretKey.h>
+#include <stoxum/protocol/Sign.h>
 
 
 namespace ripple {

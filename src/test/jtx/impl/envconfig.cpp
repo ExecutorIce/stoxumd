@@ -19,7 +19,7 @@
 
 #include <test/jtx/envconfig.h>
 #include <test/jtx/Env.h>
-#include <ripple/core/ConfigSections.h>
+#include <stoxum/core/ConfigSections.h>
 
 namespace ripple {
 namespace test {

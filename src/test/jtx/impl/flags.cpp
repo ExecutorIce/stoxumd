@@ -19,7 +19,7 @@
 
 #include <BeastConfig.h>
 #include <test/jtx/flags.h>
-#include <ripple/protocol/JsonFields.h>
+#include <stoxum/protocol/JsonFields.h>
 
 namespace ripple {
 namespace test {

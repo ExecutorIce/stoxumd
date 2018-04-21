@@ -18,12 +18,12 @@
 //==============================================================================
 
 #include <BeastConfig.h>
-#include <ripple/beast/unit_test.h>
+#include <stoxum/beast/unit_test.h>
 #include <test/jtx.h>
 #include <test/jtx/Env.h>
-#include <ripple/beast/utility/temp_dir.h>
-#include <ripple/protocol/JsonFields.h>
-#include <ripple/protocol/SField.h>
+#include <stoxum/beast/utility/temp_dir.h>
+#include <stoxum/protocol/JsonFields.h>
+#include <stoxum/protocol/SField.h>
 #include <boost/algorithm/string.hpp>
 #include <boost/filesystem.hpp>
 #include <fstream>

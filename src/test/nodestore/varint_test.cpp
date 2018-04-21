@@ -17,8 +17,8 @@
 */
 //==============================================================================
 
-#include <ripple/beast/unit_test.h>
-#include <ripple/nodestore/impl/varint.h>
+#include <stoxum/beast/unit_test.h>
+#include <stoxum/nodestore/impl/varint.h>
 #include <array>
 #include <vector>
 

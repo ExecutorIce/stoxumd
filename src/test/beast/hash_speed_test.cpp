@@ -17,12 +17,12 @@
 */
 //==============================================================================
 
-#include <ripple/beast/hash/endian.h>
-#include <ripple/beast/hash/fnv1a.h>
-#include <ripple/beast/hash/siphash.h>
-#include <ripple/beast/hash/xxhasher.h>
-#include <ripple/beast/xor_shift_engine.h>
-#include <ripple/beast/unit_test.h>
+#include <stoxum/beast/hash/endian.h>
+#include <stoxum/beast/hash/fnv1a.h>
+#include <stoxum/beast/hash/siphash.h>
+#include <stoxum/beast/hash/xxhasher.h>
+#include <stoxum/beast/xor_shift_engine.h>
+#include <stoxum/beast/unit_test.h>
 #include <array>
 #include <chrono>
 #include <cstdint>

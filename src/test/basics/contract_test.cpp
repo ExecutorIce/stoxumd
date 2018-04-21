@@ -18,8 +18,8 @@
 //==============================================================================
 
 #include <BeastConfig.h>
-#include <ripple/basics/contract.h>
-#include <ripple/beast/unit_test.h>
+#include <stoxum/basics/contract.h>
+#include <stoxum/beast/unit_test.h>
 #include <string>
 
 namespace ripple {

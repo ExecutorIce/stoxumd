@@ -20,10 +20,10 @@
 #define RIPPLE_TEST_TRUSTED_PUBLISHER_SERVER_H_INCLUDED
 
 #include <beast/core/detail/base64.hpp>
-#include <ripple/protocol/PublicKey.h>
-#include <ripple/protocol/SecretKey.h>
-#include <ripple/protocol/Sign.h>
-#include <ripple/basics/strHex.h>
+#include <stoxum/protocol/PublicKey.h>
+#include <stoxum/protocol/SecretKey.h>
+#include <stoxum/protocol/Sign.h>
+#include <stoxum/basics/strHex.h>
 #include <boost/asio.hpp>
 #include <beast/core/detail/base64.hpp>
 #include <beast/http.hpp>

@@ -16,8 +16,8 @@ ACTION  OF  CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 */
 //==============================================================================
-#include <ripple/beast/unit_test.h>
-#include <ripple/beast/utility/Debug.h>
+#include <stoxum/beast/unit_test.h>
+#include <stoxum/beast/utility/Debug.h>
 namespace beast {
 
 // A simple unit test to determine the diagnostic settings in a build.

@@ -18,11 +18,11 @@
 //==============================================================================
 
 #include <BeastConfig.h>
-#include <ripple/basics/BasicConfig.h>
+#include <stoxum/basics/BasicConfig.h>
 #include <test/jtx/TestSuite.h>
-#include <ripple/overlay/Cluster.h>
-#include <ripple/overlay/ClusterNode.h>
-#include <ripple/protocol/SecretKey.h>
+#include <stoxum/overlay/Cluster.h>
+#include <stoxum/overlay/ClusterNode.h>
+#include <stoxum/protocol/SecretKey.h>
 
 namespace ripple {
 namespace tests {

@@ -18,13 +18,13 @@
 //==============================================================================
 
 #include <BeastConfig.h>
-#include <ripple/shamap/SHAMap.h>
-#include <ripple/shamap/SHAMapItem.h>
+#include <stoxum/shamap/SHAMap.h>
+#include <stoxum/shamap/SHAMapItem.h>
 #include <test/shamap/common.h>
-#include <ripple/basics/random.h>
-#include <ripple/basics/StringUtilities.h>
-#include <ripple/beast/unit_test.h>
-#include <ripple/beast/xor_shift_engine.h>
+#include <stoxum/basics/random.h>
+#include <stoxum/basics/StringUtilities.h>
+#include <stoxum/beast/unit_test.h>
+#include <stoxum/beast/xor_shift_engine.h>
 
 namespace ripple {
 namespace tests {

@@ -22,9 +22,9 @@
 
 #include <test/jtx/requires.h>
 #include <test/jtx/basic_prop.h>
-#include <ripple/json/json_value.h>
-#include <ripple/protocol/STTx.h>
-#include <ripple/protocol/TER.h>
+#include <stoxum/json/json_value.h>
+#include <stoxum/protocol/STTx.h>
+#include <stoxum/protocol/TER.h>
 #include <functional>
 #include <memory>
 #include <vector>

@@ -17,8 +17,8 @@
 */
 //==============================================================================
 #include <BeastConfig.h>
-#include <ripple/beast/clock/manual_clock.h>
-#include <ripple/beast/unit_test.h>
+#include <stoxum/beast/clock/manual_clock.h>
+#include <stoxum/beast/unit_test.h>
 #include <test/csf.h>
 #include <utility>
 

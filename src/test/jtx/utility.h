@@ -21,9 +21,9 @@
 #define RIPPLE_TEST_JTX_UTILITY_H_INCLUDED
 
 #include <test/jtx/Account.h>
-#include <ripple/json/json_value.h>
-#include <ripple/app/ledger/Ledger.h>
-#include <ripple/protocol/STObject.h>
+#include <stoxum/json/json_value.h>
+#include <stoxum/app/ledger/Ledger.h>
+#include <stoxum/protocol/STObject.h>
 #include <stdexcept>
 
 namespace ripple {

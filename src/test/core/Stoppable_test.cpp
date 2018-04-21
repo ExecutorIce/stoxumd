@@ -17,8 +17,8 @@
 */
 //==============================================================================
 
-#include <ripple/core/Stoppable.h>
-#include <ripple/beast/unit_test.h>
+#include <stoxum/core/Stoppable.h>
+#include <stoxum/beast/unit_test.h>
 #include <thread>
 
 namespace ripple {

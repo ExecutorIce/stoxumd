@@ -18,14 +18,14 @@
 //==============================================================================
 
 #include <BeastConfig.h>
-#include <ripple/basics/StringUtilities.h>
+#include <stoxum/basics/StringUtilities.h>
 #include <test/jtx/TestSuite.h>
-#include <ripple/json/json_value.h>
-#include <ripple/json/json_writer.h>
-#include <ripple/protocol/ErrorCodes.h>
-#include <ripple/protocol/JsonFields.h>
-#include <ripple/rpc/handlers/WalletPropose.h>
-#include <ripple/rpc/impl/RPCHelpers.h>
+#include <stoxum/json/json_value.h>
+#include <stoxum/json/json_writer.h>
+#include <stoxum/protocol/ErrorCodes.h>
+#include <stoxum/protocol/JsonFields.h>
+#include <stoxum/rpc/handlers/WalletPropose.h>
+#include <stoxum/rpc/impl/RPCHelpers.h>
 
 namespace ripple {
 

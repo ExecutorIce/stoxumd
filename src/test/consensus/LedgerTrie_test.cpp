@@ -17,8 +17,8 @@
 */
 //==============================================================================
 #include <BeastConfig.h>
-#include <ripple/beast/unit_test.h>
-#include <ripple/consensus/LedgerTrie.h>
+#include <stoxum/beast/unit_test.h>
+#include <stoxum/consensus/LedgerTrie.h>
 #include <test/csf/ledgers.h>
 #include <unordered_map>
 #include <random>

@@ -18,8 +18,8 @@
 //==============================================================================
 
 #include <BeastConfig.h>
-#include <ripple/protocol/XRPAmount.h>
-#include <ripple/beast/unit_test.h>
+#include <stoxum/protocol/XRPAmount.h>
+#include <stoxum/beast/unit_test.h>
 
 namespace ripple {
 

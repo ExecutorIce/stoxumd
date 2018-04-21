@@ -20,11 +20,11 @@
 #include <BeastConfig.h>
 #include <test/jtx.h>
 #include <test/jtx/Env.h>
-#include <ripple/beast/utility/Journal.h>
-#include <ripple/app/tx/apply.h>
-#include <ripple/app/tx/impl/Transactor.h>
-#include <ripple/app/tx/impl/ApplyContext.h>
-#include <ripple/protocol/STLedgerEntry.h>
+#include <stoxum/beast/utility/Journal.h>
+#include <stoxum/app/tx/apply.h>
+#include <stoxum/app/tx/impl/Transactor.h>
+#include <stoxum/app/tx/impl/ApplyContext.h>
+#include <stoxum/protocol/STLedgerEntry.h>
 #include <boost/algorithm/string/predicate.hpp>
 
 namespace ripple {

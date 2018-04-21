@@ -18,10 +18,10 @@
 //==============================================================================
 
 #include <BeastConfig.h>
-#include <ripple/basics/Slice.h>
-#include <ripple/basics/StringUtilities.h>
-#include <ripple/basics/ToString.h>
-#include <ripple/beast/unit_test.h>
+#include <stoxum/basics/Slice.h>
+#include <stoxum/basics/StringUtilities.h>
+#include <stoxum/basics/ToString.h>
+#include <stoxum/beast/unit_test.h>
 
 namespace ripple {
 

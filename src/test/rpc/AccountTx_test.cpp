@@ -17,9 +17,9 @@
 */
 //==============================================================================
 
-#include <ripple/beast/unit_test.h>
-#include <ripple/protocol/ErrorCodes.h>
-#include <ripple/protocol/JsonFields.h>
+#include <stoxum/beast/unit_test.h>
+#include <stoxum/protocol/ErrorCodes.h>
+#include <stoxum/protocol/JsonFields.h>
 #include <test/jtx.h>
 
 namespace ripple {

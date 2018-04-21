@@ -18,8 +18,8 @@
 //==============================================================================
 
 #include <BeastConfig.h>
-#include <ripple/basics/RangeSet.h>
-#include <ripple/beast/unit_test.h>
+#include <stoxum/basics/RangeSet.h>
+#include <stoxum/beast/unit_test.h>
 #include <boost/archive/binary_iarchive.hpp>
 #include <boost/archive/binary_oarchive.hpp>
 

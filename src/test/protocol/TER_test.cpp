@@ -18,8 +18,8 @@
 //==============================================================================
 
 #include <BeastConfig.h>
-#include <ripple/protocol/TER.h>
-#include <ripple/beast/unit_test.h>
+#include <stoxum/protocol/TER.h>
+#include <stoxum/beast/unit_test.h>
 
 namespace ripple {
 

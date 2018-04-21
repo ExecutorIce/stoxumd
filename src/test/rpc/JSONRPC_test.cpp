@@ -18,16 +18,16 @@
 //==============================================================================
 
 #include <BeastConfig.h>
-#include <ripple/app/misc/LoadFeeTrack.h>
-#include <ripple/app/misc/TxQ.h>
-#include <ripple/basics/contract.h>
-#include <ripple/json/json_reader.h>
-#include <ripple/protocol/ErrorCodes.h>
-#include <ripple/protocol/Feature.h>
-#include <ripple/rpc/impl/TransactionSign.h>
+#include <stoxum/app/misc/LoadFeeTrack.h>
+#include <stoxum/app/misc/TxQ.h>
+#include <stoxum/basics/contract.h>
+#include <stoxum/json/json_reader.h>
+#include <stoxum/protocol/ErrorCodes.h>
+#include <stoxum/protocol/Feature.h>
+#include <stoxum/rpc/impl/TransactionSign.h>
 #include <test/jtx.h>
 #include <test/jtx/envconfig.h>
-#include <ripple/beast/unit_test.h>
+#include <stoxum/beast/unit_test.h>
 
 namespace ripple {
 

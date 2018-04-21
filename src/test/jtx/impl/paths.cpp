@@ -18,9 +18,9 @@
 //==============================================================================
 
 #include <BeastConfig.h>
-#include <ripple/app/paths/Pathfinder.h>
+#include <stoxum/app/paths/Pathfinder.h>
 #include <test/jtx/paths.h>
-#include <ripple/protocol/JsonFields.h>
+#include <stoxum/protocol/JsonFields.h>
 
 namespace ripple {
 namespace test {
