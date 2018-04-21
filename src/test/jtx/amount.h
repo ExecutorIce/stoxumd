@@ -37,8 +37,8 @@ namespace jtx {
 
 /*
 
-The decision was made to accept amounts of drops and XRP
-using an int type, since the range of XRP is 100 billion
+The decision was made to accept amounts of drops and STM
+using an int type, since the range of STM is 100 billion
 and having both signed and unsigned overloads creates
 tricky code leading to overload resolution ambiguities.
 
@@ -66,9 +66,9 @@ struct dropsPerXRP
     static T const value = 1000000;
 };
 
-/** Represents an XRP or IOU quantity
+/** Represents an STM or IOU quantity
     This customizes the string conversion and supports
-    XRP conversions from integer and floating point.
+    STM conversions from integer and floating point.
 */
 struct PrettyAmount
 {
@@ -164,7 +164,7 @@ struct XRP_t
 {
     /** Implicit conversion to Issue.
 
-        This allows passing XRP where
+        This allows passing STM where
         an Issue is expected.
     */
     operator Issue() const
@@ -172,9 +172,9 @@ struct XRP_t
         return xrpIssue();
     }
 
-    /** Returns an amount of XRP as STAmount
+    /** Returns an amount of STM as STAmount
 
-        @param v The number of XRP (not drops)
+        @param v The number of STM (not drops)
     */
     /** @{ */
     template <class T, class = std::enable_if_t<
@@ -211,7 +211,7 @@ struct XRP_t
     }
     /** @} */
 
-    /** Returns None-of-XRP */
+    /** Returns None-of-STM */
     None
     operator()(none_t) const
     {
@@ -227,15 +227,15 @@ struct XRP_t
     }
 };
 
-/** Converts to XRP Issue or STAmount.
+/** Converts to STM Issue or STAmount.
 
     Examples:
-        XRP         Converts to the XRP Issue
-        XRP(10)     Returns STAmount of 10 XRP
+        STM         Converts to the STM Issue
+        STM(10)     Returns STAmount of 10 STM
 */
-extern XRP_t const XRP;
+extern XRP_t const STM;
 
-/** Returns an XRP STAmount.
+/** Returns an STM STAmount.
 
     Example:
         drops(10)   Returns STAmount of 10 drops

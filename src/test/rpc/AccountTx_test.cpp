@@ -35,7 +35,7 @@ class AccountTX_test : public beast::unit_test::suite
 
         Env env(*this);
         Account A1{"A1"};
-        env.fund(XRP(10000), A1);
+        env.fund(STM(10000), A1);
         env.close();
 
         // Ledger 3 has the two txs associated with funding the account

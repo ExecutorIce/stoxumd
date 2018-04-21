@@ -296,7 +296,7 @@ STAmount::construct (SerialIter& sit, SField const& name)
 // Conversion
 //
 //------------------------------------------------------------------------------
-XRPAmount STAmount::xrp () const
+XRPAmount STAmount::stm () const
 {
     if (!mIsNative)
         Throw<std::logic_error> ("Cannot return non-native STAmount as XRPAmount");
@@ -763,9 +763,9 @@ amountFromString (Issue const& issue, std::string const& amount)
 
     bool negative = (match[1].matched && (match[1] == "-"));
 
-    // Can't specify XRP using fractional representation
+    // Can't specify STM using fractional representation
     if (isXRP(issue) && match[3].matched)
-        Throw<std::runtime_error> ("XRP must be specified in integral drops.");
+        Throw<std::runtime_error> ("STM must be specified in integral drops.");
 
     std::uint64_t mantissa;
     int exponent;
@@ -847,12 +847,12 @@ amountFromJson (SField const& name, Json::Value const& v)
     if (native)
     {
         if (v.isObject ())
-            Throw<std::runtime_error> ("XRP may not be specified as an object");
+            Throw<std::runtime_error> ("STM may not be specified as an object");
         issue = xrpIssue ();
     }
     else
     {
-        // non-XRP
+        // non-STM
         if (! to_currency (issue.currency, currency.asString ()))
             Throw<std::runtime_error> ("invalid currency");
 
@@ -1165,9 +1165,9 @@ mulRound (STAmount const& v1, STAmount const& v2, Issue const& issue,
     if (v1 == zero || v2 == zero)
         return {issue};
 
-    bool const xrp = isXRP (issue);
+    bool const stm = isXRP (issue);
 
-    if (v1.native() && v2.native() && xrp)
+    if (v1.native() && v2.native() && stm)
     {
         std::uint64_t minV = (getSNValue (v1) < getSNValue (v2)) ?
                 getSNValue (v1) : getSNValue (v2);
@@ -1220,13 +1220,13 @@ mulRound (STAmount const& v1, STAmount const& v2, Issue const& issue,
 
     int offset = offset1 + offset2 + 14;
     if (resultNegative != roundUp)
-        canonicalizeRound (xrp, amount, offset);
+        canonicalizeRound (stm, amount, offset);
     STAmount result (issue, amount, offset, resultNegative);
 
     // Control when bugfixes that require switchover dates are enabled
     if (roundUp && !resultNegative && !result && *stAmountCalcSwitchover)
     {
-        if (xrp && *stAmountCalcSwitchover2)
+        if (stm && *stAmountCalcSwitchover2)
         {
             // return the smallest value above zero
             amount = 1;

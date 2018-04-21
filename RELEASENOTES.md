@@ -13,7 +13,7 @@ If you are using Red Hat Enterprise Linux 7 or CentOS 7, you can [update using `
 
 ## Version 0.90.0
 
-The `rippled` 0.90.0 release introduces several features and enhancements that improve the reliability, scalability and security of the XRP Ledger.
+The `rippled` 0.90.0 release introduces several features and enhancements that improve the reliability, scalability and security of the STM Ledger.
 
 Highlights of this release include:
 
@@ -59,7 +59,7 @@ Highlights of this release include:
 
 ## Version 0.81.0
 
-The `rippled` 0.81.0 release introduces changes that improve the scalability of the XRP Ledger and transitions the recommended validator configuration to a new hosted site, as described in Ripple's [Decentralization Strategy Update](https://ripple.com/dev-blog/decentralization-strategy-update/) post.
+The `rippled` 0.81.0 release introduces changes that improve the scalability of the STM Ledger and transitions the recommended validator configuration to a new hosted site, as described in Ripple's [Decentralization Strategy Update](https://ripple.com/dev-blog/decentralization-strategy-update/) post.
 
 **New and Updated Features**
 
@@ -73,7 +73,7 @@ The `rippled` 0.81.0 release introduces changes that improve the scalability of 
 
 ## Version 0.80.2
 
-The `rippled` 0.80.2 release introduces changes that improve the scalability of the XRP Ledger.
+The `rippled` 0.80.2 release introduces changes that improve the scalability of the STM Ledger.
 
 **New and Updated Features**
 
@@ -106,7 +106,7 @@ The `rippled` 0.80.1 release provides several enhancements in support of publish
 
 ## Version 0.80.0
 
-The `rippled` 0.80.0 release introduces several enhancements that improve the reliability, scalability and security of the XRP Ledger.
+The `rippled` 0.80.0 release introduces several enhancements that improve the reliability, scalability and security of the STM Ledger.
 
 Highlights of this release include:
 
@@ -169,7 +169,7 @@ The `rippled` 0.70.0 release introduces several enhancements that improve the re
 Highlights of this release include:
 
 - The `FlowCross` amendment, which streamlines offer crossing and autobrigding logic by leveraging the new “Flow” payment engine.
-- The `EnforceInvariants` amendment, which can safeguard the integrity of the XRP Ledger by introducing code that executes after every transaction and ensures that the execution did not violate key protocol rules.
+- The `EnforceInvariants` amendment, which can safeguard the integrity of the STM Ledger by introducing code that executes after every transaction and ensures that the execution did not violate key protocol rules.
 - `fix1373`, which addresses an issue that would cause payments with certain path specifications to not be properly parsed.
 
 **New and Updated Features**
@@ -242,7 +242,7 @@ The `rippled` 0.60.0 release introduces several enhancements that improve the re
 
 Highlights of this release include:
 
-- `Escrow` (previously called `SusPay`) which permits users to cryptographically escrow XRP on RCL with an expiration date, and optionally a hashlock crypto-condition. Ripple expects Escrow to be enabled via an Amendment named [`Escrow`](https://ripple.com/build/amendments/#escrow) on Thursday, 2017-03-30. See below for details.
+- `Escrow` (previously called `SusPay`) which permits users to cryptographically escrow STM on RCL with an expiration date, and optionally a hashlock crypto-condition. Ripple expects Escrow to be enabled via an Amendment named [`Escrow`](https://ripple.com/build/amendments/#escrow) on Thursday, 2017-03-30. See below for details.
 - Dynamic UNL Lite, which allows `rippled` to automatically adjust which validators it trusts based on recommended lists from trusted publishers.
 
 **New and Updated Features**
@@ -320,7 +320,7 @@ Currently, offers on RCL can differ by as little as one part in a quadrillion. T
 
 This change lets issuers quantize the exchange rates of offers to use a specified number of significant digits. Gateways must enable a TickSize on their account for this feature to benefit them. A single AccountSet transaction may set a `TickSize` parameter. Legal values are 0 and 3-15 inclusive. Zero removes the setting. 3-15 allow that many decimal digits of precision in the pricing of offers for assets issued by this account. It will still be possible to place an offer to buy or sell any amount of an asset and the offer will still keep that amount as exactly as it does now. If an offer involves two assets that each have a tick size, the smaller number of significant figures (larger ticks) controls.
 
-For asset pairs with XRP, the tick size imposed, if any, is the tick size of the issuer of the non-XRP asset. For asset pairs without XRP, the tick size imposed, if any, is the smaller of the two issuer's configured tick sizes.
+For asset pairs with STM, the tick size imposed, if any, is the tick size of the issuer of the non-STM asset. For asset pairs without STM, the tick size imposed, if any, is the smaller of the two issuer's configured tick sizes.
 
 The tick size is imposed by rounding the offer quality down to the nearest tick and recomputing the non-critical side of the offer. For a buy, the amount offered is rounded down. For a sell, the amount charged is rounded up.
 
@@ -390,7 +390,7 @@ Validator's manifest not forwarded beyond directly connected peers (#1919)
 
 **Upcoming Features**
 
-We expect the previously announced Suspended Payments feature, which introduces new transaction types to the Ripple protocol that will permit users to cryptographically escrow XRP on RCL, to be enabled via the [SusPay](https://ripple.com/build/amendments/#suspay) Amendment on Tuesday, 2017-02-21.
+We expect the previously announced Suspended Payments feature, which introduces new transaction types to the Ripple protocol that will permit users to cryptographically escrow STM on RCL, to be enabled via the [SusPay](https://ripple.com/build/amendments/#suspay) Amendment on Tuesday, 2017-02-21.
 
 Also, we expect support for crypto-conditions, which are signature-like structures that can be used with suspended payments to support ILP integration, to be included in the next rippled release scheduled for March.
 
@@ -413,7 +413,7 @@ Increase SQLite database limits to prevent full-history servers from crashing wh
 
 ## Version 0.40.0
 
-The `rippled` 0.40.0 release includes Suspended Payments, a new transaction type on the Ripple network that functions similar to an escrow service, which permits users cryptographically escrow XRP on RCL with an expiration date. Ripple expects Suspended Payments to be enabled via an Amendment named [SusPay](https://ripple.com/build/amendments/#suspay) on Tuesday, 2017-01-17.
+The `rippled` 0.40.0 release includes Suspended Payments, a new transaction type on the Ripple network that functions similar to an escrow service, which permits users cryptographically escrow STM on RCL with an expiration date. Ripple expects Suspended Payments to be enabled via an Amendment named [SusPay](https://ripple.com/build/amendments/#suspay) on Tuesday, 2017-01-17.
 
 You can update to the new version on Red Hat Enterprise Linux 7 or CentOS 7 using yum. For other platforms, please compile the new version from source.
 
@@ -421,7 +421,7 @@ You can update to the new version on Red Hat Enterprise Linux 7 or CentOS 7 usin
 
 Previously, Ripple announced the introduction of Payment Channels during the release of rippled version 0.33.0, which permit scalable, off-ledger checkpoints of high volume, low value payments flowing in a single direction. This was the first step in a multi-phase effort to make RCL more scalable and to support Interledger Protocol (ILP). Ripple expects Payment Channels to be enabled via an Amendment called [PayChan](https://ripple.com/build/amendments/#paychan) on a future date to be determined.
 
-In the second phase towards making RCL more scalable and compatible with ILP, Ripple is introducing Suspended Payments, a new transaction type on the Ripple network that functions similar to an escrow service, which permits users to cryptographically escrow XRP on RCL with an expiration date. Ripple expects Suspended Payments to be enabled via an Amendment named [SusPay](https://ripple.com/build/amendments/#suspay) on Tuesday, 2017-01-17.
+In the second phase towards making RCL more scalable and compatible with ILP, Ripple is introducing Suspended Payments, a new transaction type on the Ripple network that functions similar to an escrow service, which permits users to cryptographically escrow STM on RCL with an expiration date. Ripple expects Suspended Payments to be enabled via an Amendment named [SusPay](https://ripple.com/build/amendments/#suspay) on Tuesday, 2017-01-17.
 
 A Suspended Payment can be created, which deducts the funds from the sending account. It can then be either fulfilled or canceled. It can only be fulfilled if the fulfillment transaction makes it into a ledger with a CloseTime lower than the expiry date of the transaction. It can be canceled with a transaction that makes it into a ledger with a CloseTime greater than the expiry date of the transaction.
 
@@ -442,7 +442,7 @@ Correctly parse multi-buffer JSON messages (#1862)
 
 ## Version 0.33.0
 
-The `rippled` 0.33.0 release includes an improved version of the payment code, which we expect to be activated via Amendment on Wednesday, 2016-10-20 with the name [Flow](https://ripple.com/build/amendments/#flow). We are also introducing XRP Payment Channels, a new structure in the ledger designed to support [Interledger Protocol](https://interledger.org/) trust lines as balances get substantial, which we expect to be activated via Amendment on a future date (TBA) with the name [PayChan](https://ripple.com/build/amendments/#paychan). Lastly, we will be introducing changes to the hash tree structure that rippled uses to represent a ledger, which we expect to be available via Amendment on a future date (TBA) with the name [SHAMapV2](https://ripple.com/build/amendments/#shamapv2).
+The `rippled` 0.33.0 release includes an improved version of the payment code, which we expect to be activated via Amendment on Wednesday, 2016-10-20 with the name [Flow](https://ripple.com/build/amendments/#flow). We are also introducing STM Payment Channels, a new structure in the ledger designed to support [Interledger Protocol](https://interledger.org/) trust lines as balances get substantial, which we expect to be activated via Amendment on a future date (TBA) with the name [PayChan](https://ripple.com/build/amendments/#paychan). Lastly, we will be introducing changes to the hash tree structure that rippled uses to represent a ledger, which we expect to be available via Amendment on a future date (TBA) with the name [SHAMapV2](https://ripple.com/build/amendments/#shamapv2).
 
 You can [update to the new version](https://ripple.com/build/rippled-setup/#updating-rippled) on Red Hat Enterprise Linux 7 or CentOS 7 using yum. For other platforms, please [compile the new version from source](https://wiki.ripple.com/Rippled_build_instructions).
 
@@ -454,11 +454,11 @@ The Flow code may occasionally produce slightly different results than the old p
 
 We will be introducing changes to the hash tree structure that rippled uses to represent a ledger, which we expect to be activated via Amendment on a future date (TBA) with the name [SHAMapV2](https://ripple.com/build/amendments/#shamapv2). The new structure is more compact and efficient than the previous version. This affects how ledger hashes are calculated, but has no other user-facing consequences. The activation of the SHAMapV2 amendment will require brief scheduled allowable downtime, while the changes to the hash tree structure are propagated by the network. We will keep the community updated as we progress towards this date (TBA).
 
-In an effort to make RCL more scalable and to support Interledger Protocol (ILP) trust lines as balances get more substantial, we’re introducing XRP Payment Channels, a new structure in the ledger, which we expect to be available via Amendment on a future date (TBA) with the name [PayChan](https://ripple.com/build/amendments/#paychan).
+In an effort to make RCL more scalable and to support Interledger Protocol (ILP) trust lines as balances get more substantial, we’re introducing STM Payment Channels, a new structure in the ledger, which we expect to be available via Amendment on a future date (TBA) with the name [PayChan](https://ripple.com/build/amendments/#paychan).
 
-XRP Payment Channels permit scalable, intermittent, off-ledger settlement of ILP trust lines for high volume payments flowing in a single direction. For bidirectional channels, an XRP Payment Channel can be used in each direction. The recipient can claim any unpaid balance at any time. The owner can top off the channel as needed. The owner must wait out a delay to close the channel to give the recipient a chance to supply any claims. The total amount paid increases monotonically as newer claims are issued.
+STM Payment Channels permit scalable, intermittent, off-ledger settlement of ILP trust lines for high volume payments flowing in a single direction. For bidirectional channels, an STM Payment Channel can be used in each direction. The recipient can claim any unpaid balance at any time. The owner can top off the channel as needed. The owner must wait out a delay to close the channel to give the recipient a chance to supply any claims. The total amount paid increases monotonically as newer claims are issued.
 
-The initial concept behind payment channels was discussed as early as 2011 and the first implementation was done by Mike Hearn in bitcoinj. Recent work being done by Lightning Network has showcased examples of the many use cases for payment channels. The introduction of XRP Payment Channels allows for a more efficient integration between RCL and ILP to further support enterprise use cases for high volume payments.
+The initial concept behind payment channels was discussed as early as 2011 and the first implementation was done by Mike Hearn in bitcoinj. Recent work being done by Lightning Network has showcased examples of the many use cases for payment channels. The introduction of STM Payment Channels allows for a more efficient integration between RCL and ILP to further support enterprise use cases for high volume payments.
 
 Added `getInfoRippled.sh` support script to gather health check for rippled servers [RIPD-1284]
 
@@ -568,7 +568,7 @@ You can update to the new version on Red Hat Enterprise Linux 7 or CentOS 7 usin
 - Reject invalid MessageKey in SetAccount handler (RIPD-308, RIPD-990)
 - Fix advisory delete effect on history acquisition (RIPD-1112)
 - Improve websocket send performance (RIPD-1158)
-- Fix XRP bridge payment bug (RIPD-1141)
+- Fix STM bridge payment bug (RIPD-1141)
 - Improve error reporting for wallet_propose command. Also include a warning if the key used may be an insecure, low-entropy key. (RIPD-1110)
 
 **Deprecated features**
@@ -1026,7 +1026,7 @@ This release incorporates a number of important features, bugfixes and functiona
 
 **Release Overview**
 
-As part of Ripple Labs’ ongoing commitment toward improving the protocol, the rippled team is excited to announce **autobridging** — a feature that allows XRP to serve as a bridge currency. Autobridging enhances utility and has the potential to expose more of the network to liquidity and improve prices. For more information please refer to the [autobridging blog post](https://ripple.com/uncategorized/introducing-offer-autobridging/).
+As part of Ripple Labs’ ongoing commitment toward improving the protocol, the rippled team is excited to announce **autobridging** — a feature that allows STM to serve as a bridge currency. Autobridging enhances utility and has the potential to expose more of the network to liquidity and improve prices. For more information please refer to the [autobridging blog post](https://ripple.com/uncategorized/introducing-offer-autobridging/).
 
 **Toolchain support**
 
@@ -2280,8 +2280,8 @@ Starting with this release, the minimum supported version of GCC used to compile
 -   Made changes to SHAMapTreeNode and visitLeavesInternal to conserve memory.
 -   Implemented new fee schedule:
     -   Transaction fee: 10 drops
-    -   Base reserve: 20 XRP
-    -   Incremental reserve: 5 XRP
+    -   Base reserve: 20 STM
+    -   Incremental reserve: 5 STM
 -   Fixed bug \#211 (getTxsAccountB in NetworkOPs).
 -   Fixed a store/fetch race condition in ther node back end.
 -   Fixed multiple comparison operations.

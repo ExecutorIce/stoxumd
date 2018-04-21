@@ -90,8 +90,8 @@ public:
         computed from the string "masterpassphrase" and ordinal
         zero.
 
-        The account has an XRP balance equal to the total amount
-        of XRP in the system. No more XRP than the amount which
+        The account has an STM balance equal to the total amount
+        of STM in the system. No more STM than the amount which
         starts in this account can ever exist, with amounts
         used to pay fees being destroyed.
 

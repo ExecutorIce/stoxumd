@@ -77,13 +77,13 @@ public:
 #endif
 
 /**
- * @brief Invariant: A transaction must not create XRP and should only destroy
- * XRP, up to the transaction fee.
+ * @brief Invariant: A transaction must not create STM and should only destroy
+ * STM, up to the transaction fee.
  *
  * For this check, we start with a signed 64-bit integer set to zero. As we go
  * through the ledger entries, look only at account roots, escrow payments,
- * and payment channels.  Remove from the total any previous XRP values and add
- * to the total any new XRP values. The net balance of a payment channel is
+ * and payment channels.  Remove from the total any previous STM values and add
+ * to the total any new STM values. The net balance of a payment channel is
  * computed from two fields (amount and balance) and deletions are ignored
  * for paychan and escrow because the amount fields have not been adjusted for
  * those in the case of deletion.
@@ -132,7 +132,7 @@ public:
 };
 
 /**
- * @brief Invariant: An account XRP balance must be in XRP and take a value
+ * @brief Invariant: An account STM balance must be in STM and take a value
                      between 0 and SYSTEM_CURRENCY_START drops, inclusive.
  */
 class XRPBalanceChecks
@@ -174,7 +174,7 @@ public:
 };
 
 /**
- * @brief Invariant: Trust lines using XRP are not allowed.
+ * @brief Invariant: Trust lines using STM are not allowed.
  */
 class NoXRPTrustLines
 {
@@ -195,7 +195,7 @@ public:
 
 /**
  * @brief Invariant: offers should be for non-negative amounts and must not
- *                   be XRP to XRP.
+ *                   be STM to STM.
  */
 class NoBadOffers
 {

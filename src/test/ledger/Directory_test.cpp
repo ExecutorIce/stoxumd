@@ -91,11 +91,11 @@ struct Directory_test : public beast::unit_test::suite
             Env env(
                 *this,
                 supported_amendments().reset(featureSortedDirectories));
-            env.fund(XRP(10000000), alice, bob, gw);
+            env.fund(STM(10000000), alice, bob, gw);
 
             // Insert 400 offers from Alice, then one from Bob:
             for (std::size_t i = 1; i <= 400; ++i)
-                env(offer(alice, USD(10), XRP(10)));
+                env(offer(alice, USD(10), STM(10)));
 
             // Check Alice's directory: it should contain one
             // entry for each offer she added. Within each
@@ -119,10 +119,10 @@ struct Directory_test : public beast::unit_test::suite
             testcase ("Directory Ordering (with 'SortedDirectories' amendment)");
 
             Env env(*this);
-            env.fund(XRP(10000000), alice, gw);
+            env.fund(STM(10000000), alice, gw);
 
             for (std::size_t i = 1; i <= 400; ++i)
-                env(offer(alice, USD(i), XRP(i)));
+                env(offer(alice, USD(i), STM(i)));
             env.close();
 
             // Check Alice's directory: it should contain one
@@ -168,7 +168,7 @@ struct Directory_test : public beast::unit_test::suite
             {
                 count++;
                 BEAST_EXPECT(offer->getFieldAmount(sfTakerPays) == USD(count));
-                BEAST_EXPECT(offer->getFieldAmount(sfTakerGets) == XRP(count));
+                BEAST_EXPECT(offer->getFieldAmount(sfTakerGets) == STM(count));
             }
         }
     }
@@ -188,7 +188,7 @@ struct Directory_test : public beast::unit_test::suite
 
         Env env(*this);
 
-        env.fund(XRP(1000000), alice, charlie, gw);
+        env.fund(STM(1000000), alice, charlie, gw);
         env.close();
 
         // alice should have an empty directory.
@@ -252,7 +252,7 @@ struct Directory_test : public beast::unit_test::suite
                 env.close();
                 env(pay(gw, charlie, c(50)));
                 env.close();
-                env(offer(alice, c(50), XRP(50)));
+                env(offer(alice, c(50), STM(50)));
                 env.close();
             }
 
@@ -265,7 +265,7 @@ struct Directory_test : public beast::unit_test::suite
 
             for (auto const& c : cl)
             {
-                env(offer(charlie, XRP(50), c(50)));
+                env(offer(charlie, STM(50), c(50)));
                 env.close();
             }
             BEAST_EXPECT(! dirIsEmpty (*env.closed(), keylet::ownerDir(alice)));
@@ -296,7 +296,7 @@ struct Directory_test : public beast::unit_test::suite
         auto const alice = Account{"alice"};
         auto const USD = gw["USD"];
 
-        env.fund(XRP(10000), alice, gw);
+        env.fund(STM(10000), alice, gw);
         env.trust(USD(1000), alice);
         env(pay(gw, alice, USD(1000)));
 
@@ -305,7 +305,7 @@ struct Directory_test : public beast::unit_test::suite
         // Fill up three pages of offers
         for (int i = 0; i < 3; ++i)
             for (int j = 0; j < dirNodeMaxEntries; ++j)
-                env(offer(alice, XRP(1), USD(1)));
+                env(offer(alice, STM(1), USD(1)));
         env.close();
 
         // remove all the offers. Remove the middle page last
@@ -356,7 +356,7 @@ struct Directory_test : public beast::unit_test::suite
         auto const alice = Account{"alice"};
         auto const USD = gw["USD"];
 
-        env.fund(XRP(10000), alice);
+        env.fund(STM(10000), alice);
         env.close();
 
         uint256 base;

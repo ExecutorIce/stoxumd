@@ -55,7 +55,7 @@ public:
     {
         if (! isXRP(*amount_))
             Throw<std::runtime_error> (
-                "fee: not XRP");
+                "fee: not STM");
     }
 
     void

@@ -56,14 +56,14 @@ struct SetAuth_test : public beast::unit_test::suite
         auto const USD = gw["USD"];
         {
             Env env(*this, features);
-            env.fund(XRP(100000), "alice", gw);
+            env.fund(STM(100000), "alice", gw);
             env(fset(gw, asfRequireAuth));
             env(auth(gw, "alice", "USD"),       ter(tecNO_LINE_REDUNDANT));
         }
         {
             Env env(*this, features | featureTrustSetAuth);
 
-            env.fund(XRP(100000), "alice", "bob", gw);
+            env.fund(STM(100000), "alice", "bob", gw);
             env(fset(gw, asfRequireAuth));
             env(auth(gw, "alice", "USD"));
             BEAST_EXPECT(env.le(

@@ -281,7 +281,7 @@ public:
         return (mValue == 0) && mIsNative;
     }
 
-    XRPAmount xrp () const;
+    XRPAmount stm () const;
     IOUAmount iou () const;
 };
 

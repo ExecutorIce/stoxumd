@@ -233,7 +233,7 @@ struct FlowDebugInfo
             auto writeXrpAmtList = [&write_list](
                 std::vector<EitherAmount> const& amts, char delim=';') {
                 auto get_val = [](EitherAmount const& a) -> std::string {
-                    return ripple::to_string (a.xrp);
+                    return ripple::to_string (a.stm);
                 };
                 write_list (amts, get_val, delim);
             };

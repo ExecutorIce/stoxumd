@@ -66,7 +66,7 @@ class PaymentSandbox_test : public beast::unit_test::suite
         Account const snd ("snd");
         Account const rcv ("rcv");
 
-        env.fund (XRP (10000), snd, rcv, gw1, gw2);
+        env.fund (STM (10000), snd, rcv, gw1, gw2);
 
         auto const USD_gw1 = gw1["USD"];
         auto const USD_gw2 = gw2["USD"];
@@ -106,7 +106,7 @@ class PaymentSandbox_test : public beast::unit_test::suite
         Account const gw2 ("gw2");
         Account const alice ("alice");
 
-        env.fund (XRP (10000), alice, gw1, gw2);
+        env.fund (STM (10000), alice, gw1, gw2);
 
         auto j = env.app().journal ("View");
 
@@ -327,8 +327,8 @@ class PaymentSandbox_test : public beast::unit_test::suite
             // to drop below the reserve. Make sure her funds are zero (there was a bug that
             // caused her funds to become negative).
 
-            accountSend (sb, xrpAccount (), alice, XRP(100), dj);
-            accountSend (sb, alice, xrpAccount (), XRP(100), dj);
+            accountSend (sb, xrpAccount (), alice, STM(100), dj);
+            accountSend (sb, alice, xrpAccount (), STM(100), dj);
             BEAST_EXPECT(accountFundsXRP (sb, alice) == beast::zero);
         }
     }

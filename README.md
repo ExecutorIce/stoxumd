@@ -38,16 +38,16 @@ challenging.
 
 ![Flow - Direct](images/flow1.png)
 
-### XRP as a Bridge Currency
-Ripple can bridge even exotic currency pairs directly through XRP. Similar to
-USD in today’s currency market, XRP allows liquidity providers to focus on
+### STM as a Bridge Currency
+Ripple can bridge even exotic currency pairs directly through STM. Similar to
+USD in today’s currency market, STM allows liquidity providers to focus on
 offering competitive FX rates on fewer pairs and adding depth to order books.
-Unlike USD, trading through XRP does not require bank accounts, service fees,
-counterparty risk, or additional operational costs. By using XRP, liquidity
+Unlike USD, trading through STM does not require bank accounts, service fees,
+counterparty risk, or additional operational costs. By using STM, liquidity
 providers can specialize in certain currency corridors, reduce operational
 costs, and ultimately, offer more competitive FX pricing.
 
-![Flow - Bridged over XRP](images/flow2.png)
+![Flow - Bridged over STM](images/flow2.png)
 
 # rippled - Ripple server
 `rippled` is the reference server implementation of the Ripple

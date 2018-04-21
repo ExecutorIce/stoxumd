@@ -150,7 +150,7 @@ public:
             BEAST_EXPECT( resp[jss::result][jss::error_message] == "ledgerNotFound");
         }
 
-        env.fund(XRP(1000), bob);
+        env.fund(STM(1000), bob);
         // test error on type param not a string
         {
             Json::Value params;
@@ -180,11 +180,11 @@ public:
        // test errors on marker
         {
             Account const gw{ "G" };
-            env.fund(XRP(1000), gw);
+            env.fund(STM(1000), gw);
             auto const USD = gw["USD"];
             env.trust(USD(1000), bob);
-            env(pay(gw, bob, XRP(1)));
-            env(offer(bob, XRP(100), bob["USD"](1)), txflags(tfPassive));
+            env(pay(gw, bob, STM(1)));
+            env(offer(bob, STM(100), bob["USD"](1)), txflags(tfPassive));
 
             Json::Value params;
             params[jss::account] = bob.human();
@@ -240,15 +240,15 @@ public:
         auto const USD1 = gw1["USD"];
         auto const USD2 = gw2["USD"];
 
-        env.fund(XRP(1000), gw1, gw2, bob);
+        env.fund(STM(1000), gw1, gw2, bob);
         env.trust(USD1(1000), bob);
         env.trust(USD2(1000), bob);
 
         env(pay(gw1, bob, USD1(1000)));
         env(pay(gw2, bob, USD2(1000)));
 
-        env(offer(bob, XRP(100), bob["USD"](1)),txflags(tfPassive));
-        env(offer(bob, XRP(100), USD1(1)), txflags(tfPassive));
+        env(offer(bob, STM(100), bob["USD"](1)),txflags(tfPassive));
+        env(offer(bob, STM(100), USD1(1)), txflags(tfPassive));
 
         Json::Value bobj[4];
         for (int i = 0; i < 4; ++i)
@@ -347,7 +347,7 @@ public:
                 (resp[jss::result][jss::account_objects].size() == size);
         };
 
-        env.fund(XRP(10000), gw, alice);
+        env.fund(STM(10000), gw, alice);
         env.close();
 
         // Since the account is empty now, all account objects should come
@@ -407,7 +407,7 @@ public:
             jvEscrow[jss::Flags] = tfUniversal;
             jvEscrow[jss::Account] = gw.human();
             jvEscrow[jss::Destination] = gw.human();
-            jvEscrow[jss::Amount] = XRP(100).value().getJson(0);
+            jvEscrow[jss::Amount] = STM(100).value().getJson(0);
             jvEscrow[sfFinishAfter.jsonName] =
                 env.now().time_since_epoch().count() + 1;
             env (jvEscrow);
@@ -424,7 +424,7 @@ public:
             BEAST_EXPECT (escrow[sfAmount.jsonName].asUInt() == 100'000'000);
         }
         // gw creates an offer that we can look for in the ledger.
-        env (offer (gw, USD (7), XRP (14)));
+        env (offer (gw, USD (7), STM (14)));
         env.close();
         {
             // Find the offer.
@@ -443,7 +443,7 @@ public:
             jvPayChan[jss::Flags] = tfUniversal;
             jvPayChan[jss::Account] = gw.human ();
             jvPayChan[jss::Destination] = alice.human ();
-            jvPayChan[jss::Amount] = XRP (300).value().getJson (0);
+            jvPayChan[jss::Amount] = STM (300).value().getJson (0);
             jvPayChan[sfSettleDelay.jsonName] = 24 * 60 * 60;
             jvPayChan[sfPublicKey.jsonName] = strHex (gw.pk().slice ());
             env (jvPayChan);

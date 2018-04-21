@@ -42,14 +42,14 @@ namespace ripple {
 
 /*
     Escrow allows an account holder to sequester any amount
-    of XRP in its own ledger entry, until the escrow process
+    of STM in its own ledger entry, until the escrow process
     either finishes or is canceled.
 
     If the escrow process finishes successfully, then the
     destination account (which must exist) will receives the
-    sequestered XRP. If the escrow is, instead, canceled,
+    sequestered STM. If the escrow is, instead, canceled,
     the account which created the escrow will receive the
-    sequestered XRP back instead.
+    sequestered STM back instead.
 
     EscrowCreate
 
@@ -128,7 +128,7 @@ namespace ripple {
     By careful selection of fields in each transaction,
     these operations may be achieved:
 
-        * Lock up XRP for a time period
+        * Lock up STM for a time period
         * Execute a payment conditionally
 */
 
@@ -137,7 +137,7 @@ namespace ripple {
 XRPAmount
 EscrowCreate::calculateMaxSpend(STTx const& tx)
 {
-    return tx[sfAmount].xrp();
+    return tx[sfAmount].stm();
 }
 
 TER
@@ -215,14 +215,14 @@ EscrowCreate::doApply()
 
     // Check reserve and funds availability
     {
-        auto const balance = STAmount((*sle)[sfBalance]).xrp();
+        auto const balance = STAmount((*sle)[sfBalance]).stm();
         auto const reserve = ctx_.view().fees().accountReserve(
             (*sle)[sfOwnerCount] + 1);
 
         if (balance < reserve)
             return tecINSUFFICIENT_RESERVE;
 
-        if (balance < reserve + STAmount(ctx_.tx[sfAmount]).xrp())
+        if (balance < reserve + STAmount(ctx_.tx[sfAmount]).stm())
             return tecUNFUNDED;
     }
 

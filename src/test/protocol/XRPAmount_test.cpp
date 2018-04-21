@@ -69,7 +69,7 @@ public:
 
     void testComparisons ()
     {
-        testcase ("XRP Comparisons");
+        testcase ("STM Comparisons");
 
         for (auto i : { -1, 0, 1})
         {

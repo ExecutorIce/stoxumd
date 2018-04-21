@@ -391,7 +391,7 @@ R"({
 "Missing field 'tx_json.Sequence'.",
 "Missing field 'tx_json.Sequence'."}},
 
-{ "Cannot create XRP to XRP paths.",
+{ "Cannot create STM to STM paths.",
 R"({
     "command": "doesnt_matter",
     "account": "rHb9CJAWyB4rj91VRWn96DkukG4bwdtyTh",
@@ -405,8 +405,8 @@ R"({
     }
 })",
 {
-"Cannot build XRP to XRP paths.",
-"Cannot build XRP to XRP paths.",
+"Cannot build STM to STM paths.",
+"Cannot build STM to STM paths.",
 "Missing field 'tx_json.Sequence'.",
 "Missing field 'tx_json.Sequence'."}},
 
@@ -485,7 +485,7 @@ R"({
 "Missing field 'tx_json.Sequence'.",
 "Missing field 'tx_json.Sequence'."}},
 
-{ "Even though 'Amount' may not be XRP for pathfinding, 'SendMax' may be XRP.",
+{ "Even though 'Amount' may not be STM for pathfinding, 'SendMax' may be STM.",
 R"({
     "command": "doesnt_matter",
     "account": "rHb9CJAWyB4rj91VRWn96DkukG4bwdtyTh",
@@ -2265,7 +2265,7 @@ public:
         // "c" (phantom signer) is rPcNzota6B8YBokhYtcTNqQVCngtbnWfux.
 
         test::jtx::Env env(*this);
-        env.fund(test::jtx::XRP(100000), a, ed, g);
+        env.fund(test::jtx::STM(100000), a, ed, g);
         env.close();
 
         env(trust(a, USD(1000)));

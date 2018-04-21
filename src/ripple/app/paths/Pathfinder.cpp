@@ -35,9 +35,9 @@
 
 Core Pathfinding Engine
 
-The pathfinding request is identified by category, XRP to XRP, XRP to
-non-XRP, non-XRP to XRP, same currency non-XRP to non-XRP, cross-currency
-non-XRP to non-XRP.  For each category, there is a table of paths that the
+The pathfinding request is identified by category, STM to STM, STM to
+non-STM, non-STM to STM, same currency non-STM to non-STM, cross-currency
+non-STM to non-STM.  For each category, there is a table of paths that the
 pathfinder searches for.  Complete paths are collected.
 
 Each complete path is then rated and sorted. Paths with no or trivial
@@ -251,7 +251,7 @@ bool Pathfinder::findPaths (int searchLevel)
         if (!bDstXrp)
         {
             JLOG (j_.debug())
-                    << "New account not being funded in XRP ";
+                    << "New account not being funded in STM ";
             return false;
         }
 
@@ -270,32 +270,32 @@ bool Pathfinder::findPaths (int searchLevel)
     PaymentType paymentType;
     if (bSrcXrp && bDstXrp)
     {
-        // XRP -> XRP
-        JLOG (j_.debug()) << "XRP to XRP payment";
+        // STM -> STM
+        JLOG (j_.debug()) << "STM to STM payment";
         paymentType = pt_XRP_to_XRP;
     }
     else if (bSrcXrp)
     {
-        // XRP -> non-XRP
-        JLOG (j_.debug()) << "XRP to non-XRP payment";
+        // STM -> non-STM
+        JLOG (j_.debug()) << "STM to non-STM payment";
         paymentType = pt_XRP_to_nonXRP;
     }
     else if (bDstXrp)
     {
-        // non-XRP -> XRP
-        JLOG (j_.debug()) << "non-XRP to XRP payment";
+        // non-STM -> STM
+        JLOG (j_.debug()) << "non-STM to STM payment";
         paymentType = pt_nonXRP_to_XRP;
     }
     else if (mSrcCurrency == mDstAmount.getCurrency ())
     {
-        // non-XRP -> non-XRP - Same currency
-        JLOG (j_.debug()) << "non-XRP to non-XRP - same currency";
+        // non-STM -> non-STM - Same currency
+        JLOG (j_.debug()) << "non-STM to non-STM - same currency";
         paymentType = pt_nonXRP_to_same;
     }
     else
     {
-        // non-XRP to non-XRP - Different currency
-        JLOG (j_.debug()) << "non-XRP to non-XRP - cross currency";
+        // non-STM to non-STM - Different currency
+        JLOG (j_.debug()) << "non-STM to non-STM - cross currency";
         paymentType = pt_nonXRP_to_nonXRP;
     }
 
@@ -915,7 +915,7 @@ void Pathfinder::addLink (
         if (bOnXRP)
         {
             if (mDstAmount.native () && !currentPath.empty ())
-            { // non-default path to XRP destination
+            { // non-default path to STM destination
                 JLOG (j_.trace())
                     << "complete path found ax: " << currentPath.getJson(0);
                 addUniquePath (mCompletePaths, currentPath);
@@ -1063,7 +1063,7 @@ void Pathfinder::addLink (
         // add order books
         if (addFlags & afOB_XRP)
         {
-            // to XRP only
+            // to STM only
             if (!bOnXRP && app_.getOrderBookDB ().isBookToXRP (
                     {uEndCurrency, uEndIssuer}))
             {
@@ -1096,7 +1096,7 @@ void Pathfinder::addLink (
                     STPath newPath (currentPath);
 
                     if (book->getCurrencyOut().isZero())
-                    { // to XRP
+                    { // to STM
 
                         // add the order book itself
                         newPath.emplace_back (
@@ -1107,7 +1107,7 @@ void Pathfinder::addLink (
 
                         if (mDstAmount.getCurrency ().isZero ())
                         {
-                            // destination is XRP, add account and path is
+                            // destination is STM, add account and path is
                             // complete
                             JLOG (j_.trace())
                                 << "complete path found bx: "
@@ -1196,7 +1196,7 @@ Pathfinder::PathType makePath (char const *string)
                 ret.push_back (Pathfinder::nt_BOOKS);
                 break;
 
-            case 'x': // xrp book
+            case 'x': // stm book
                 ret.push_back (Pathfinder::nt_XRP_BOOK);
                 break;
 
@@ -1254,15 +1254,15 @@ void Pathfinder::initPathTable ()
 
     fillPaths(
         pt_nonXRP_to_XRP, {
-            {1, "sxd"},       // gateway buys XRP
-            {2, "saxd"},      // source -> gateway -> book(XRP) -> dest
+            {1, "sxd"},       // gateway buys STM
+            {2, "saxd"},      // source -> gateway -> book(STM) -> dest
             {6, "saaxd"},
             {7, "sbxd"},
             {8, "sabxd"},
             {9, "sabaxd"}
         });
 
-    // non-XRP to non-XRP (same currency)
+    // non-STM to non-STM (same currency)
     fillPaths(
         pt_nonXRP_to_same,  {
             {1, "sad"},     // source -> gateway -> destination
@@ -1273,14 +1273,14 @@ void Pathfinder::initPathTable ()
             {5, "sbfd"},
             {6, "sxfad"},
             {6, "safad"},
-            {6, "saxfd"},   // source -> gateway -> book to XRP -> book ->
+            {6, "saxfd"},   // source -> gateway -> book to STM -> book ->
                             // destination
             {6, "saxfad"},
             {6, "sabfd"},   // source -> gateway -> book -> book -> destination
             {7, "saaad"},
         });
 
-    // non-XRP to non-XRP (different currency)
+    // non-STM to non-STM (different currency)
     fillPaths(
         pt_nonXRP_to_nonXRP, {
             {1, "sfad"},

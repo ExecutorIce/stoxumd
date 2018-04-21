@@ -141,34 +141,34 @@ public:
         {
             testcase ("set value (native)");
 
-            Issue const xrp (xrpIssue ());
+            Issue const stm (xrpIssue ());
 
-            // fractional XRP (i.e. drops)
-            testSetValue ("1", xrp);
-            testSetValue ("22", xrp);
-            testSetValue ("333", xrp);
-            testSetValue ("4444", xrp);
-            testSetValue ("55555", xrp);
-            testSetValue ("666666", xrp);
+            // fractional STM (i.e. drops)
+            testSetValue ("1", stm);
+            testSetValue ("22", stm);
+            testSetValue ("333", stm);
+            testSetValue ("4444", stm);
+            testSetValue ("55555", stm);
+            testSetValue ("666666", stm);
 
-            // 1 XRP up to 100 billion, in powers of 10 (in drops)
-            testSetValue ("1000000", xrp);
-            testSetValue ("10000000", xrp);
-            testSetValue ("100000000", xrp);
-            testSetValue ("1000000000", xrp);
-            testSetValue ("10000000000", xrp);
-            testSetValue ("100000000000", xrp);
-            testSetValue ("1000000000000", xrp);
-            testSetValue ("10000000000000", xrp);
-            testSetValue ("100000000000000", xrp);
-            testSetValue ("1000000000000000", xrp);
-            testSetValue ("10000000000000000", xrp);
-            testSetValue ("100000000000000000", xrp);
+            // 1 STM up to 100 billion, in powers of 10 (in drops)
+            testSetValue ("1000000", stm);
+            testSetValue ("10000000", stm);
+            testSetValue ("100000000", stm);
+            testSetValue ("1000000000", stm);
+            testSetValue ("10000000000", stm);
+            testSetValue ("100000000000", stm);
+            testSetValue ("1000000000000", stm);
+            testSetValue ("10000000000000", stm);
+            testSetValue ("100000000000000", stm);
+            testSetValue ("1000000000000000", stm);
+            testSetValue ("10000000000000000", stm);
+            testSetValue ("100000000000000000", stm);
 
             // Invalid native values:
-            testSetValue ("1.1", xrp, false);
-            testSetValue ("100000000000000001", xrp, false);
-            testSetValue ("1000000000000000000", xrp, false);
+            testSetValue ("1.1", stm, false);
+            testSetValue ("100000000000000001", stm, false);
+            testSetValue ("1000000000000000000", stm, false);
         }
 
         {
@@ -272,7 +272,7 @@ public:
         unexpected (STAmount ().getText () != "0", "STAmount fail");
         unexpected (STAmount (31).getText () != "31", "STAmount fail");
         unexpected (STAmount (310).getText () != "310", "STAmount fail");
-        unexpected (to_string (Currency ()) != "XRP", "cHC(XRP)");
+        unexpected (to_string (Currency ()) != "STM", "cHC(STM)");
         Currency c;
         unexpected (!to_currency (c, "USD"), "create USD currency");
         unexpected (to_string (c) != "USD", "check USD currency");
@@ -547,12 +547,12 @@ public:
         testcase ("STAmount to XRPAmount conversions");
 
         Issue const usd { Currency (0x5553440000000000), AccountID (0x4985601) };
-        Issue const xrp { xrpIssue () };
+        Issue const stm { xrpIssue () };
 
         for (std::uint64_t drops = 100000000000000000; drops != 1; drops = drops / 10)
         {
-            auto const t = amountFromString (xrp, std::to_string (drops));
-            auto const s = t.xrp ();
+            auto const t = amountFromString (stm, std::to_string (drops));
+            auto const s = t.stm ();
             BEAST_EXPECT(s.drops() == drops);
             BEAST_EXPECT(t == STAmount (XRPAmount (drops)));
             BEAST_EXPECT(s == XRPAmount (drops));
@@ -561,7 +561,7 @@ public:
         try
         {
             auto const t = amountFromString (usd, "136500");
-            fail (to_string (t.xrp ()));
+            fail (to_string (t.stm ()));
         }
         catch (std::logic_error const&)
         {
@@ -579,7 +579,7 @@ public:
         testcase ("STAmount to IOUAmount conversions");
 
         Issue const usd { Currency (0x5553440000000000), AccountID (0x4985601) };
-        Issue const xrp { xrpIssue () };
+        Issue const stm { xrpIssue () };
 
         for (std::uint64_t dollars = 10000000000; dollars != 1; dollars = dollars / 10)
         {
@@ -592,7 +592,7 @@ public:
 
         try
         {
-            auto const t = amountFromString (xrp, "136500");
+            auto const t = amountFromString (stm, "136500");
             fail (to_string (t.iou ()));
         }
         catch (std::logic_error const&)

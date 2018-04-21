@@ -68,7 +68,7 @@ preflight1 (PreflightContext const& ctx)
 
     // No point in going any further if the transaction fee is malformed.
     auto const fee = ctx.tx.getFieldAmount (sfFee);
-    if (!fee.native () || fee.negative () || !isLegalAmount (fee.xrp ()))
+    if (!fee.native () || fee.negative () || !isLegalAmount (fee.stm ()))
     {
         JLOG(ctx.j.debug()) << "preflight1: invalid fee";
         return temBAD_FEE;
@@ -156,7 +156,7 @@ std::uint64_t Transactor::calculateBaseFee (
 XRPAmount
 Transactor::calculateFeePaid(STTx const& tx)
 {
-    return tx[sfFee].xrp();
+    return tx[sfFee].stm();
 }
 
 XRPAmount
@@ -189,7 +189,7 @@ Transactor::checkFee (PreclaimContext const& ctx, std::uint64_t baseFee)
     auto const id = ctx.tx.getAccountID(sfAccount);
     auto const sle = ctx.view.read(
         keylet::account(id));
-    auto const balance = (*sle)[sfBalance].xrp();
+    auto const balance = (*sle)[sfBalance].stm();
 
     if (balance < feePaid)
     {
@@ -313,7 +313,7 @@ TER Transactor::apply ()
 
     if (sle)
     {
-        mPriorBalance   = STAmount ((*sle)[sfBalance]).xrp ();
+        mPriorBalance   = STAmount ((*sle)[sfBalance]).stm ();
         mSourceBalance  = mPriorBalance;
 
         setSeq();
@@ -576,7 +576,7 @@ Transactor::claimFee (XRPAmount& fee, TER terResult, std::vector<uint256> const&
     auto const txnAcct = view().peek(
         keylet::account(ctx_.tx.getAccountID(sfAccount)));
 
-    auto const balance = txnAcct->getFieldAmount (sfBalance).xrp ();
+    auto const balance = txnAcct->getFieldAmount (sfBalance).stm ();
 
     // balance should have already been
     // checked in checkFee / preFlight.
@@ -646,7 +646,7 @@ Transactor::operator()()
     }
 
     bool didApply = isTesSuccess (terResult);
-    auto fee = ctx_.tx.getFieldAmount(sfFee).xrp ();
+    auto fee = ctx_.tx.getFieldAmount(sfFee).stm ();
 
     if (ctx_.size() > oversizeMetaDataCap)
         terResult = tecOVERSIZE;

@@ -45,19 +45,19 @@ toSTAmount (IOUAmount const& iou)
 
 inline
 STAmount
-toSTAmount (XRPAmount const& xrp)
+toSTAmount (XRPAmount const& stm)
 {
-    bool const isNeg = xrp.signum() < 0;
-    std::uint64_t const umant = isNeg ? - xrp.drops () : xrp.drops ();
+    bool const isNeg = stm.signum() < 0;
+    std::uint64_t const umant = isNeg ? - stm.drops () : stm.drops ();
     return STAmount (umant, isNeg);
 }
 
 inline
 STAmount
-toSTAmount (XRPAmount const& xrp, Issue const& iss)
+toSTAmount (XRPAmount const& stm, Issue const& iss)
 {
     assert (isXRP(iss.account) && isXRP(iss.currency));
-    return toSTAmount (xrp);
+    return toSTAmount (stm);
 }
 
 template <class T>

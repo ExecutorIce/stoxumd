@@ -178,7 +178,7 @@ Env::balance (Account const& account) const
 {
     auto const sle = le(account);
     if (! sle)
-        return XRP(0);
+        return STM(0);
     return {
         sle->getFieldAmount(sfBalance),
             "" };

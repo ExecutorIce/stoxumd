@@ -31,7 +31,7 @@ struct AmountSpec
     bool native;
     union
     {
-        XRPAmount xrp;
+        XRPAmount stm;
         IOUAmount iou;
     };
     boost::optional<AccountID> issuer;
@@ -44,7 +44,7 @@ struct AmountSpec
         AmountSpec const& amt)
     {
         if (amt.native)
-            stream << to_string (amt.xrp);
+            stream << to_string (amt.stm);
         else
             stream << to_string (amt.iou);
         if (amt.currency)
@@ -64,7 +64,7 @@ struct EitherAmount
     union
     {
         IOUAmount iou;
-        XRPAmount xrp;
+        XRPAmount stm;
     };
 
     EitherAmount () = default;
@@ -82,7 +82,7 @@ struct EitherAmount
 #endif
     explicit
     EitherAmount (XRPAmount const& a)
-            :xrp(a)
+            :stm(a)
     {
 #ifndef NDEBUG
         native = true;
@@ -99,7 +99,7 @@ struct EitherAmount
         native = a.native;
 #endif
         if (a.native)
-            xrp = a.xrp;
+            stm = a.stm;
         else
             iou = a.iou;
     }
@@ -128,7 +128,7 @@ XRPAmount&
 get<XRPAmount> (EitherAmount& amt)
 {
     assert (amt.native);
-    return amt.xrp;
+    return amt.stm;
 }
 
 template <class T>
@@ -154,7 +154,7 @@ XRPAmount const&
 get<XRPAmount> (EitherAmount const& amt)
 {
     assert (amt.native);
-    return amt.xrp;
+    return amt.stm;
 }
 
 inline
@@ -170,7 +170,7 @@ toAmountSpec (STAmount const& amt)
     result.native = isXRP (amt);
     if (result.native)
     {
-        result.xrp = XRPAmount (sMant);
+        result.stm = XRPAmount (sMant);
     }
     else
     {
@@ -187,7 +187,7 @@ EitherAmount
 toEitherAmount (STAmount const& amt)
 {
     if (isXRP (amt))
-        return EitherAmount{amt.xrp()};
+        return EitherAmount{amt.stm()};
     return EitherAmount{amt.iou()};
 }
 
@@ -203,7 +203,7 @@ toAmountSpec (
     assert (ea.native == r.native);
     if (r.native)
     {
-        r.xrp = ea.xrp;
+        r.stm = ea.stm;
     }
     else
     {

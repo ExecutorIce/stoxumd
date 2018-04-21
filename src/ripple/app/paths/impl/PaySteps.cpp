@@ -120,7 +120,7 @@ toStep (
 
     if (isXRP (curIssue.currency) && isXRP (outCurrency))
     {
-        JLOG (j.warn()) << "Found xrp/xrp offer payment step";
+        JLOG (j.warn()) << "Found stm/stm offer payment step";
         return {temBAD_PATH, std::unique_ptr<Step>{}};
     }
 
@@ -594,7 +594,7 @@ toStrandV2 (
                         return {temBAD_PATH, Strand{}};
                     else
                     {
-                        // Last step. insert xrp endpoint step
+                        // Last step. insert stm endpoint step
                         auto msr = make_XRPEndpointStep (ctx(), next->getAccountID());
                         if (msr.first != tesSUCCESS)
                             return {msr.first, Strand{}};

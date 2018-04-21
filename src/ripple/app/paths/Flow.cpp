@@ -117,14 +117,14 @@ flow (
 
     auto const asDeliver = toAmountSpec (deliver);
 
-    // The src account may send either xrp or iou. The dst account may receive
-    // either xrp or iou. Since XRP and IOU amounts are represented by different
+    // The src account may send either stm or iou. The dst account may receive
+    // either stm or iou. Since STM and IOU amounts are represented by different
     // types, use templates to tell `flow` about the amount types.
     if (srcIsXRP && dstIsXRP)
     {
         return finishFlow (sb, srcIssue, dstIssue,
             flow<XRPAmount, XRPAmount> (
-                sb, strands, asDeliver.xrp, partialPayment, offerCrossing,
+                sb, strands, asDeliver.stm, partialPayment, offerCrossing,
                 limitQuality, sendMax, j, flowDebugInfo));
     }
 
@@ -140,7 +140,7 @@ flow (
     {
         return finishFlow (sb, srcIssue, dstIssue,
             flow<IOUAmount, XRPAmount> (
-                sb, strands, asDeliver.xrp, partialPayment, offerCrossing,
+                sb, strands, asDeliver.stm, partialPayment, offerCrossing,
                 limitQuality, sendMax, j, flowDebugInfo));
     }
 

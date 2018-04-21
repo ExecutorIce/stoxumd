@@ -51,7 +51,7 @@ getFeeLevelPaid(
     // If the math overflows, return the clipped
     // result blindly. This is very unlikely to ever
     // happen.
-    return mulDiv(tx[sfFee].xrp().drops(),
+    return mulDiv(tx[sfFee].stm().drops(),
         baseRefLevel,
             refTxnCostDrops).second;
 }
@@ -884,34 +884,34 @@ TxQ::apply(Application& app, OpenView& view,
                         this account. Currently, it will not count,
                         for the same reason that it is not checked on
                         the first transaction.
-                    Assume: Minimum account reserve is 20 XRP.
-                    Example 1: If I have 1,000,000 XRP, I can queue
-                        a transaction with a 1,000,000 XRP fee. In
+                    Assume: Minimum account reserve is 20 STM.
+                    Example 1: If I have 1,000,000 STM, I can queue
+                        a transaction with a 1,000,000 STM fee. In
                         the meantime, some other transaction may
                         lower my balance (eg. taking an offer). When
                         the transaction executes, I will either
-                        spend the 1,000,000 XRP, or the transaction
+                        spend the 1,000,000 STM, or the transaction
                         will get stuck in the queue with a
                         `terINSUF_FEE_B`.
-                    Example 2: If I have 1,000,000 XRP, and I queue
-                        10 transactions with 0.1 XRP fee, I have 1 XRP
+                    Example 2: If I have 1,000,000 STM, and I queue
+                        10 transactions with 0.1 STM fee, I have 1 STM
                         in flight. I can now queue another tx with a
-                        999,999 XRP fee. When the first 10 execute,
+                        999,999 STM fee. When the first 10 execute,
                         they're guaranteed to pay their fee, because
                         nothing can eat into my reserve. The last
                         transaction, again, will either spend the
-                        999,999 XRP, or get stuck in the queue.
-                    Example 3: If I have 1,000,000 XRP, and I queue
-                        7 transactions with 3 XRP fee, I have 21 XRP
+                        999,999 STM, or get stuck in the queue.
+                    Example 3: If I have 1,000,000 STM, and I queue
+                        7 transactions with 3 STM fee, I have 21 STM
                         in flight. I can not queue any more transactions,
                         no matter how small or large the fee.
                     Transactions stuck in the queue are mitigated by
                     LastLedgerSeq and MaybeTx::retriesRemaining.
                 */
-                auto const balance = (*sle)[sfBalance].xrp();
+                auto const balance = (*sle)[sfBalance].stm();
                 auto totalFee = multiTxn->fee;
                 if (multiTxn->includeCurrentFee)
-                    totalFee += (*tx)[sfFee].xrp();
+                    totalFee += (*tx)[sfFee].stm();
                 if (totalFee >= balance ||
                     totalFee >= view.fees().accountReserve(0))
                 {

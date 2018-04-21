@@ -36,7 +36,7 @@ public:
         using namespace test::jtx;
         Env env(*this);
         Account const alice ("alice");
-        env.fund(XRP(10000), noripple(alice));
+        env.fund(STM(10000), noripple(alice));
         //ask for the ledger entry - account root, to check its flags
         auto const jrr = env.le(alice);
         BEAST_EXPECT((*env.le(alice))[ sfFlags ] == 0u);
@@ -49,7 +49,7 @@ public:
 
         // Test without DepositAuth enabled initially.
         Env env(*this, supported_amendments() - featureDepositAuth);
-        env.fund(XRP(10000), noripple(alice));
+        env.fund(STM(10000), noripple(alice));
 
         // Give alice a regular key so she can legally set and clear
         // her asfDisableMaster flag.
@@ -115,7 +115,7 @@ public:
         using namespace test::jtx;
         Env env(*this);
         Account const alice ("alice");
-        env.fund(XRP(10000), noripple(alice));
+        env.fund(STM(10000), noripple(alice));
 
         std::uint32_t const orig_flags = (*env.le(alice))[ sfFlags ];
 
@@ -135,7 +135,7 @@ public:
         using namespace test::jtx;
         Env env(*this);
         Account const alice ("alice");
-        env.fund(XRP(10000), noripple(alice));
+        env.fund(STM(10000), noripple(alice));
         env.memoize("eric");
         env(regkey(alice, "eric"));
 
@@ -153,7 +153,7 @@ public:
         using namespace test::jtx;
         Env env(*this);
         Account const alice ("alice");
-        env.fund(XRP(10000), alice);
+        env.fund(STM(10000), alice);
         auto jt = noop(alice);
         // The Domain field is represented as the hex string of the lowercase
         // ASCII of the domain. For example, the domain example.com would be
@@ -200,7 +200,7 @@ public:
         using namespace test::jtx;
         Env env(*this);
         Account const alice ("alice");
-        env.fund(XRP(10000), alice);
+        env.fund(STM(10000), alice);
         auto jt = noop(alice);
 
         auto const rkp = randomKeyPair(KeyType::ed25519);
@@ -221,7 +221,7 @@ public:
         using namespace test::jtx;
         Env env(*this);
         Account const alice ("alice");
-        env.fund(XRP(10000), alice);
+        env.fund(STM(10000), alice);
         auto jt = noop(alice);
 
         uint256 somehash = from_hex_text<uint256>("9633ec8af54f16b5286db1d7b519ef49eefc050c0c8ac4384f1d88acd1bfdf05");
@@ -239,7 +239,7 @@ public:
         using namespace test::jtx;
         Env env(*this);
         Account const alice ("alice");
-        env.fund(XRP(10000), alice);
+        env.fund(STM(10000), alice);
         auto jt = noop(alice);
 
         uint128 somehash = from_hex_text<uint128>("fff680681c2f5e6095324e2e08838f221a72ab4f");
@@ -268,7 +268,7 @@ public:
             Env env (*this, features);
 
             Account const alice ("alice");
-            env.fund(XRP(10000), alice);
+            env.fund(STM(10000), alice);
 
             for (auto const& r : testData)
             {
@@ -320,7 +320,7 @@ public:
             Account const gw ("gateway");
             auto const USD = gw["USD"];
 
-            env.fund(XRP(10000), gw, alice, bob);
+            env.fund(STM(10000), gw, alice, bob);
             env.trust(USD(3), alice, bob);
             env(rate(gw, tr));
             env.close();
@@ -355,7 +355,7 @@ public:
             auto const USD = gw["USD"];
             double const tr = 2.75;
 
-            env.fund(XRP(10000), gw, alice, bob);
+            env.fund(STM(10000), gw, alice, bob);
             env.trust(USD(3), alice, bob);
             env(rate(gw, tr));
             env.close();
@@ -382,7 +382,7 @@ public:
             withFeatures ?  new Env(*this) : new Env(*this, FeatureBitset{})};
         Env& env = *penv;
         Account const alice ("alice");
-        env.fund(XRP(10000), alice);
+        env.fund(STM(10000), alice);
 
         auto jt = fset(alice, asfDisallowXRP);
         jt[jss::ClearFlag] = asfDisallowXRP;
@@ -424,7 +424,7 @@ public:
         Account const alice ("alice");
         Account const bob ("bob");
 
-        env.fund(XRP(10000), alice);
+        env.fund(STM(10000), alice);
         env.close();
 
         // alice should have an empty directory.

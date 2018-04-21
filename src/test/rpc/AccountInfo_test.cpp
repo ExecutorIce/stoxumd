@@ -61,7 +61,7 @@ public:
         using namespace jtx;
         Env env(*this);
         Account const alice {"alice"};
-        env.fund(XRP(1000), alice);
+        env.fund(STM(1000), alice);
 
         auto const withoutSigners = std::string ("{ ") +
             "\"account\": \"" + alice.human() + "\"}";
@@ -167,7 +167,7 @@ public:
         using namespace jtx;
         Env env(*this);
         Account const alice {"alice"};
-        env.fund(XRP(1000), alice);
+        env.fund(STM(1000), alice);
 
         auto const withoutSigners = std::string ("{ ") +
             "\"jsonrpc\": \"2.0\", "

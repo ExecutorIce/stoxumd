@@ -93,7 +93,7 @@ operator<< (std::ostream& os,
         if (amount.value().negative())
             os << "-";
 
-        os << to_places(d, 6) << " XRP";
+        os << to_places(d, 6) << " STM";
     }
     else
     {
@@ -107,7 +107,7 @@ operator<< (std::ostream& os,
 
 //------------------------------------------------------------------------------
 
-XRP_t const XRP {};
+XRP_t const STM {};
 
 PrettyAmount
 IOU::operator()(epsilon_t) const

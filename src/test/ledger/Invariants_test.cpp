@@ -75,7 +75,7 @@ class Invariants_test : public beast::unit_test::suite
 
         Account A1 {"A1"};
         Account A2 {"A2"};
-        env.fund (XRP (1000), A1, A2);
+        env.fund (STM (1000), A1, A2);
         env.close();
 
         // dummy/empty tx to setup the AccountContext
@@ -142,12 +142,12 @@ class Invariants_test : public beast::unit_test::suite
     {
         using namespace test::jtx;
         testcase << "checks " << (enabled ? "enabled" : "disabled") <<
-            " - XRP created";
+            " - STM created";
         doInvariantCheck (enabled,
-            {{ "XRP net change was 500 on a fee of 0" }},
+            {{ "STM net change was 500 on a fee of 0" }},
             [](Account const& A1, Account const&, ApplyContext& ac)
             {
-                // put a single account in the view and "manufacture" some XRP
+                // put a single account in the view and "manufacture" some STM
                 auto const sle = ac.view().peek (keylet::account(A1.id()));
                 if(! sle)
                     return false;
@@ -185,7 +185,7 @@ class Invariants_test : public beast::unit_test::suite
             " - LE types don't match";
         doInvariantCheck (enabled,
             {{ "ledger entry type mismatch" },
-             { "XRP net change was -1000000000 on a fee of 0" }},
+             { "STM net change was -1000000000 on a fee of 0" }},
             [](Account const& A1, Account const&, ApplyContext& ac)
             {
                 // replace an entry in the table with an SLE of a different type
@@ -221,12 +221,12 @@ class Invariants_test : public beast::unit_test::suite
     {
         using namespace test::jtx;
         testcase << "checks " << (enabled ? "enabled" : "disabled") <<
-            " - trust lines with XRP not allowed";
+            " - trust lines with STM not allowed";
         doInvariantCheck (enabled,
-            {{ "an XRP trust line was created" }},
+            {{ "an STM trust line was created" }},
             [](Account const& A1, Account const& A2, ApplyContext& ac)
             {
-                // create simple trust SLE with xrp currency
+                // create simple trust SLE with stm currency
                 auto index = getRippleStateIndex (A1, A2, xrpIssue().currency);
                 auto const sleNew = std::make_shared<SLE>(
                     ltRIPPLE_STATE, index);
@@ -240,7 +240,7 @@ class Invariants_test : public beast::unit_test::suite
     {
         using namespace test::jtx;
         testcase << "checks " << (enabled ? "enabled" : "disabled") <<
-            " - XRP balance checks";
+            " - STM balance checks";
 
         doInvariantCheck (enabled,
             {{ "Cannot return non-native STAmount as XRPAmount" }},
@@ -257,8 +257,8 @@ class Invariants_test : public beast::unit_test::suite
             });
 
         doInvariantCheck (enabled,
-            {{ "incorrect account XRP balance" },
-             {  "XRP net change was 99999999000000001 on a fee of 0" }},
+            {{ "incorrect account STM balance" },
+             {  "STM net change was 99999999000000001 on a fee of 0" }},
             [](Account const& A1, Account const&, ApplyContext& ac)
             {
                 // balance exceeds genesis amount
@@ -271,8 +271,8 @@ class Invariants_test : public beast::unit_test::suite
             });
 
         doInvariantCheck (enabled,
-            {{ "incorrect account XRP balance" },
-             { "XRP net change was -1000000001 on a fee of 0" }},
+            {{ "incorrect account STM balance" },
+             { "STM net change was -1000000001 on a fee of 0" }},
             [](Account const& A1, Account const&, ApplyContext& ac)
             {
                 // balance is negative
@@ -305,7 +305,7 @@ class Invariants_test : public beast::unit_test::suite
                 auto sleNew = std::make_shared<SLE> (ltOFFER, offer_index);
                 sleNew->setAccountID (sfAccount, A1.id());
                 sleNew->setFieldU32 (sfSequence, (*sle)[sfSequence]);
-                sleNew->setFieldAmount (sfTakerPays, XRP(-1));
+                sleNew->setFieldAmount (sfTakerPays, STM(-1));
                 ac.view().insert (sleNew);
                 return true;
             });
@@ -324,7 +324,7 @@ class Invariants_test : public beast::unit_test::suite
                 sleNew->setAccountID (sfAccount, A1.id());
                 sleNew->setFieldU32 (sfSequence, (*sle)[sfSequence]);
                 sleNew->setFieldAmount (sfTakerPays, A1["USD"](10));
-                sleNew->setFieldAmount (sfTakerGets, XRP(-1));
+                sleNew->setFieldAmount (sfTakerGets, STM(-1));
                 ac.view().insert (sleNew);
                 return true;
             });
@@ -333,7 +333,7 @@ class Invariants_test : public beast::unit_test::suite
             {{ "offer with a bad amount" }},
             [](Account const& A1, Account const&, ApplyContext& ac)
             {
-                // offer XRP to XRP
+                // offer STM to STM
                 auto const sle = ac.view().peek (keylet::account(A1.id()));
                 if(! sle)
                     return false;
@@ -342,8 +342,8 @@ class Invariants_test : public beast::unit_test::suite
                 auto sleNew = std::make_shared<SLE> (ltOFFER, offer_index);
                 sleNew->setAccountID (sfAccount, A1.id());
                 sleNew->setFieldU32 (sfSequence, (*sle)[sfSequence]);
-                sleNew->setFieldAmount (sfTakerPays, XRP(10));
-                sleNew->setFieldAmount (sfTakerGets, XRP(11));
+                sleNew->setFieldAmount (sfTakerPays, STM(10));
+                sleNew->setFieldAmount (sfTakerGets, STM(11));
                 ac.view().insert (sleNew);
                 return true;
             });
@@ -373,7 +373,7 @@ class Invariants_test : public beast::unit_test::suite
             });
 
         doInvariantCheck (enabled,
-            {{ "XRP net change was -1000000 on a fee of 0"},
+            {{ "STM net change was -1000000 on a fee of 0"},
              {  "escrow specifies invalid amount" }},
             [](Account const& A1, Account const&, ApplyContext& ac)
             {
@@ -383,13 +383,13 @@ class Invariants_test : public beast::unit_test::suite
                     return false;
                 auto sleNew = std::make_shared<SLE> (
                     keylet::escrow(A1, (*sle)[sfSequence] + 2));
-                sleNew->setFieldAmount (sfAmount, XRP(-1));
+                sleNew->setFieldAmount (sfAmount, STM(-1));
                 ac.view().insert (sleNew);
                 return true;
             });
 
         doInvariantCheck (enabled,
-            {{ "XRP net change was 100000000000000001 on a fee of 0" },
+            {{ "STM net change was 100000000000000001 on a fee of 0" },
              {  "escrow specifies invalid amount" }},
             [](Account const& A1, Account const&, ApplyContext& ac)
             {

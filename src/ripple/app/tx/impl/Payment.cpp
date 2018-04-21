@@ -37,12 +37,12 @@ Payment::calculateMaxSpend(STTx const& tx)
     if (tx.isFieldPresent(sfSendMax))
     {
         auto const& sendMax = tx[sfSendMax];
-        return sendMax.native() ? sendMax.xrp() : beast::zero;
+        return sendMax.native() ? sendMax.stm() : beast::zero;
     }
-    /* If there's no sfSendMax in XRP, and the sfAmount isn't
-    in XRP, then the transaction can not send XRP. */
+    /* If there's no sfSendMax in STM, and the sfAmount isn't
+    in STM, then the transaction can not send STM. */
     auto const& saDstAmount = tx.getFieldAmount(sfAmount);
-    return saDstAmount.native() ? saDstAmount.xrp() : beast::zero;
+    return saDstAmount.native() ? saDstAmount.stm() : beast::zero;
 }
 
 TER
@@ -88,7 +88,7 @@ Payment::preflight (PreflightContext const& ctx)
     auto const& uSrcCurrency = maxSourceAmount.getCurrency ();
     auto const& uDstCurrency = saDstAmount.getCurrency ();
 
-    // isZero() is XRP.  FIX!
+    // isZero() is STM.  FIX!
     bool const bXRPDirect = uSrcCurrency.isZero () && uDstCurrency.isZero ();
 
     if (!isLegalNet (saDstAmount) || !isLegalNet (maxSourceAmount))
@@ -133,35 +133,35 @@ Payment::preflight (PreflightContext const& ctx)
     {
         // Consistent but redundant transaction.
         JLOG(j.trace()) << "Malformed transaction: " <<
-            "SendMax specified for XRP to XRP.";
+            "SendMax specified for STM to STM.";
         return temBAD_SEND_XRP_MAX;
     }
     if (bXRPDirect && bPaths)
     {
-        // XRP is sent without paths.
+        // STM is sent without paths.
         JLOG(j.trace()) << "Malformed transaction: " <<
-            "Paths specified for XRP to XRP.";
+            "Paths specified for STM to STM.";
         return temBAD_SEND_XRP_PATHS;
     }
     if (bXRPDirect && partialPaymentAllowed)
     {
         // Consistent but redundant transaction.
         JLOG(j.trace()) << "Malformed transaction: " <<
-            "Partial payment specified for XRP to XRP.";
+            "Partial payment specified for STM to STM.";
         return temBAD_SEND_XRP_PARTIAL;
     }
     if (bXRPDirect && limitQuality)
     {
         // Consistent but redundant transaction.
         JLOG(j.trace()) << "Malformed transaction: " <<
-            "Limit quality specified for XRP to XRP.";
+            "Limit quality specified for STM to STM.";
         return temBAD_SEND_XRP_LIMIT;
     }
     if (bXRPDirect && !defaultPathsAllowed)
     {
         // Consistent but redundant transaction.
         JLOG(j.trace()) << "Malformed transaction: " <<
-            "No ripple direct specified for XRP to XRP.";
+            "No ripple direct specified for STM to STM.";
         return temBAD_SEND_XRP_NO_DIRECT;
     }
 
@@ -354,7 +354,7 @@ Payment::doApply ()
     bool const bRipple = paths || sendMax || !saDstAmount.native ();
     // XXX Should sendMax be sufficient to imply ripple?
 
-    // If the destination has lsfDepositAuth set, then only direct XRP
+    // If the destination has lsfDepositAuth set, then only direct STM
     // payments (no intermediate steps) are allowed to the destination.
     if (bRipple && reqDepositAuth)
         return tecNO_PERMISSION;
@@ -419,7 +419,7 @@ Payment::doApply ()
 
     assert (saDstAmount.native ());
 
-    // Direct XRP payment.
+    // Direct STM payment.
 
     // uOwnerCount is the number of entries in this ledger for this
     // account that require a reserve.
@@ -433,15 +433,15 @@ Payment::doApply ()
     // fees were charged. We want to make sure we have enough reserve
     // to send. Allow final spend to use reserve for fee.
     auto const mmm = std::max(reserve,
-        ctx_.tx.getFieldAmount (sfFee).xrp ());
+        ctx_.tx.getFieldAmount (sfFee).stm ());
 
-    if (mPriorBalance < saDstAmount.xrp () + mmm)
+    if (mPriorBalance < saDstAmount.stm () + mmm)
     {
         // Vote no. However the transaction might succeed, if applied in
         // a different order.
         JLOG(j_.trace()) << "Delay transaction: Insufficient funds: " <<
             " " << to_string (mPriorBalance) <<
-            " / " << to_string (saDstAmount.xrp () + mmm) <<
+            " / " << to_string (saDstAmount.stm () + mmm) <<
             " (" << to_string (reserve) << ")";
 
         return tecUNFUNDED_PAYMENT;
@@ -454,16 +454,16 @@ Payment::doApply ()
         // Get the base reserve.
         XRPAmount const dstReserve {view().fees().accountReserve (0)};
 
-        // If the destination's XRP balance is
+        // If the destination's STM balance is
         //  1. below the base reserve and
         //  2. the deposit amount is also below the base reserve,
         // then we allow the deposit.
         //
         // This rule is designed to keep an account from getting wedged
         // in an unusable state if it sets the lsfDepositAuth flag and
-        // then consumes all of its XRP.  Without the rule if an
-        // account with lsfDepositAuth set spent all of its XRP, it
-        // would be unable to acquire more XRP required to pay fees.
+        // then consumes all of its STM.  Without the rule if an
+        // account with lsfDepositAuth set spent all of its STM, it
+        // would be unable to acquire more STM required to pay fees.
         //
         // We choose the base reserve as our bound because it is
         // a small number that seldom changes but is always sufficient

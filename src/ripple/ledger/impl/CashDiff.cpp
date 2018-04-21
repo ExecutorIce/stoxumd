@@ -201,8 +201,8 @@ static bool getBasicCashFlow (CashSummary& result, bool isDelete,
         {
         case ltACCOUNT_ROOT:
         {
-            auto const curXrp = cur[sfBalance].xrp();
-            if (!before || (*before)[sfBalance].xrp() != curXrp)
+            auto const curXrp = cur[sfBalance].stm();
+            if (!before || (*before)[sfBalance].stm() != curXrp)
                 result.xrpChanges.push_back (
                     std::make_pair (cur[sfAccount], curXrp));
             return true;
@@ -281,7 +281,7 @@ getCashFlow (ReadView const& view, CashFilter f, ApplyStateTable const& table)
 class CashDiff::Impl
 {
 private:
-    // Note differences in destroyed XRP between two ApplyStateTables.
+    // Note differences in destroyed STM between two ApplyStateTables.
     struct DropsGone
     {
         XRPAmount lhs;
@@ -666,7 +666,7 @@ bool diffIsDust (STAmount const& v1, STAmount const& v2, std::uint8_t e10)
     STAmount const& small = v1 < v2 ? v1 : v2;
     STAmount const& large = v1 < v2 ? v2 : v1;
 
-    // Handling XRP is different from IOU.
+    // Handling STM is different from IOU.
     if (v1.native())
     {
         std::uint64_t const s = small.mantissa();
