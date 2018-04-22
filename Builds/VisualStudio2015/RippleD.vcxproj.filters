@@ -100,217 +100,217 @@
     <Filter Include="protobuf\vsprojects">
       <UniqueIdentifier>{5DA545F5-86B2-6120-E3A6-8D0875402F4D}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ripple">
+    <Filter Include="stoxum">
       <UniqueIdentifier>{C99E2B0C-64FF-A4A9-6FCF-DF19BE8E4C66}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ripple\app">
+    <Filter Include="stoxum\app">
       <UniqueIdentifier>{83B96C00-A786-6597-826D-E12FA6187AA8}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ripple\app\consensus">
+    <Filter Include="stoxum\app\consensus">
       <UniqueIdentifier>{0E8BC18A-9853-B13E-1A9D-C55FA29DA60F}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ripple\app\ledger">
+    <Filter Include="stoxum\app\ledger">
       <UniqueIdentifier>{CE126498-A44D-30A2-345B-0F672BCDF947}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ripple\app\ledger\impl">
+    <Filter Include="stoxum\app\ledger\impl">
       <UniqueIdentifier>{0EF1A571-94CC-4D70-E004-48579DF8AF2B}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ripple\app\main">
+    <Filter Include="stoxum\app\main">
       <UniqueIdentifier>{91D5931B-D981-52BC-BC12-08DA9F7BF606}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ripple\app\misc">
+    <Filter Include="stoxum\app\misc">
       <UniqueIdentifier>{5A1509B2-871B-A7AC-1E60-544D3F398741}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ripple\app\misc\detail">
+    <Filter Include="stoxum\app\misc\detail">
       <UniqueIdentifier>{2919FCCC-A707-22B8-FFB4-89494A8AC070}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ripple\app\misc\impl">
+    <Filter Include="stoxum\app\misc\impl">
       <UniqueIdentifier>{C4BDB9F8-7DB7-E304-D286-098085D5D16E}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ripple\app\paths">
+    <Filter Include="stoxum\app\paths">
       <UniqueIdentifier>{03533509-DAC6-636F-9F7E-288894549E95}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ripple\app\paths\cursor">
+    <Filter Include="stoxum\app\paths\cursor">
       <UniqueIdentifier>{9AD8D049-10A8-704C-D51A-FAD55B1F235F}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ripple\app\paths\impl">
+    <Filter Include="stoxum\app\paths\impl">
       <UniqueIdentifier>{38932157-7DA1-A9CC-CABC-2A3D9CACF188}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ripple\app\tx">
+    <Filter Include="stoxum\app\tx">
       <UniqueIdentifier>{50FDCDC1-EC9C-9F3B-34C9-EF4137E132B4}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ripple\app\tx\impl">
+    <Filter Include="stoxum\app\tx\impl">
       <UniqueIdentifier>{4849F8A8-26D5-8416-2D59-F4CA49F0100C}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ripple\basics">
+    <Filter Include="stoxum\basics">
       <UniqueIdentifier>{B8720E2F-21B1-2847-F96C-4E00A45DC639}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ripple\basics\impl">
+    <Filter Include="stoxum\basics\impl">
       <UniqueIdentifier>{1B5E3484-E132-ADEA-8A38-01B0F4ABAC58}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ripple\beast">
+    <Filter Include="stoxum\beast">
       <UniqueIdentifier>{B75D9C70-388A-3FA5-53E7-8F37FDF4704B}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ripple\beast\asio">
+    <Filter Include="stoxum\beast\asio">
       <UniqueIdentifier>{18E2EE25-691B-C8C6-CE50-559012D120C5}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ripple\beast\clock">
+    <Filter Include="stoxum\beast\clock">
       <UniqueIdentifier>{B19A7492-A21F-6398-8E2C-CB226DAB2AB5}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ripple\beast\container">
+    <Filter Include="stoxum\beast\container">
       <UniqueIdentifier>{55CEA641-A406-D50E-17E4-0617F38C4279}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ripple\beast\container\detail">
+    <Filter Include="stoxum\beast\container\detail">
       <UniqueIdentifier>{D17C7530-EB8E-2A5E-6900-050BBEAD7C9F}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ripple\beast\core">
+    <Filter Include="stoxum\beast\core">
       <UniqueIdentifier>{2878154F-A12B-FAF9-2731-F1E554045252}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ripple\beast\crypto">
+    <Filter Include="stoxum\beast\crypto">
       <UniqueIdentifier>{FD4D1806-56C7-EFD3-8177-B77ECCB62673}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ripple\beast\crypto\detail">
+    <Filter Include="stoxum\beast\crypto\detail">
       <UniqueIdentifier>{D2FEF8DB-10F1-40FD-149C-2929726AB662}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ripple\beast\cxx17">
+    <Filter Include="stoxum\beast\cxx17">
       <UniqueIdentifier>{462217CD-F700-FBAF-6337-9B66824D1964}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ripple\beast\hash">
+    <Filter Include="stoxum\beast\hash">
       <UniqueIdentifier>{EFCF517A-692C-C748-5A6B-E7A80A245AE8}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ripple\beast\hash\impl">
+    <Filter Include="stoxum\beast\hash\impl">
       <UniqueIdentifier>{A434A188-4373-CE55-6995-BA4EC86D2125}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ripple\beast\hash\tests">
+    <Filter Include="stoxum\beast\hash\tests">
       <UniqueIdentifier>{A0CD1F88-1FA8-FDBF-8C82-A5427B6E10AE}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ripple\beast\insight">
+    <Filter Include="stoxum\beast\insight">
       <UniqueIdentifier>{1CB945B8-4655-2C56-1C03-24281400ABD8}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ripple\beast\insight\impl">
+    <Filter Include="stoxum\beast\insight\impl">
       <UniqueIdentifier>{061B26E1-FD5A-69B2-F70A-DC6B19CD7068}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ripple\beast\net">
+    <Filter Include="stoxum\beast\net">
       <UniqueIdentifier>{4CC44F87-2E4D-81E7-CB8C-027C2928EC7D}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ripple\beast\net\detail">
+    <Filter Include="stoxum\beast\net\detail">
       <UniqueIdentifier>{7A1954FE-9751-AE24-A1AF-C282F14B5757}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ripple\beast\net\impl">
+    <Filter Include="stoxum\beast\net\impl">
       <UniqueIdentifier>{38E875CA-FF93-DCC2-393B-1E2E128AD077}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ripple\beast\unity">
+    <Filter Include="stoxum\beast\unity">
       <UniqueIdentifier>{D7812F07-CB10-3361-544B-EB66B18F2D7F}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ripple\beast\utility">
+    <Filter Include="stoxum\beast\utility">
       <UniqueIdentifier>{411729E2-D597-D511-9CCB-A9E0FF697232}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ripple\beast\utility\src">
+    <Filter Include="stoxum\beast\utility\src">
       <UniqueIdentifier>{C94B6C51-E253-633B-0AA8-8D18CD695D5E}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ripple\conditions">
+    <Filter Include="stoxum\conditions">
       <UniqueIdentifier>{44E216F9-ACFD-B770-C6C9-BFFAD162566D}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ripple\conditions\impl">
+    <Filter Include="stoxum\conditions\impl">
       <UniqueIdentifier>{155DC1A3-8A60-BC74-A7E4-1AC1A679FFF9}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ripple\consensus">
+    <Filter Include="stoxum\consensus">
       <UniqueIdentifier>{75481992-909B-CAA9-859B-91F15AFD2AD0}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ripple\core">
+    <Filter Include="stoxum\core">
       <UniqueIdentifier>{235DCF23-2CF8-4F03-1A54-C159823A7E8D}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ripple\core\impl">
+    <Filter Include="stoxum\core\impl">
       <UniqueIdentifier>{D9A8899A-B47C-E5BB-DDF1-32A50545A7D3}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ripple\crypto">
+    <Filter Include="stoxum\crypto">
       <UniqueIdentifier>{165391B0-6CF7-0ECF-2566-2F12A922148E}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ripple\crypto\impl">
+    <Filter Include="stoxum\crypto\impl">
       <UniqueIdentifier>{8EF07519-1C32-2E82-D707-702EB0157733}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ripple\json">
+    <Filter Include="stoxum\json">
       <UniqueIdentifier>{BEDCC703-A2C8-FF25-7E1E-3471BD39ED98}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ripple\json\impl">
+    <Filter Include="stoxum\json\impl">
       <UniqueIdentifier>{32043215-B959-04E5-00FF-F97C7F597235}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ripple\ledger">
+    <Filter Include="stoxum\ledger">
       <UniqueIdentifier>{33BBF793-1734-8439-B367-C4A48AB37EFC}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ripple\ledger\detail">
+    <Filter Include="stoxum\ledger\detail">
       <UniqueIdentifier>{3F9EB11B-A89B-C878-201C-5F1113B3A6E8}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ripple\ledger\impl">
+    <Filter Include="stoxum\ledger\impl">
       <UniqueIdentifier>{EA35E0D0-6876-9DC8-10FA-1E6A0486C574}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ripple\net">
+    <Filter Include="stoxum\net">
       <UniqueIdentifier>{6649BD29-BE86-723F-501A-045E39310112}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ripple\net\impl">
+    <Filter Include="stoxum\net\impl">
       <UniqueIdentifier>{18A4343E-EF40-5824-86E0-6374708FDDBC}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ripple\nodestore">
+    <Filter Include="stoxum\nodestore">
       <UniqueIdentifier>{D3E78215-1C49-D4FB-E9FC-5074083D184F}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ripple\nodestore\backend">
+    <Filter Include="stoxum\nodestore\backend">
       <UniqueIdentifier>{B79A9145-D4DD-8A3C-59ED-AF8BEE7AD7A3}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ripple\nodestore\impl">
+    <Filter Include="stoxum\nodestore\impl">
       <UniqueIdentifier>{9D691DE1-17A1-5989-3E2E-F69B3E43152F}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ripple\overlay">
+    <Filter Include="stoxum\overlay">
       <UniqueIdentifier>{51E817F6-DC2E-045A-9009-37E3D16D0990}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ripple\overlay\impl">
+    <Filter Include="stoxum\overlay\impl">
       <UniqueIdentifier>{07E4BC73-2B68-D0D1-D922-FEBBB573F503}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ripple\peerfinder">
+    <Filter Include="stoxum\peerfinder">
       <UniqueIdentifier>{186385AD-A056-FA3A-7E0E-759EB55E9EAB}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ripple\peerfinder\impl">
+    <Filter Include="stoxum\peerfinder\impl">
       <UniqueIdentifier>{26FDAE33-6FB7-5B19-3F9D-3F635A0C93BA}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ripple\peerfinder\sim">
+    <Filter Include="stoxum\peerfinder\sim">
       <UniqueIdentifier>{F1CDEBFB-0510-764D-010B-F14BCA9456EB}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ripple\proto">
+    <Filter Include="stoxum\proto">
       <UniqueIdentifier>{8016685C-6468-9514-D06F-F95060DB5F10}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ripple\protocol">
+    <Filter Include="stoxum\protocol">
       <UniqueIdentifier>{AAA1F4C4-829E-8085-A768-FB4DC3670296}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ripple\protocol\impl">
+    <Filter Include="stoxum\protocol\impl">
       <UniqueIdentifier>{0AFA29AA-2CF8-9A4D-112E-AA1044C005EC}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ripple\resource">
+    <Filter Include="stoxum\resource">
       <UniqueIdentifier>{7F5082C0-3323-CAC3-1868-CA49C7F63A34}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ripple\resource\impl">
+    <Filter Include="stoxum\resource\impl">
       <UniqueIdentifier>{A05858D1-18F0-3A7E-ECFD-7729C370F65B}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ripple\rpc">
+    <Filter Include="stoxum\rpc">
       <UniqueIdentifier>{BCDBB833-2810-D5F5-A023-4E346AD0EED3}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ripple\rpc\handlers">
+    <Filter Include="stoxum\rpc\handlers">
       <UniqueIdentifier>{98D31BEB-9D82-93F8-6AC3-70AC5A1EA2E1}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ripple\rpc\impl">
+    <Filter Include="stoxum\rpc\impl">
       <UniqueIdentifier>{93AC3675-D183-4DB4-021E-8F4CA1586866}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ripple\server">
+    <Filter Include="stoxum\server">
       <UniqueIdentifier>{8A61DBF7-69CB-9043-8312-D44C40EC6AE9}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ripple\server\impl">
+    <Filter Include="stoxum\server\impl">
       <UniqueIdentifier>{B0649154-4449-1172-FF4F-9F7A46908774}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ripple\shamap">
+    <Filter Include="stoxum\shamap">
       <UniqueIdentifier>{81841155-E173-EABC-D87B-5DDBE199F8E3}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ripple\shamap\impl">
+    <Filter Include="stoxum\shamap\impl">
       <UniqueIdentifier>{92AC870A-6B4B-9CD5-4F7F-648C72CFA0D3}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ripple\unity">
+    <Filter Include="stoxum\unity">
       <UniqueIdentifier>{5DB3CD0B-B361-B301-9562-697CA8A52B68}</UniqueIdentifier>
     </Filter>
     <Filter Include="rocksdb2">
