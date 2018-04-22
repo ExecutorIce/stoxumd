@@ -15,7 +15,7 @@ RUN apt-get update -y && \
   scons && \
   mkdir -p /opt/stoxumd/bin/ && \
   mv build/stoxumd /opt/stoxumd/bin/ && \
-  mv conf/stoxumd.cfg.example /opt/stoxumd/stoxumd.cfg && \
+  mv doc/stoxumd-example.cfg /opt/stoxumd/stoxumd.cfg && \
   apt remove -y $build_deps && apt clean all && \
   rm -fr /var/cache/apt && \
   cd .. && rm -fr /stoxumd-src && rm -fr /boost.src
