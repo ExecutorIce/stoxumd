@@ -31,7 +31,7 @@
 namespace ripple {
 
 static char stoxumAlphabet[] =
-    "sprhnaf39wBUDNEGHJKLM4PQRST7VWXYZ2bcdeCg65jkm8oFqi1tuvAxyz";
+    "xFtyEXqQ2YpfNC9zmjoaJAG5n4MSigZsKvB1UP37kwbucVrTHhD8dRLeW6";
 
 static char bitcoinAlphabet[] =
     "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz";
