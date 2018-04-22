@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+docker build --network host -t "stoxum/stoxumd:0.1.0" -f docker/Dockerfile docker
