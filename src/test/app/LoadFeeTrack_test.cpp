@@ -37,8 +37,8 @@ public:
             Fees f;
             f.base = d.FEE_DEFAULT;
             f.units = d.TRANSACTION_FEE_BASE;
-            f.reserve = 200 * SYSTEM_CURRENCY_PARTS;
-            f.increment = 50 * SYSTEM_CURRENCY_PARTS;
+            f.reserve = SYSTEM_CURRENCY_PARTS / 100;
+            f.increment = SYSTEM_CURRENCY_PARTS / 500;
             return f;
         }();
 
